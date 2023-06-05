@@ -1,0 +1,35 @@
+WAIT 0.1
+IF (File.IfFile.Exists File: $'''%ettpath%.inroom''') THEN
+    IF isinroom = False THEN
+        CALL joinroom
+        SET isinroom TO True
+        DISABLE MouseAndKeyboard.SendKeys.FocusAndSendKeysByTitleClass Title: $'''OBS 28.1.2 (64-bit, windows) - 配置文件: 未命名 - 场景: 未命名''' Class: $'''''' TextToSend: $'''{F7}''' DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+        DISABLE WAIT (UIAutomation.WaitForWindow.ToOpenByTitleClass Title: $'''Eleven''' Class: $'''UnityWndClass''' FocusWindow: True)
+    ELSE
+        DateTime.GetCurrentDateTime.Local DateTimeFormat: DateTime.DateTimeFormat.DateAndTime CurrentDateTime=> CurrentDateTimeNew
+        DateTime.Subtract FromDate: CurrentDateTimeNew SubstractDate: CurrentDateTime TimeUnit: DateTime.DifferenceTimeUnit.Seconds TimeDifference=> TimeDifference
+        IF ViewSwitched = False THEN
+            MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: 6 DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+            SET ViewSwitched TO True
+        END
+        IF TimeDifference >= 60 THEN
+            Variables.GenerateRandomNumber.RandomNumber MinimumValue: 1 MaximumValue: 9 RandomNumber=> RandomNumber
+            MouseAndKeyboard.SendKeys.FocusAndSendKeysByTitleClass Title: $'''Eleven''' Class: $'''UnityWndClass''' TextToSend: RandomNumber DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+            SET CurrentDateTime TO CurrentDateTimeNew
+        END
+        DISABLE CALL switchview_randomly
+    END
+END
+IF (File.IfFile.Exists File: $'''%ettpath%.inhome''') THEN
+    IF isinroom = True THEN
+        CALL exitroom
+        SET isinroom TO False
+        MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: 0 DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+        WAIT 0.1
+        IF (OCR.IfTextOnScreen.TextOnScreenExistsWithWindowsOcr TextToFind: $'''NO''' IsRegex: False WindowsOcrLanguage: OCR.WindowsOcrLanguage.English SearchForTextOn: OCR.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 TextLocationX=> LocationOfTextFoundX3 TextLocationY=> LocationOfTextFoundY3) THEN
+            MouseAndKeyboard.SendMouseClick.ClickAt ClickType: MouseAndKeyboard.MouseClickType.LeftClick MillisecondsDelay: 0 X: LocationOfTextFoundX3 Y: LocationOfTextFoundY3 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+        END
+        DISABLE MouseAndKeyboard.SendKeys.FocusAndSendKeysByTitleClass Title: $'''OBS 28.1.2 (64-bit, windows) - 配置文件: 未命名 - 场景: 未命名''' Class: $'''''' TextToSend: $'''{F9}''' DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+        DISABLE WAIT (UIAutomation.WaitForWindow.ToOpenByTitleClass Title: $'''Eleven''' Class: $'''UnityWndClass''' FocusWindow: True)
+    END
+END

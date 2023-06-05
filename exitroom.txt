@@ -1,0 +1,26 @@
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: 0 DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+LABEL CLICKEXIT
+IF (OCR.IfTextOnScreen.TextOnScreenExistsWithWindowsOcr TextToFind: $'''EXIT''' IsRegex: False WindowsOcrLanguage: OCR.WindowsOcrLanguage.English SearchForTextOn: OCR.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 TextLocationX=> LocationOfTextFoundX5 TextLocationY=> LocationOfTextFoundY5) THEN
+    MouseAndKeyboard.MoveMouse X: LocationOfTextFoundX5 Y: LocationOfTextFoundY5 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+    WAIT 0.05
+    MouseAndKeyboard.SendMouseClick.ClickAt ClickType: MouseAndKeyboard.MouseClickType.LeftButtonDown MillisecondsDelay: 0 X: LocationOfTextFoundX5 Y: LocationOfTextFoundY5 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+    WAIT 0.02
+    MouseAndKeyboard.SendMouseClick.ClickAt ClickType: MouseAndKeyboard.MouseClickType.LeftButtonUp MillisecondsDelay: 0 X: LocationOfTextFoundX5 Y: LocationOfTextFoundY5 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+    MouseAndKeyboard.MoveMouse X: 0 Y: 0 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+ELSE
+    MouseAndKeyboard.SendKeys.FocusAndSendKeysByTitleClass Title: $'''Eleven''' Class: $'''UnityWndClass''' TextToSend: $'''m''' DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+    WAIT 0.1
+    IF (OCR.IfTextOnScreen.TextOnScreenExistsWithWindowsOcr TextToFind: $'''EXIT''' IsRegex: False WindowsOcrLanguage: OCR.WindowsOcrLanguage.English SearchForTextOn: OCR.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 TextLocationX=> LocationOfTextFoundX6 TextLocationY=> LocationOfTextFoundY6) THEN
+        MouseAndKeyboard.MoveMouse X: LocationOfTextFoundX6 Y: LocationOfTextFoundY6 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+        WAIT 0.05
+        MouseAndKeyboard.SendMouseClick.ClickAt ClickType: MouseAndKeyboard.MouseClickType.LeftButtonDown MillisecondsDelay: 0 X: LocationOfTextFoundX6 Y: LocationOfTextFoundY6 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+        WAIT 0.02
+        MouseAndKeyboard.SendMouseClick.ClickAt ClickType: MouseAndKeyboard.MouseClickType.LeftButtonUp MillisecondsDelay: 0 X: LocationOfTextFoundX6 Y: LocationOfTextFoundY6 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+        MouseAndKeyboard.MoveMouse X: 0 Y: 0 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+    END
+END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: 0 DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+WAIT 0.1
+IF (OCR.IfTextOnScreen.TextOnScreenExistsWithWindowsOcr TextToFind: $'''EXIT''' IsRegex: False WindowsOcrLanguage: OCR.WindowsOcrLanguage.English SearchForTextOn: OCR.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1) THEN
+    GOTO CLICKEXIT
+END
