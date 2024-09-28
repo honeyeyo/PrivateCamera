@@ -135,12 +135,6 @@ def parse_log_line(line):
             pass
     return None, None
 
-# def update_inroom_file():
-#     if in_room:
-#         open(INROOM_FILE, 'w').close()  # 创建空文件
-#     elif os.path.exists(INROOM_FILE):
-#         os.remove(INROOM_FILE)  # 删除文件
-
 def backup_and_reset_files():
     # 备份 CSV_OUTPUT 文件
     if os.path.exists(CSV_OUTPUT):
@@ -162,7 +156,7 @@ def analyze_log():
     global in_room, camera_in_room
     
     start_time = datetime.now()
-    print(f"开始分析日志: {start_time}")
+    # print(f"开始分析日志: {start_time}")
 
     log_file_path = get_latest_log_file()
     if not log_file_path:
@@ -196,9 +190,11 @@ def analyze_log():
                                 if new_state == "room" and old_state != "room":
                                     camera_in_room = True
                                     csv_writer.writerow([timestamp, "Camera Enter Room", f"From {old_state} to {new_state}"])
+                                    print(f"Camera[{CAMERA_ID}] Enter Room")
                                 elif old_state == "room" and new_state != "room":
                                     camera_in_room = False
                                     csv_writer.writerow([timestamp, "Camera Exit Room", f"From {old_state} to {new_state}"])
+                                    print(f"Camera[{CAMERA_ID}] Exit Room")
 
                             # 处理 FriendStateChange (被跟踪玩家状态变化)
                             elif data["key"] == "FriendStateChange" and any(user["UserId"] == PLAYER_ID for user in data["data"]):
@@ -207,10 +203,12 @@ def analyze_log():
                                 if new_state == "room" and old_state != "room":
                                     # in_room = True
                                     csv_writer.writerow([timestamp, "Player Enter Room", f"From {old_state} to {new_state}"])
+                                    print(f"Player[{PLAYER_ID}] Enter Room")
                                     enter_room()  # 执行进入房间操作
                                 elif old_state == "room" and new_state != "room":
                                     # in_room = False
                                     csv_writer.writerow([timestamp, "Player Exit Room", f"From {old_state} to {new_state}"])
+                                    print(f"Player[{PLAYER_ID}] Exit Room")
                                     exit_room()  # 执行退出房间操作
 
                             # 处理 RoomJoined
@@ -229,9 +227,6 @@ def analyze_log():
                                     csv_writer.writerow([timestamp, "Player Left Room", f"Player: {data['data'][0]['UserName']}"])
         else:
             return # 没有新行，直接返回
-
-        # 更新 .inroom 文件
-        # update_inroom_file()
 
         # 保存最后处理的位置
         save_last_position(log_file_path, log_file.tell())
