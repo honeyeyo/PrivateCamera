@@ -57,24 +57,24 @@ def simulate_click(x, y):
     pyautogui.mouseUp(x, y)
     time.sleep(1)
 
-def enter_room():    
+def enter_room():
     # 切换到侧面视角
     simulate_keypress('0')
-    
+
     # 呼出菜单
     simulate_keypress('m')
-    
+
     # 点击被观战者名称位置
     simulate_click(*PLAYER_NAME_POS)
     time.sleep(1)
-    
+
     # 点击JOIN ROOM按钮
     simulate_click(*JOIN_ROOM_POS)
     time.sleep(1)
-    
+
     # 关闭菜单
     # simulate_keypress('m')
-    
+
     # 切换到观战视角
     simulate_keypress('6')
 
@@ -84,11 +84,11 @@ def exit_room():
     # 切换到侧面视角
     simulate_keypress('0')
     time.sleep(0.5)
-    
+
     # 呼出菜单
     # simulate_keypress('m')
     # time.sleep(1)
-    
+
     # 点击退出房间按钮
     simulate_click(*EXIT_ROOM_POS)
 
@@ -99,7 +99,7 @@ def exit_room():
     simulate_keypress('m')
 
     simulate_mouse_move(*SCREEN_CORNER_POSE)
-    
+
     # 等待退出完成
     time.sleep(2)
 
@@ -142,7 +142,7 @@ def backup_and_reset_files():
         backup_file = f"{CSV_OUTPUT[:-4]}_{backup_time}.csv"
         shutil.copy2(CSV_OUTPUT, backup_file)
         print(f"已备份 CSV 输出文件到: {backup_file}")
-        
+
         # 清空原 CSV 文件
         open(CSV_OUTPUT, 'w').close()
         print(f"已清空 CSV 输出文件: {CSV_OUTPUT}")
@@ -154,7 +154,7 @@ def backup_and_reset_files():
 
 def analyze_log():
     global in_room, camera_in_room
-    
+
     start_time = datetime.now()
     # print(f"开始分析日志: {start_time}")
 
@@ -162,7 +162,7 @@ def analyze_log():
     if not log_file_path:
         print("No log file found.")
         return
-    
+
     # 强制刷新日志文件
     force_flush_file(log_file_path)
 
@@ -219,7 +219,7 @@ def analyze_log():
                                     elif player["Id"] == CAMERA_ID:
                                         csv_writer.writerow([timestamp, "Camera Joined Room", f"Room ID: {data['data'][0]['Id']}"])
                                     else:
-                                        csv_writer.writerow([timestamp, "Other Player Joined Room", f"Room ID: {data['data'][0]['Id']}, Player ID: {player['Id']}， Player Name: {player['UserName']}"])
+                                        csv_writer.writerow([timestamp, "Other Player Joined Room", f"Room ID: {data['data'][0]['Id']}, Player ID: {player['Id']}, Player Name: {player['UserName']}"])
 
                             # 处理 RoomExitUser
                             elif data["key"] == "RoomExitUser":
@@ -254,9 +254,9 @@ if __name__ == "__main__":
     # 一开始先呼出 -> 关闭菜单一下 确保好友列表中我名字加载出来了。
     # 呼出菜单
     simulate_keypress('m')
-    
+
     time.sleep(3)
-    
+
     # 关闭菜单
     simulate_keypress('m')
 

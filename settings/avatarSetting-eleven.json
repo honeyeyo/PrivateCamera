@@ -1,0 +1,12 @@
+{
+  "AvatarId":"0",
+  "MaskId":"1",
+  "AvatarIdAI":"1",
+  "AvatarSource":"CDN",
+  "AvatarSourceAI":"None",
+  "AvatarActiveType":"OculusAvatar",
+  "AvatarActiveTypeAI":"MaskForAI",
+  "viewRemoteAvatars":"True",
+  "viewOwnAvatar":"False",
+  "overrideSuffix":"Oculus.Any.Any"
+}

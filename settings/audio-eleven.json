@@ -1,0 +1,15 @@
+{
+  "Master":"1",
+  "Music":"0",
+  "SUI":"0.800000011920929",
+  "SFX":"0.800000011920929",
+  "Announcer":"0.800000011920929",
+  "MyMic":"1",
+  "OpponentMic":"0.5",
+  "BallVolume":"0.5",
+  "MicMode":"2",
+  "MuteFaultSound":"True",
+  "useResonanceSpatializer":"True",
+  "Version":"3",
+  "overrideSuffix":"Oculus.Any.Any"
+}
