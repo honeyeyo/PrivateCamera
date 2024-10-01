@@ -3,19 +3,21 @@ import json
 from datetime import datetime
 import os
 import time
-import pyautogui # type: ignore
+import pyautogui 
 import shutil
+import re
+import math
 
 # 配置
 LOG_DIR = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\logs\\"
 CSV_OUTPUT = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\log_analysis.csv"
-# INROOM_FILE = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\.inroom"
 LAST_POSITION_FILE = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\.last_position" # 保存本次处理的日志中处理到的行
 PERFORMANCE_LOG = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\performance.log" # 性能日志
 PLAYER_ID = "1418464"  # VIOLENTPANDA 的 ID
 CAMERA_ID = "1461990"  # CHN_CAMERA 的 ID
 PLAYER_NAME = "VIOLENTPANDA"
 CAMERA_NAME = "CHN_CAMERA"
+CSV_COLUMNS = ["Timestamp", "Analysis Time", "Event", "Details", "Delay (seconds)"]
 
 # 全局变量
 in_room = False
@@ -26,6 +28,7 @@ PLAYER_NAME_POS = (-520, 320)
 JOIN_ROOM_POS = (-620, 530)
 EXIT_ROOM_POS = (-1120, 600)
 EXIT_ROOM_OK_POS = (-1060, 520)
+REJOIN_NO_POS = (-920, 520)
 SCREEN_CORNER_POSE = (-1,1)
 
 def force_flush_file(file_path):
@@ -92,11 +95,14 @@ def exit_room():
     # 点击退出房间按钮
     simulate_click(*EXIT_ROOM_POS)
 
-    # 点击OK按钮
+    # 点击弹窗OK按钮
     simulate_click(*EXIT_ROOM_OK_POS)
 
     # 关闭菜单
     simulate_keypress('m')
+
+    # 点击弹窗NO按钮
+    simulate_click(*REJOIN_NO_POS)
 
     simulate_mouse_move(*SCREEN_CORNER_POSE)
 
@@ -122,6 +128,58 @@ def save_last_position(file_path, position):
     with open(LAST_POSITION_FILE, 'w') as f:
         f.write(f"{file_path},{position}")
 
+# 添加新函数用于解析击球数据
+def parse_ball_hit_data(content):
+    match = re.search(r'pos:\((.*?)\) vel:\((.*?)\) rrate:\((.*?)\)', content)
+    if match:
+        pos = [float(x) for x in match.group(1).split(',')]
+        vel = [float(x) for x in match.group(2).split(',')]
+        rrate = [float(x) for x in match.group(3).split(',')]
+        
+        speed = math.sqrt(sum(v**2 for v in vel))
+        rotation = math.sqrt(sum((r/360)**2 for r in rrate))
+        
+        # 判断旋转方向
+        x_rotation, y_rotation, _ = rrate
+        
+        # 设定阈值
+        threshold = 20  # 这个阈值可能需要根据实际情况调整
+        
+        # 判断上下旋转
+        if abs(y_rotation) > threshold:
+            vertical_spin = "Top" if y_rotation > 0 else "Back"
+        else:
+            vertical_spin = ""
+        
+        # 判断左右旋转
+        if abs(x_rotation) > threshold:
+            horizontal_spin = "Right" if x_rotation > 0 else "Left"
+        else:
+            horizontal_spin = ""
+        
+        # 组合旋转描述
+        if vertical_spin and horizontal_spin:
+            if abs(y_rotation) > abs(x_rotation):
+                spin_direction = f"{vertical_spin} {horizontal_spin} spin"
+            else:
+                spin_direction = f"{horizontal_spin} {vertical_spin} spin"
+        elif vertical_spin:
+            spin_direction = f"{vertical_spin} spin"
+        elif horizontal_spin:
+            spin_direction = f"{horizontal_spin} spin"
+        else:
+            spin_direction = "No significant spin"
+        
+        return {
+            'position': pos,
+            'velocity': vel,
+            'rotation_rate': rrate,
+            'speed': speed,
+            'rotation': rotation,
+            'spin_direction': spin_direction
+        }
+    return None
+
 def parse_log_line(line):
     if '"msgType":"Message"' in line or '"msgType":"Response"' in line:
         try:
@@ -133,6 +191,10 @@ def parse_log_line(line):
                 return timestamp, json.loads(json_content)
         except (ValueError, json.JSONDecodeError):
             pass
+    elif "[MPMatch]Received ball hit from opponent:" in line:
+        timestamp, content = line.split("]", 2)[:2]
+        timestamp = timestamp.strip("[")
+        return timestamp, content.strip()
     return None, None
 
 def backup_and_reset_files():
@@ -177,54 +239,95 @@ def analyze_log():
             with open(CSV_OUTPUT, 'a', newline='', encoding='utf-8') as csv_file:
                 csv_writer = csv.writer(csv_file)
                 if os.path.getsize(CSV_OUTPUT) == 0:
-                    csv_writer.writerow(["Timestamp", "Event", "Details"])
+                    csv_writer.writerow(CSV_COLUMNS)
 
                 for line in new_lines:
+                    analysis_time = datetime.now()
                     timestamp, data = parse_log_line(line)
+                    event = "Unknown"
+                    details = "Unknown"
+
                     if timestamp and data:
-                        if data["msgType"] == "Message":
+                        log_timestamp = datetime.strptime(timestamp, "%m/%d/%Y %H:%M:%S")
+                        delay = (analysis_time - log_timestamp).total_seconds()
+
+                        if isinstance(data, dict) and data["msgType"] == "Message":
                             # 处理 StateChange (摄像头状态变化)
                             if data["key"] == "StateChange" and any(user["UserId"] == CAMERA_ID for user in data["data"]):
                                 old_state = data["data"][0]["Location"]["locationType"]
                                 new_state = data["data"][1]["Location"]["locationType"]
                                 if new_state == "room" and old_state != "room":
                                     camera_in_room = True
-                                    csv_writer.writerow([timestamp, "Camera Enter Room", f"From {old_state} to {new_state}"])
-                                    print(f"Camera[{CAMERA_ID}] Enter Room")
+                                    event = "Camera Enter Room"
                                 elif old_state == "room" and new_state != "room":
                                     camera_in_room = False
-                                    csv_writer.writerow([timestamp, "Camera Exit Room", f"From {old_state} to {new_state}"])
-                                    print(f"Camera[{CAMERA_ID}] Exit Room")
+                                    event = "Camera Exit Room"
+                                details = f"From {old_state} to {new_state}"
 
                             # 处理 FriendStateChange (被跟踪玩家状态变化)
                             elif data["key"] == "FriendStateChange" and any(user["UserId"] == PLAYER_ID for user in data["data"]):
                                 old_state = data["data"][0]["Location"]["locationType"]
                                 new_state = data["data"][1]["Location"]["locationType"]
                                 if new_state == "room" and old_state != "room":
-                                    # in_room = True
-                                    csv_writer.writerow([timestamp, "Player Enter Room", f"From {old_state} to {new_state}"])
-                                    print(f"Player[{PLAYER_ID}] Enter Room")
+                                    in_room = True
+                                    event = "Player Enter Room"
                                     enter_room()  # 执行进入房间操作
                                 elif old_state == "room" and new_state != "room":
-                                    # in_room = False
-                                    csv_writer.writerow([timestamp, "Player Exit Room", f"From {old_state} to {new_state}"])
-                                    print(f"Player[{PLAYER_ID}] Exit Room")
+                                    in_room = False
+                                    event = "Player Exit Room"
                                     exit_room()  # 执行退出房间操作
+                                else:
+                                    continue
+                                details = f"From {old_state} to {new_state}"
 
                             # 处理 RoomJoined
                             elif data["key"] == "RoomJoined":
                                 for player in data["data"][0]["Players"]:
                                     if player["Id"] == PLAYER_ID:
-                                        csv_writer.writerow([timestamp, "Player Joined Room", f"Room ID: {data['data'][0]['Id']}"])
+                                        event = "Player Join Room"
                                     elif player["Id"] == CAMERA_ID:
-                                        csv_writer.writerow([timestamp, "Camera Joined Room", f"Room ID: {data['data'][0]['Id']}"])
+                                        event = "Camera Join Room"
                                     else:
-                                        csv_writer.writerow([timestamp, "Other Player Joined Room", f"Room ID: {data['data'][0]['Id']}, Player ID: {player['Id']}, Player Name: {player['UserName']}"])
+                                        event = "Other Player Join Room"
+                                    details = f"Room ID: {data['data'][0]['Id']}, Player ID: {player['Id']}, Player Name: {player['UserName']}"
 
                             # 处理 RoomExitUser
                             elif data["key"] == "RoomExitUser":
-                                if data["data"][0]["Id"] == PLAYER_ID:
-                                    csv_writer.writerow([timestamp, "Player Left Room", f"Player: {data['data'][0]['UserName']}"])
+                                for player in data["data"][0]["Players"]:
+                                    if player["Id"] == PLAYER_ID:
+                                        event = "Player Left Room"
+                                    elif player["Id"] == CAMERA_ID:
+                                        event = "Camera Left Room"
+                                    else:
+                                        event = "Other Player Left Room"
+                                    details = f"Room ID: {data['data'][0]['Id']}, Player ID: {player['Id']}, {data['data'][0]['UserName']}"
+                        
+                        elif isinstance(data, str) and "Received ball hit from opponent:" in data:
+                            ball_data = parse_ball_hit_data(data)
+                            if ball_data:
+                                event = "Ball Hit"
+                                details = f"Speed: {ball_data['speed']:.2f} m/s, Rotation: {ball_data['rotation']:.2f} rev/s"
+                            else:
+                                continue
+                        else:
+                            continue
+
+                        
+                        if (event != "Unknown"):
+                            log_timestamp = datetime.strptime(timestamp, "%m/%d/%Y %H:%M:%S")
+                            delay = (analysis_time - log_timestamp).total_seconds()
+                            csv_writer.writerow([
+                                        timestamp,
+                                        analysis_time.strftime("%Y-%m-%d %H:%M:%S.%f"),
+                                        event,
+                                        details,
+                                        f"{delay:.3f}"
+                                    ])
+                            print(f"Event: {event}")
+                            print(f"Log Timestamp: {timestamp}")
+                            print(f"Analysis Time: {analysis_time}")
+                            print(f"Delay: {delay:.3f} seconds")
+                            print("---")
         else:
             return # 没有新行，直接返回
 
@@ -235,8 +338,8 @@ def analyze_log():
     duration = (end_time - start_time).total_seconds()
 
     # 记录性能信息
-    with open(PERFORMANCE_LOG, 'a', encoding='utf-8') as perf_log:
-        perf_log.write(f"开始时间: {start_time}, 结束时间: {end_time}, 持续时间: {duration:.2f}秒, 处理行数: {lines_processed}\n")
+    # with open(PERFORMANCE_LOG, 'a', encoding='utf-8') as perf_log:
+    #     perf_log.write(f"开始时间: {start_time}, 结束时间: {end_time}, 持续时间: {duration:.2f}秒, 处理行数: {lines_processed}\n")
 
     print(f"结束分析日志: {end_time} 本次分析处理了 {lines_processed} 行日志，耗时 {duration:.2f} 秒")
 
