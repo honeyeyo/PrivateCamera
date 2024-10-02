@@ -293,14 +293,11 @@ def analyze_log():
 
                             # 处理 RoomExitUser
                             elif data["key"] == "RoomExitUser":
-                                for player in data["data"][0]["Players"]:
-                                    if player["Id"] == PLAYER_ID:
-                                        event = "Player Left Room"
-                                    elif player["Id"] == CAMERA_ID:
-                                        event = "Camera Left Room"
-                                    else:
-                                        event = "Other Player Left Room"
-                                    details = f"Room ID: {data['data'][0]['Id']}, Player ID: {player['Id']}, {data['data'][0]['UserName']}"
+                                if data["data"][0]["Id"] == PLAYER_ID:
+                                    event = "Player Left Room"
+                                else:
+                                    event = "Other Player Left Room"
+                                details = f"Player ID: {data['data'][0]['Id']}, Player Name: {data['data'][0]['UserName']}"
                         
                         elif isinstance(data, str) and "Received ball hit from opponent:" in data:
                             ball_data = parse_ball_hit_data(data)
