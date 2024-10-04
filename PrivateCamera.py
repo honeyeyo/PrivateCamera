@@ -12,7 +12,7 @@ import math
 LOG_DIR = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\logs\\"
 CSV_OUTPUT = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\log_analysis.csv"
 LAST_POSITION_FILE = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\.last_position" # 保存本次处理的日志中处理到的行
-PERFORMANCE_LOG = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\performance.log" # 性能日志
+# PERFORMANCE_LOG = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\performance.log" # 性能日志
 PLAYER_ID = "1418464"  # VIOLENTPANDA 的 ID
 CAMERA_ID = "1461990"  # CHN_CAMERA 的 ID
 PLAYER_NAME = "VIOLENTPANDA"
@@ -31,13 +31,13 @@ EXIT_ROOM_OK_POS = (-1060, 520)
 REJOIN_NO_POS = (-920, 520)
 SCREEN_CORNER_POSE = (-1,1)
 
-def force_flush_file(file_path):
-    try:
-        with open(file_path, 'a') as f:
-            os.fsync(f.fileno())
-        # print(f"Successfully flushed file: {file_path}")
-    except Exception as e:
-        print(f"Error flushing file {file_path}: {e}")
+# def force_flush_file(file_path):
+#     try:
+#         with open(file_path, 'a') as f:
+#             os.fsync(f.fileno())
+#         # print(f"Successfully flushed file: {file_path}")
+#     except Exception as e:
+#         print(f"Error flushing file {file_path}: {e}")
 
 def simulate_mouse_move(x, y):
     pyautogui.moveTo(x, y, duration=0.05)
@@ -139,26 +139,30 @@ def parse_ball_hit_data(content):
         speed = math.sqrt(sum(v**2 for v in vel))
         rotation = math.sqrt(sum((r/360)**2 for r in rrate))
         
-        # 判断旋转方向
-        x_rotation, y_rotation, _ = rrate
+        x_rotation, y_rotation, z_rotation = rrate
         
         # 设定阈值
-        threshold = 20  # 这个阈值可能需要根据实际情况调整
+        threshold = 3600  # 这个阈值可能需要根据实际情况调整
         
-        # 判断上下旋转
+        # 判断球的运动方向
+        direction = "Forward" if vel[2] > 0 else "Backward"
+        
+        # 判断旋转方向
+        horizontal_spin = ""
+        vertical_spin = ""
+        
+        if abs(x_rotation) > threshold:
+            # 根据运动方向和x轴旋转方向判断左右旋
+            if (direction == "Forward" and x_rotation > 0) or (direction == "Backward" and x_rotation < 0):
+                horizontal_spin = "Right"
+            else:
+                horizontal_spin = "Left"
+        
         if abs(y_rotation) > threshold:
             vertical_spin = "Top" if y_rotation > 0 else "Back"
-        else:
-            vertical_spin = ""
         
-        # 判断左右旋转
-        if abs(x_rotation) > threshold:
-            horizontal_spin = "Right" if x_rotation > 0 else "Left"
-        else:
-            horizontal_spin = ""
-        
-        # 组合旋转描述
-        if vertical_spin and horizontal_spin:
+        # 组合旋转描述，根据旋转强度决定顺序
+        if horizontal_spin and vertical_spin:
             if abs(y_rotation) > abs(x_rotation):
                 spin_direction = f"{vertical_spin} {horizontal_spin} spin"
             else:
@@ -176,7 +180,8 @@ def parse_ball_hit_data(content):
             'rotation_rate': rrate,
             'speed': speed,
             'rotation': rotation,
-            'spin_direction': spin_direction
+            'spin_direction': spin_direction,
+            'direction': direction
         }
     return None
 
@@ -192,9 +197,12 @@ def parse_log_line(line):
         except (ValueError, json.JSONDecodeError):
             pass
     elif "[MPMatch]Received ball hit from opponent:" in line:
-        timestamp, content = line.split("]", 2)[:2]
-        timestamp = timestamp.strip("[")
-        return timestamp, content.strip()
+        match = re.match(r'\[(.*?)\].*?\[MPMatch\](.*)', line)
+        if match:
+            timestamp, content = match.groups()
+            # print(f"Timestamp: {timestamp}")
+            # print(f"Content: {content}")
+            return timestamp, content.strip()
     return None, None
 
 def backup_and_reset_files():
@@ -224,9 +232,11 @@ def analyze_log():
     if not log_file_path:
         print("No log file found.")
         return
+    
+    print(f"正在分析最新日志: {log_file_path}")
 
     # 强制刷新日志文件
-    force_flush_file(log_file_path)
+    # force_flush_file(log_file_path)
 
     last_position = get_last_position(log_file_path)
 
@@ -301,10 +311,23 @@ def analyze_log():
                         
                         elif isinstance(data, str) and "Received ball hit from opponent:" in data:
                             ball_data = parse_ball_hit_data(data)
-                            if ball_data:
+                            if ball_data and ball_data['speed'] >= 1:  # 只处理速度大于等于1的数据
                                 event = "Ball Hit"
-                                details = f"Speed: {ball_data['speed']:.2f} m/s, Rotation: {ball_data['rotation']:.2f} rev/s"
+                                details = (f"Speed: {ball_data['speed']:.2f} m/s, "
+                                        f"Rotation: {ball_data['rotation']:.2f} rev/s, "
+                                        f"Spin: {ball_data['spin_direction']}, "
+                                        f"Direction: {ball_data['direction']}")
+                                print(f"Ball hit detected at {timestamp}")
+                                print(f"Speed: {ball_data['speed']:.2f} m/s")
+                                print(f"Rotation: {ball_data['rotation']:.2f} rev/s")
+                                print(f"Spin direction: {ball_data['spin_direction']}")
+                                print(f"Ball direction: {ball_data['direction']}")
+                                print(f"Velocity vector: {ball_data['velocity']}")
+                                print(f"Rotation rate vector: {ball_data['rotation_rate']}")
+                                print(f"Delay: {delay:.3f} seconds")
+                                print("---")
                             else:
+                                print(f"Failed to parse ball hit data : {data}")
                                 continue
                         else:
                             continue
