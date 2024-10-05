@@ -69,14 +69,9 @@ def enter_room():
 
     # 点击被观战者名称位置
     simulate_click(*PLAYER_NAME_POS)
-    time.sleep(1)
 
     # 点击JOIN ROOM按钮
     simulate_click(*JOIN_ROOM_POS)
-    time.sleep(1)
-
-    # 关闭菜单
-    # simulate_keypress('m')
 
     # 切换到观战视角
     simulate_keypress('6')
@@ -86,11 +81,6 @@ def enter_room():
 def exit_room():
     # 切换到侧面视角
     simulate_keypress('0')
-    time.sleep(0.5)
-
-    # 呼出菜单
-    # simulate_keypress('m')
-    # time.sleep(1)
 
     # 点击退出房间按钮
     simulate_click(*EXIT_ROOM_POS)
@@ -150,20 +140,24 @@ def parse_ball_hit_data(content):
         # 判断旋转方向
         horizontal_spin = ""
         vertical_spin = ""
-        
+
         if abs(x_rotation) > threshold:
-            # 根据运动方向和x轴旋转方向判断左右旋
-            if (direction == "Forward" and x_rotation > 0) or (direction == "Backward" and x_rotation < 0):
-                horizontal_spin = "Right"
+            # 根据运动方向和x轴旋转方向判断上下旋
+            if (direction == "Forward" and x_rotation < 0) or (direction == "Backward" and x_rotation > 0):
+                vertical_spin = "Back"
             else:
-                horizontal_spin = "Left"
+                vertical_spin = "Top"
         
         if abs(y_rotation) > threshold:
-            vertical_spin = "Top" if y_rotation > 0 else "Back"
+            # 根据运动方向和y轴旋转方向判断左右旋
+            if (direction == "Forward" and y_rotation > 0) or (direction == "Backward" and y_rotation < 0):
+                horizontal_spin = "Right"
+            else:
+                horizontal_spin = "Left"     
         
         # 组合旋转描述，根据旋转强度决定顺序
         if horizontal_spin and vertical_spin:
-            if abs(y_rotation) > abs(x_rotation):
+            if abs(x_rotation) > abs(y_rotation):
                 spin_direction = f"{vertical_spin} {horizontal_spin} spin"
             else:
                 spin_direction = f"{horizontal_spin} {vertical_spin} spin"
@@ -185,6 +179,82 @@ def parse_ball_hit_data(content):
         }
     return None
 
+last_score = []
+match_info = None
+
+def parse_snapshot(content):
+    print(content)
+    try:
+        data = json.loads(content.replace("Snapshot reads: ", ""))
+        current_scores = data["RoundScores"]
+        
+        global last_score, match_info
+        
+        # 如果是新的比赛或者新的对手，重置 match_info 和 last_score
+        if not match_info or match_info["MatchId"] != data["MatchId"]:
+            match_info = {
+                "PlayerNames": data["PlayerNames"],
+                "PlayerELOs": data["PlayerELOs"],
+                "MatchId": data["MatchId"],
+                "BestOf": data["BestOf"],
+                "Ranked": data["Ranked"]
+            }
+            last_score = []
+            event = "Match Start"
+            details = f"New match started: {match_info}"
+            return event, details
+        
+        if last_score != current_scores:
+            current_round = len(current_scores)
+            current_round_score = current_scores[-1]
+            
+            scoring_side = data["LastPointReasonSide"]
+            scoring_player = data["PlayerNames"][0] if scoring_side == "SideA" else data["PlayerNames"][1]
+            losing_player = data["PlayerNames"][1] if scoring_side == "SideA" else data["PlayerNames"][0]
+            
+            server_id = int(data["CurrentServer"])
+            server_name = data["PlayerNames"][0] if server_id == data["PlayerIds"][0] else data["PlayerNames"][1]
+            
+            reason = data["LastPointReason"]
+            
+            # 检查是否是新的Round开始
+            if len(current_scores) > len(last_score or []):
+                event = "New Round"
+                details = f"Round {current_round} started. "
+                if len(current_scores) == 1:
+                    details += f", First round of the match, "
+                else:
+                    details += f"Previous round score: {current_scores[-2][0]}-{current_scores[-2][1]}, New round of the match, "
+            else:
+                event = "Score Update"
+                details = ""
+            
+            details += (f"Current round score: {current_round_score[0]}-{current_round_score[1]}, "
+                        f"Match score: {sum(1 for s in current_scores if s[0] > s[1])}-{sum(1 for s in current_scores if s[1] > s[0])}, "
+                        f"Point won by: {scoring_player}, "
+                        f"Point lost by: {losing_player}, "
+                        f"Server: {server_name}, "
+                        f"Reason: {reason}")
+            
+            if data["MatchWinner"] != "0":
+                event = "Match End"
+                winner_name = data["PlayerNames"][0] if int(data["MatchWinner"]) == data["PlayerIds"][0] else data["PlayerNames"][1]
+                details += f", Match Winner: {winner_name}"
+            
+            last_score = current_scores
+        else:
+            if data["MatchWinner"] != "0":
+                event = "Match End"
+                winner_name = data["PlayerNames"][0] if int(data["MatchWinner"]) == data["PlayerIds"][0] else data["PlayerNames"][1]
+                details = f"Match ended. Winner: {winner_name}, Final score: {' '.join([f'{s[0]}-{s[1]}' for s in current_scores])}"
+            else:
+                return "Unknown", None  # 如果比分没有变化且比赛未结束，不记录
+
+        return event, details
+    except json.JSONDecodeError:
+        print(f"Failed to parse snapshot data: {content}")
+        return "Unknown", None
+
 def parse_log_line(line):
     if '"msgType":"Message"' in line or '"msgType":"Response"' in line:
         try:
@@ -203,6 +273,15 @@ def parse_log_line(line):
             # print(f"Timestamp: {timestamp}")
             # print(f"Content: {content}")
             return timestamp, content.strip()
+    elif "Snapshot reads:" in line:
+        # match = re.search(r'Snapshot reads: (.*)', line)
+        # if match:
+            # content = match.group(1)
+            # # 使用当前时间作为时间戳，因为日志中没有提供
+            # timestamp = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+            # return timestamp, content.strip()
+        timestamp = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+        return timestamp, line.strip()
     return None, None
 
 def backup_and_reset_files():
@@ -233,7 +312,7 @@ def analyze_log():
         print("No log file found.")
         return
     
-    print(f"正在分析最新日志: {log_file_path}")
+    # print(f"正在分析最新日志: {log_file_path}")
 
     # 强制刷新日志文件
     # force_flush_file(log_file_path)
@@ -329,6 +408,23 @@ def analyze_log():
                             else:
                                 print(f"Failed to parse ball hit data : {data}")
                                 continue
+                        elif isinstance(data, str) and "Snapshot reads:" in data:
+                            match = re.search(r'Snapshot reads: (.*)', line)
+                            if match:
+                                content = match.group(1)
+                            event, details = parse_snapshot(content)
+
+                            print(f"Event: {event}")
+                            print(f"Details: {details}")
+                            print(f"Log Timestamp: {timestamp}")
+                            print(f"Analysis Time: {analysis_time}")
+                            print(f"Delay: {delay:.3f} seconds")
+                            if event == "New Round":
+                                print("=" * 50)  # 添加一个分隔线以突出显示新的Round开始
+                            elif event == "Match End":
+                                print("#" * 50)  # 为比赛结束添加特殊的分隔线
+                            else:
+                                print("-" * 30)
                         else:
                             continue
 
