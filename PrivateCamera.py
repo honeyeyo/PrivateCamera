@@ -151,9 +151,9 @@ def parse_ball_hit_data(content):
         if abs(y_rotation) > threshold:
             # 根据运动方向和y轴旋转方向判断左右旋
             if (direction == "Forward" and y_rotation > 0) or (direction == "Backward" and y_rotation < 0):
-                horizontal_spin = "Right"
+                horizontal_spin = "Left"
             else:
-                horizontal_spin = "Left"     
+                horizontal_spin = "Right"     
         
         # 组合旋转描述，根据旋转强度决定顺序
         if horizontal_spin and vertical_spin:
