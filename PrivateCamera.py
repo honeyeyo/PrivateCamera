@@ -275,7 +275,7 @@ def parse_log_line(line):
             # print(f"Timestamp: {timestamp}")
             # print(f"Content: {content}")
             return timestamp, content.strip()
-    elif "Snapshot reads:" in line:
+    elif line.strip().startswith("Snapshot reads:"):
         # match = re.search(r'Snapshot reads: (.*)', line)
         # if match:
             # content = match.group(1)
@@ -410,10 +410,8 @@ def analyze_log():
                             else:
                                 # print(f"Failed to parse ball hit data : {data}")
                                 continue
-                        elif isinstance(data, str) and "Snapshot reads:" in data:
-                            match = re.search(r'Snapshot reads: (.*)', line)
-                            if match:
-                                content = match.group(1)
+                        elif isinstance(data, str) and data.startswith("Snapshot reads:"):
+                            content = data.replace("Snapshot reads:", "").strip()
                             event, details = parse_snapshot(content)
 
                             print(f"Event: {event}")
