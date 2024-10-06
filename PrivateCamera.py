@@ -231,12 +231,7 @@ def parse_snapshot(content):
                 event = "Score Update"
                 details = ""
             
-            details += (f"Current round score: {current_round_score[0]}-{current_round_score[1]}, "
-                        f"Match score: {sum(1 for s in current_scores if s[0] > s[1])}-{sum(1 for s in current_scores if s[1] > s[0])}, "
-                        f"Point won by: {scoring_player}, "
-                        f"Point lost by: {losing_player}, "
-                        f"Server: {server_name}, "
-                        f"Reason: {reason}")
+            details += f"Current round score: {current_round_score[0]}-{current_round_score[1]}. "
             
             if data["MatchWinner"] != "0":
                 event = "Match End"
