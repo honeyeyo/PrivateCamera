@@ -11,13 +11,15 @@ import math
 # 配置
 LOG_DIR = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\logs\\"
 CSV_OUTPUT = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\log_analysis.csv"
+OBS_OUTPUT = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\obs.log"
 LAST_POSITION_FILE = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\.last_position" # 保存本次处理的日志中处理到的行
 # PERFORMANCE_LOG = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\performance.log" # 性能日志
 PLAYER_ID = "1418464"  # VIOLENTPANDA 的 ID
 CAMERA_ID = "1461990"  # CHN_CAMERA 的 ID
 PLAYER_NAME = "VIOLENTPANDA"
 CAMERA_NAME = "CHN_CAMERA"
-CSV_COLUMNS = ["Timestamp", "Analysis Time", "Event", "Details", "Delay (seconds)"]
+# CSV_COLUMNS = ["Timestamp", "Analysis Time", "Event", "Details", "Delay (seconds)"]
+CSV_COLUMNS = ["Event", "Details"]
 
 # 全局变量
 in_room = False
@@ -369,33 +371,33 @@ def analyze_log():
                                     continue
                                 details = f"From {old_state} to {new_state}"
 
-                            # 处理 RoomJoined
-                            elif data["key"] == "RoomJoined":
-                                for player in data["data"][0]["Players"]:
-                                    if player["Id"] == PLAYER_ID:
-                                        event = "Player Join Room"
-                                    elif player["Id"] == CAMERA_ID:
-                                        event = "Camera Join Room"
-                                    else:
-                                        event = "Other Player Join Room"
-                                    details = f"Room ID: {data['data'][0]['Id']}, Player ID: {player['Id']}, Player Name: {player['UserName']}"
+                            # # 处理 RoomJoined
+                            # elif data["key"] == "RoomJoined":
+                            #     for player in data["data"][0]["Players"]:
+                            #         if player["Id"] == PLAYER_ID:
+                            #             event = "Player Join Room"
+                            #         elif player["Id"] == CAMERA_ID:
+                            #             event = "Camera Join Room"
+                            #         else:
+                            #             event = "Other Player Join Room"
+                            #         details = f"Room ID: {data['data'][0]['Id']}, Player ID: {player['Id']}, Player Name: {player['UserName']}"
 
-                            # 处理 RoomExitUser
-                            elif data["key"] == "RoomExitUser":
-                                if data["data"][0]["Id"] == PLAYER_ID:
-                                    event = "Player Left Room"
-                                else:
-                                    event = "Other Player Left Room"
-                                details = f"Player ID: {data['data'][0]['Id']}, Player Name: {data['data'][0]['UserName']}"
+                            # # 处理 RoomExitUser
+                            # elif data["key"] == "RoomExitUser":
+                            #     if data["data"][0]["Id"] == PLAYER_ID:
+                            #         event = "Player Left Room"
+                            #     else:
+                            #         event = "Other Player Left Room"
+                            #     details = f"Player ID: {data['data'][0]['Id']}, Player Name: {data['data'][0]['UserName']}"
                         
                         elif isinstance(data, str) and "Received ball hit from opponent:" in data:
                             ball_data = parse_ball_hit_data(data)
                             if ball_data and ball_data['speed'] >= 1:  # 只处理速度大于等于1的数据
                                 event = "Ball Hit"
-                                details = (f"Speed: {ball_data['speed']:.2f} m/s, "
-                                        f"Rotation: {ball_data['rotation']:.2f} rev/s, "
-                                        f"Spin: {ball_data['spin_direction']}, "
-                                        f"Direction: {ball_data['direction']}")
+                                details = (f"{ball_data['speed']:.2f} m/s, "
+                                        f"{ball_data['rotation']:.2f} rev/s, "
+                                        f"{ball_data['spin_direction']}, "
+                                        f"{ball_data['direction']}")
                                 print(f"Ball hit detected at {timestamp}")
                                 print(f"Speed: {ball_data['speed']:.2f} m/s")
                                 print(f"Rotation: {ball_data['rotation']:.2f} rev/s")
@@ -406,7 +408,7 @@ def analyze_log():
                                 print(f"Delay: {delay:.3f} seconds")
                                 print("---")
                             else:
-                                print(f"Failed to parse ball hit data : {data}")
+                                # print(f"Failed to parse ball hit data : {data}")
                                 continue
                         elif isinstance(data, str) and "Snapshot reads:" in data:
                             match = re.search(r'Snapshot reads: (.*)', line)
@@ -433,11 +435,12 @@ def analyze_log():
                             log_timestamp = datetime.strptime(timestamp, "%m/%d/%Y %H:%M:%S")
                             delay = (analysis_time - log_timestamp).total_seconds()
                             csv_writer.writerow([
-                                        timestamp,
-                                        analysis_time.strftime("%Y-%m-%d %H:%M:%S.%f"),
+                                        # timestamp,
+                                        # analysis_time.strftime("%Y-%m-%d %H:%M:%S.%f"),
                                         event,
-                                        details,
-                                        f"{delay:.3f}"
+                                        details
+                                        # details,
+                                        # f"{delay:.3f}"
                                     ])
                             print(f"Event: {event}")
                             print(f"Log Timestamp: {timestamp}")
@@ -459,6 +462,17 @@ def analyze_log():
 
     print(f"结束分析日志: {end_time} 本次分析处理了 {lines_processed} 行日志，耗时 {duration:.2f} 秒")
 
+def read_last_lines(file_path, num_lines=5):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()[-num_lines:]
+    return '\n'.join(lines)
+
+def set_text_source(text):
+    # 把text写入OBS_OUTPUT文件,如果已有则直接覆盖
+    with open(OBS_OUTPUT, 'w', encoding='utf-8') as f:
+        f.write('\n')
+        f.write(text)
+        f.write('\n')
 
 if __name__ == "__main__":
     # 在脚本启动时执行上次运行输出文件的备份和重置
@@ -481,4 +495,7 @@ if __name__ == "__main__":
 
     while True:
         analyze_log()
+        text_to_display = read_last_lines(CSV_OUTPUT,20)
+        # 设置到obs的文本源
+        set_text_source(text_to_display)
         time.sleep(1)  # 每1秒运行一次

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OBS Text Source</title>
+    <style type="text/css">
+        #log {
+            white-space: pre;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px; /* 设置字体大小为12像素 */
+            color: #d9ff00; /* 设置字体颜色为鲜明的黄色 */
+            line-height: 0.6; /* 设置行间距为字体大小的xx倍 */
+            font-weight: bold; /* 设置文本加粗 */
+        }
+    </style>
+    <script type="text/javascript">
+        function loadLog() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("log").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open("GET", "obs.log", true);
+            xhr.send();
+        }
+
+        // 设置定时器，每秒刷新一次
+        setInterval(function() {
+            loadLog();
+        }, 1000);
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+</body>
+</html>
