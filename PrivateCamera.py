@@ -76,7 +76,7 @@ def enter_room():
     simulate_click(*JOIN_ROOM_POS)
 
     # 切换到观战视角
-    simulate_keypress('6')
+    simulate_keypress('8')
 
     simulate_mouse_move(*SCREEN_CORNER_POSE)
 
@@ -458,14 +458,12 @@ def analyze_log():
 def read_last_lines(file_path, num_lines=5):
     with open(file_path, 'r') as file:
         lines = file.readlines()[-num_lines:]
-    return '\n'.join(lines)
+    return ''.join(lines)
 
 def set_text_source(text):
     # 把text写入OBS_OUTPUT文件,如果已有则直接覆盖
     with open(OBS_OUTPUT, 'w', encoding='utf-8') as f:
-        f.write('\n')
         f.write(text)
-        f.write('\n')
 
 if __name__ == "__main__":
     # 在脚本启动时执行上次运行输出文件的备份和重置
