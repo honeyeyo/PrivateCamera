@@ -1,7 +1,7 @@
 # PrivateCamera
 PrivateCamera for ETT match recording and streaming
 
-![20241015001713](https://github.com/user-attachments/assets/e03787ee-28e7-4fc0-aee4-07487bf31532)
+![image](https://github.com/user-attachments/assets/466a09e9-e871-4a1a-a757-a2378d9250cb)
 
 
 使用说明在下面链接
