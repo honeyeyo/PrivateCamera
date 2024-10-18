@@ -76,7 +76,7 @@ def enter_room():
     simulate_click(*JOIN_ROOM_POS)
 
     # 切换到观战视角
-    simulate_keypress('8')
+    simulate_keypress('6')
 
     simulate_mouse_move(*SCREEN_CORNER_POSE)
 
@@ -124,12 +124,25 @@ def save_last_position(file_path, position):
 def parse_ball_hit_data(content):
     match = re.search(r'pos:\((.*?)\) vel:\((.*?)\) rrate:\((.*?)\)', content)
     if match:
-        pos = [float(x) for x in match.group(1).split(',')]
-        vel = [float(x) for x in match.group(2).split(',')]
-        rrate = [float(x) for x in match.group(3).split(',')]
+        pos = [float(x) for x in match.group(1).split(',') if x]
+        vel = [float(x) for x in match.group(2).split(',') if x]
+        rrate = [float(x) for x in match.group(3).split(',') if x]
         
         speed = math.sqrt(sum(v**2 for v in vel))
         rotation = math.sqrt(sum((r/360)**2 for r in rrate))
+        # 确保vel是3维的
+        while len(vel) < 3:
+            vel.append(0.0)
+        
+        # 如果vel超过3维，只保留前3个值
+        vel = vel[:3]
+
+        # 确保rrate是3维的
+        while len(rrate) < 3:
+            rrate.append(0.0)
+        
+        # 如果rrate超过3维，只保留前3个值
+        rrate = rrate[:3]
         
         x_rotation, y_rotation, z_rotation = rrate
         
