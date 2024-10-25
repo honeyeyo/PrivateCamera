@@ -40,5 +40,9 @@
     "matchScore": [
         0,
         1
+    ],
+    "currentSetStatus": [
+        0,
+        2
     ]
 }

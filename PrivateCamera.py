@@ -220,7 +220,7 @@ def parse_snapshot(content):
         
         global last_score, match_info
         
-        # 如果是新的比赛或者新的对手，重置 match_info 和 last_score
+        # 如果是新的比赛或者新的对手，重置 match_info、last_score 和 currentSetStatus
         if not match_info or match_info["MatchId"] != data["MatchId"]:
             match_info = {
                 "PlayerNames": data["PlayerNames"],
@@ -232,6 +232,28 @@ def parse_snapshot(content):
             last_score = []
             event = "Match Start"
             details = f"New match started: {match_info}"
+            
+            # 重置 currentSetStatus 和 matchScore
+            try:
+                with open(MATCH_JSON, 'r', encoding='utf-8') as f:
+                    match_data = json.load(f)
+                match_data['currentSetStatus'] = [0, 0]
+                match_data['matchScore'] = [0, 0]
+                
+                # 更新玩家信息
+                match_data['playerNames'] = data["PlayerNames"]
+                match_data['playerELOs'] = data["PlayerELOs"]
+                
+                # 如果有其他需要重置或更新的字段，也在这里处理
+                
+                with open(MATCH_JSON, 'w', encoding='utf-8') as f:
+                    json.dump(match_data, f, ensure_ascii=False, indent=4)
+            except Exception as e:
+                print(f"Error resetting match data: {e}")
+            
+            # 生成新的记分牌
+            generate_scoreboard()
+            
             return event, details
         
         if last_score != current_scores:
@@ -255,10 +277,31 @@ def parse_snapshot(content):
                     if len(current_scores) == 1:
                         details += f"First round of the match, "
                     else:
-                        details += f"Previous round score: {current_scores[-2][0]}-{current_scores[-2][1]}, New round of the match, "
+                        previous_score = current_scores[-2]
+                        details += f"Previous round score: {previous_score[0]}-{previous_score[1]}, New round of the match, "
+                        
+                        # 更新 currentSetStatus
+                        try:
+                            with open(MATCH_JSON, 'r', encoding='utf-8') as f:
+                                match_data = json.load(f)
+                            current_set_status = match_data.get('currentSetStatus', [0, 0])
+                            
+                            # 确定上一轮的获胜者
+                            winner_index = 0 if previous_score[0] > previous_score[1] else 1
+                            current_set_status[winner_index] += 1
+                            
+                            update_match_data({'currentSetStatus': current_set_status})
+                        except Exception as e:
+                            print(f"Error updating currentSetStatus: {e}")
+                    
+                    # 生成新的记分牌
+                    generate_scoreboard()
                 else:
                     event = "Score Update"
                     details = ""
+
+                # 更新 last_score
+                last_score = current_scores
                 
                 details += f"Current round score: {current_round_score[0]}-{current_round_score[1]}. "
             else:
@@ -278,10 +321,13 @@ def parse_snapshot(content):
                     match_score = match_data.get('matchScore', [0, 0])
                     match_score[winner_index] += 1
                     update_match_data({'matchScore': match_score})
+                    # 这里也要更新 currentSetStatus
+                    current_set_status = match_data.get('currentSetStatus', [0, 0])
+                    current_set_status[winner_index] += 1
+                    update_match_data({'currentSetStatus': current_set_status})
                 except Exception as e:
-                    print(f"Error updating match score: {e}")
+                    print(f"Error updating match score and currentSetStatus: {e}")
             
-            last_score = current_scores
         else:
             if data["MatchWinner"] != "0":
                 event = "Match End"
@@ -296,8 +342,12 @@ def parse_snapshot(content):
                     match_score = match_data.get('matchScore', [0, 0])
                     match_score[winner_index] += 1
                     update_match_data({'matchScore': match_score})
+                    # 这里也要更新 currentSetStatus
+                    current_set_status = match_data.get('currentSetStatus', [0, 0])
+                    current_set_status[winner_index] += 1
+                    update_match_data({'currentSetStatus': current_set_status})
                 except Exception as e:
-                    print(f"Error updating match score: {e}")
+                    print(f"Error updating match score and currentSetStatus: {e}")
             else:
                 return "Unknown", None  # 如果比分没有变化且比赛未结束，不记录
 
@@ -414,7 +464,7 @@ def analyze_log():
                                 if new_state == "room" and old_state != "room":
                                     in_room = True
                                     event = "Player Enter Room"
-                                    enter_room()  # 执行进入房间操作
+                                    enter_room()  # 执行进���房间操作
                                 elif old_state == "room" and new_state != "room":
                                     in_room = False
                                     event = "Player Exit Room"
@@ -473,6 +523,10 @@ def analyze_log():
                                         # 新的玩家组合，重置大局分
                                         match_score = [0, 0]
                                     
+                                    # 第一局的局分初始化0:0
+                                    current_set_status = [0, 0]
+
+                                    
                                     # 更新玩家数据
                                     for player in [home_player, away_player]:
                                         player_data['playerNames'].append(player['UserName'])
@@ -483,6 +537,7 @@ def analyze_log():
                                         player_data['playerLosses'].append(player['Losses'])
                                     
                                     player_data['matchScore'] = match_score
+                                    player_data['currentSetStatus'] = current_set_status
                                     
                                     # 更新 match_data
                                     update_match_data(player_data)
@@ -528,9 +583,9 @@ def analyze_log():
                             print(f"Analysis Time: {analysis_time}")
                             print(f"Delay: {delay:.3f} seconds")
                             if event == "New Round":
-                                print("=" * 50)  # 添加一个分隔线以突出显示新的Round开始
+                                print("=" * 50)  # 添加一个分隔线���突出显示新的Round开始
                             elif event == "Match End":
-                                print("#" * 50)  # ���比赛结束添加特殊的分隔线
+                                print("#" * 50)  # 比赛结束添加特殊的分隔线
                             else:
                                 print("-" * 30)
                         else:
@@ -624,4 +679,6 @@ if __name__ == "__main__":
         set_text_source(text_to_display)
         generate_scoreboard()  # 生成新的 scoreboard.html
         time.sleep(1)  # 每1秒运行一次
+
+
 
