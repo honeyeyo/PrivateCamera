@@ -1,0 +1,1579 @@
+Event,Details
+Player Enter Room,From home to room
+Camera Enter Room,From home to room
+Match Start,"New match started: {'PlayerNames': ['huole', 'VIOLENTPANDA'], 'PlayerELOs': [2315, 2782], 'MatchId': '58024725', 'BestOf': '3', 'Ranked': 'False'}"
+Ball Hit,"2.33 m/s, 0.00 rev/s, No significant spin, Forward"
+Ball Hit,"6.27 m/s, 17.39 rev/s, Right Back spin, Backward"
+Ball Hit,"9.55 m/s, 88.27 rev/s, Top Left spin, Forward"
+Ball Hit,"7.84 m/s, 42.17 rev/s, Top Left spin, Backward"
+New Round,"Round 1 started. First round of the match, Current round score: 2-0. "
+Ball Hit,"6.82 m/s, 25.70 rev/s, Right spin, Forward"
+Ball Hit,"9.37 m/s, 71.81 rev/s, Top Right spin, Backward"
+Ball Hit,"6.54 m/s, 35.00 rev/s, Back Left spin, Forward"
+Score Update,Current round score: 2-1. 
+Ball Hit,"8.68 m/s, 31.31 rev/s, Right spin, Forward"
+Ball Hit,"8.16 m/s, 40.55 rev/s, Top Right spin, Backward"
+Ball Hit,"12.77 m/s, 85.96 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 2-2. 
+Ball Hit,"5.96 m/s, 18.66 rev/s, Right spin, Backward"
+Ball Hit,"6.50 m/s, 18.78 rev/s, Back Right spin, Forward"
+Ball Hit,"8.45 m/s, 51.49 rev/s, Top Left spin, Backward"
+Ball Hit,"12.55 m/s, 87.14 rev/s, Top Left spin, Forward"
+Ball Hit,"7.88 m/s, 42.21 rev/s, Top Left spin, Backward"
+Ball Hit,"15.80 m/s, 81.55 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-2. 
+Ball Hit,"5.56 m/s, 16.32 rev/s, Right spin, Backward"
+Ball Hit,"6.06 m/s, 15.94 rev/s, Back Left spin, Forward"
+Ball Hit,"7.01 m/s, 56.41 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 4-2. 
+Ball Hit,"7.89 m/s, 28.34 rev/s, Right spin, Forward"
+Ball Hit,"7.91 m/s, 60.48 rev/s, Top Right spin, Backward"
+Ball Hit,"13.00 m/s, 69.93 rev/s, Top Left spin, Forward"
+Ball Hit,"8.01 m/s, 49.97 rev/s, Top Left spin, Backward"
+Ball Hit,"15.60 m/s, 97.70 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 5-2. 
+Ball Hit,"7.50 m/s, 22.38 rev/s, Right spin, Forward"
+Ball Hit,"10.63 m/s, 69.95 rev/s, Top spin, Backward"
+Ball Hit,"13.06 m/s, 94.79 rev/s, Top Left spin, Forward"
+Ball Hit,"13.46 m/s, 54.07 rev/s, Top spin, Backward"
+Score Update,Current round score: 6-2. 
+Ball Hit,"6.28 m/s, 13.38 rev/s, Right spin, Backward"
+Ball Hit,"5.35 m/s, 30.32 rev/s, Right Back spin, Forward"
+Ball Hit,"6.82 m/s, 22.73 rev/s, Left Top spin, Backward"
+Score Update,Current round score: 6-3. 
+Ball Hit,"9.51 m/s, 54.62 rev/s, Top Left spin, Backward"
+Ball Hit,"10.67 m/s, 91.08 rev/s, Top spin, Forward"
+Ball Hit,"9.65 m/s, 42.82 rev/s, Top spin, Backward"
+Ball Hit,"10.70 m/s, 72.24 rev/s, Top Left spin, Forward"
+Ball Hit,"7.10 m/s, 35.11 rev/s, Top Left spin, Backward"
+Ball Hit,"7.83 m/s, 76.38 rev/s, Left Top spin, Forward"
+Ball Hit,"10.18 m/s, 97.94 rev/s, Top Right spin, Backward"
+Ball Hit,"17.01 m/s, 95.72 rev/s, Left Top spin, Forward"
+Score Update,Current round score: 6-4. 
+Ball Hit,"7.89 m/s, 33.88 rev/s, Right spin, Forward"
+Ball Hit,"8.02 m/s, 59.44 rev/s, Top spin, Backward"
+Ball Hit,"11.98 m/s, 86.46 rev/s, Top Left spin, Forward"
+Ball Hit,"11.50 m/s, 82.13 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 6-5. 
+Ball Hit,"9.29 m/s, 35.49 rev/s, Top Right spin, Forward"
+Ball Hit,"6.46 m/s, 11.33 rev/s, Back spin, Backward"
+Score Update,Current round score: 7-5. 
+Ball Hit,"5.44 m/s, 28.01 rev/s, Left spin, Backward"
+Ball Hit,"11.55 m/s, 100.86 rev/s, Top Left spin, Forward"
+Ball Hit,"8.76 m/s, 52.83 rev/s, Left Top spin, Backward"
+Ball Hit,"11.94 m/s, 84.64 rev/s, Left Top spin, Forward"
+Ball Hit,"9.52 m/s, 23.52 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 7-6. 
+Ball Hit,"4.98 m/s, 21.69 rev/s, Left spin, Backward"
+Ball Hit,"1.83 m/s, 15.13 rev/s, Top spin, Forward"
+Score Update,Current round score: 7-7. 
+Ball Hit,"5.44 m/s, 30.03 rev/s, Right spin, Forward"
+Ball Hit,"9.73 m/s, 61.36 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 8-7. 
+Ball Hit,"6.37 m/s, 36.45 rev/s, Right Top spin, Forward"
+Ball Hit,"5.26 m/s, 33.34 rev/s, Right spin, Backward"
+Ball Hit,"6.21 m/s, 30.56 rev/s, Top Left spin, Forward"
+Ball Hit,"9.02 m/s, 63.68 rev/s, Top spin, Backward"
+Ball Hit,"11.21 m/s, 79.16 rev/s, Top Left spin, Forward"
+Ball Hit,"10.74 m/s, 76.22 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 9-7. 
+Ball Hit,"4.86 m/s, 13.94 rev/s, No significant spin, Backward"
+Ball Hit,"4.86 m/s, 26.82 rev/s, Right spin, Forward"
+Ball Hit,"5.24 m/s, 25.09 rev/s, Left spin, Backward"
+Ball Hit,"8.68 m/s, 59.09 rev/s, Top Left spin, Forward"
+Ball Hit,"11.52 m/s, 71.77 rev/s, Top Left spin, Backward"
+Ball Hit,"4.85 m/s, 52.67 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 9-8. 
+Ball Hit,"6.67 m/s, 21.22 rev/s, Right spin, Backward"
+Ball Hit,"10.21 m/s, 85.88 rev/s, Top Left spin, Forward"
+Ball Hit,"7.50 m/s, 40.30 rev/s, Top Left spin, Backward"
+Ball Hit,"8.51 m/s, 71.20 rev/s, Left Top spin, Forward"
+Ball Hit,"2.06 m/s, 52.04 rev/s, Right Top spin, Backward"
+Score Update,Current round score: 10-8. 
+Ball Hit,"6.65 m/s, 35.08 rev/s, Right Top spin, Forward"
+Ball Hit,"5.44 m/s, 19.13 rev/s, Right spin, Backward"
+Ball Hit,"12.91 m/s, 82.31 rev/s, Top Left spin, Forward"
+Ball Hit,"4.96 m/s, 52.36 rev/s, Back Right spin, Backward"
+New Round,"Round 2 started. Previous round score: 11-8, New round of the match, Current round score: 0-0. "
+Ball Hit,"9.65 m/s, 37.12 rev/s, Right Top spin, Forward"
+Ball Hit,"7.15 m/s, 33.70 rev/s, Top Right spin, Backward"
+Ball Hit,"12.70 m/s, 97.41 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 0-1. 
+Ball Hit,"9.00 m/s, 29.86 rev/s, Right spin, Forward"
+Ball Hit,"7.99 m/s, 40.40 rev/s, Top Right spin, Backward"
+Ball Hit,"11.50 m/s, 92.16 rev/s, Top Left spin, Forward"
+Ball Hit,"8.90 m/s, 50.53 rev/s, Top Left spin, Backward"
+Ball Hit,"12.15 m/s, 104.39 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 1-1. 
+Ball Hit,"4.87 m/s, 29.07 rev/s, Left spin, Backward"
+Ball Hit,"5.74 m/s, 16.72 rev/s, Top spin, Forward"
+Ball Hit,"6.86 m/s, 15.58 rev/s, Left spin, Backward"
+Ball Hit,"15.01 m/s, 116.83 rev/s, Top spin, Forward"
+Ball Hit,"11.69 m/s, 70.57 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 1-2. 
+Ball Hit,"7.82 m/s, 50.75 rev/s, Top spin, Backward"
+Ball Hit,"13.25 m/s, 63.23 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 1-3. 
+Ball Hit,"8.34 m/s, 39.34 rev/s, Right Top spin, Forward"
+Ball Hit,"10.24 m/s, 54.66 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 2-3. 
+Ball Hit,"8.21 m/s, 30.81 rev/s, Right spin, Forward"
+Ball Hit,"8.46 m/s, 51.72 rev/s, Top Right spin, Backward"
+Ball Hit,"12.17 m/s, 111.05 rev/s, Top Right spin, Forward"
+Ball Hit,"10.21 m/s, 63.68 rev/s, Top spin, Backward"
+Ball Hit,"12.95 m/s, 44.57 rev/s, No significant spin, Forward"
+Score Update,Current round score: 2-4. 
+Ball Hit,"5.79 m/s, 14.00 rev/s, No significant spin, Backward"
+Ball Hit,"8.72 m/s, 46.99 rev/s, Top spin, Forward"
+Ball Hit,"8.43 m/s, 42.05 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 2-5. 
+Ball Hit,"4.86 m/s, 20.48 rev/s, Back Right spin, Backward"
+Ball Hit,"7.03 m/s, 26.52 rev/s, Back spin, Backward"
+Ball Hit,"2.62 m/s, 12.30 rev/s, Left spin, Forward"
+Ball Hit,"6.85 m/s, 23.19 rev/s, Back Right spin, Backward"
+Ball Hit,"10.79 m/s, 82.95 rev/s, Top Left spin, Forward"
+Ball Hit,"7.80 m/s, 38.38 rev/s, Top Left spin, Backward"
+Ball Hit,"16.18 m/s, 108.66 rev/s, Top Left spin, Forward"
+Ball Hit,"10.42 m/s, 63.40 rev/s, Top Left spin, Backward"
+Ball Hit,"11.38 m/s, 90.87 rev/s, Top Left spin, Forward"
+Ball Hit,"8.76 m/s, 40.05 rev/s, Top Left spin, Backward"
+Ball Hit,"13.27 m/s, 86.74 rev/s, Top spin, Forward"
+Score Update,Current round score: 2-6. 
+Ball Hit,"5.16 m/s, 25.88 rev/s, Right Back spin, Forward"
+Ball Hit,"4.55 m/s, 17.65 rev/s, No significant spin, Backward"
+Ball Hit,"8.23 m/s, 34.63 rev/s, Top spin, Forward"
+Ball Hit,"7.44 m/s, 41.40 rev/s, Top spin, Backward"
+Score Update,Current round score: 2-7. 
+Ball Hit,"6.76 m/s, 23.77 rev/s, Right spin, Forward"
+Ball Hit,"5.97 m/s, 18.91 rev/s, Back spin, Backward"
+Score Update,Current round score: 2-8. 
+Ball Hit,"5.13 m/s, 27.41 rev/s, Left spin, Backward"
+Ball Hit,"5.68 m/s, 25.11 rev/s, Back spin, Forward"
+Ball Hit,"7.77 m/s, 55.68 rev/s, Top spin, Backward"
+Ball Hit,"11.32 m/s, 71.34 rev/s, Top Left spin, Forward"
+Ball Hit,"10.68 m/s, 82.76 rev/s, Top Left spin, Backward"
+Ball Hit,"13.24 m/s, 71.54 rev/s, Top spin, Forward"
+Score Update,Current round score: 2-9. 
+Ball Hit,"5.32 m/s, 31.67 rev/s, Left spin, Backward"
+Ball Hit,"4.60 m/s, 37.99 rev/s, Back Right spin, Forward"
+Ball Hit,"4.95 m/s, 19.15 rev/s, Back spin, Backward"
+Ball Hit,"5.67 m/s, 10.22 rev/s, No significant spin, Forward"
+Ball Hit,"6.71 m/s, 86.51 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 2-10. 
+Ball Hit,"12.23 m/s, 47.19 rev/s, Right spin, Forward"
+New Round,"Round 3 started. Previous round score: 2-11, New round of the match, Current round score: 0-0. "
+Ball Hit,"6.46 m/s, 13.44 rev/s, Back spin, Backward"
+Ball Hit,"10.11 m/s, 115.48 rev/s, Top Left spin, Forward"
+Ball Hit,"8.71 m/s, 52.26 rev/s, Left spin, Backward"
+Score Update,Current round score: 1-0. 
+Ball Hit,"5.64 m/s, 26.56 rev/s, Left spin, Backward"
+Ball Hit,"5.70 m/s, 34.00 rev/s, Back spin, Forward"
+Ball Hit,"6.52 m/s, 11.65 rev/s, Right spin, Backward"
+Score Update,Current round score: 1-1. 
+Ball Hit,"8.27 m/s, 28.95 rev/s, Right spin, Forward"
+Ball Hit,"8.69 m/s, 72.51 rev/s, Top spin, Backward"
+Ball Hit,"9.68 m/s, 64.92 rev/s, Top Left spin, Forward"
+Ball Hit,"10.78 m/s, 67.90 rev/s, Top spin, Backward"
+Ball Hit,"10.56 m/s, 59.38 rev/s, Top Right spin, Forward"
+Ball Hit,"9.31 m/s, 48.52 rev/s, Top Right spin, Backward"
+Ball Hit,"9.42 m/s, 55.97 rev/s, Top Left spin, Forward"
+Ball Hit,"11.33 m/s, 86.05 rev/s, Top spin, Backward"
+Ball Hit,"9.93 m/s, 55.41 rev/s, Right Top spin, Forward"
+Score Update,Current round score: 1-2. 
+Ball Hit,"9.47 m/s, 47.26 rev/s, Top Right spin, Forward"
+Ball Hit,"10.06 m/s, 59.22 rev/s, Top Right spin, Backward"
+Ball Hit,"11.00 m/s, 71.87 rev/s, Top spin, Forward"
+Ball Hit,"11.31 m/s, 80.16 rev/s, Top spin, Backward"
+Ball Hit,"10.13 m/s, 63.26 rev/s, Top Right spin, Forward"
+Ball Hit,"11.77 m/s, 65.55 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 2-2. 
+Ball Hit,"7.60 m/s, 27.02 rev/s, Back Right spin, Backward"
+Score Update,Current round score: 3-2. 
+Ball Hit,"5.55 m/s, 17.71 rev/s, Back spin, Backward"
+Ball Hit,"6.39 m/s, 45.85 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-3. 
+Ball Hit,"8.73 m/s, 32.84 rev/s, Right Top spin, Forward"
+Ball Hit,"7.91 m/s, 47.51 rev/s, Top Right spin, Backward"
+Ball Hit,"14.00 m/s, 103.67 rev/s, Top spin, Forward"
+Ball Hit,"13.26 m/s, 68.25 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 3-4. 
+Ball Hit,"5.32 m/s, 24.89 rev/s, Right Back spin, Forward"
+Ball Hit,"5.33 m/s, 18.56 rev/s, Back spin, Backward"
+Ball Hit,"9.90 m/s, 109.38 rev/s, Top Right spin, Forward"
+Ball Hit,"12.92 m/s, 87.06 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 4-4. 
+Ball Hit,"5.38 m/s, 26.39 rev/s, Left spin, Backward"
+Ball Hit,"8.64 m/s, 30.33 rev/s, Left Top spin, Forward"
+Ball Hit,"6.70 m/s, 28.53 rev/s, Left Top spin, Backward"
+Score Update,Current round score: 5-4. 
+Ball Hit,"6.04 m/s, 29.53 rev/s, Left spin, Backward"
+Ball Hit,"9.85 m/s, 86.63 rev/s, Left Top spin, Forward"
+Score Update,Current round score: 5-5. 
+Ball Hit,"4.87 m/s, 28.85 rev/s, Right Back spin, Forward"
+Ball Hit,"4.68 m/s, 25.52 rev/s, Back spin, Backward"
+Ball Hit,"6.10 m/s, 33.31 rev/s, Back spin, Forward"
+Ball Hit,"7.70 m/s, 77.65 rev/s, Top Right spin, Backward"
+Ball Hit,"13.99 m/s, 78.27 rev/s, Top Left spin, Forward"
+Ball Hit,"10.86 m/s, 62.38 rev/s, Top Left spin, Backward"
+Ball Hit,"13.06 m/s, 88.28 rev/s, Top Left spin, Forward"
+Ball Hit,"10.89 m/s, 90.74 rev/s, Top Left spin, Backward"
+Ball Hit,"12.77 m/s, 83.13 rev/s, Top Left spin, Forward"
+Ball Hit,"15.73 m/s, 96.38 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 6-5. 
+Ball Hit,"8.34 m/s, 33.10 rev/s, Right Top spin, Forward"
+Ball Hit,"9.89 m/s, 61.11 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 6-6. 
+Ball Hit,"5.12 m/s, 30.65 rev/s, Left spin, Backward"
+Ball Hit,"5.14 m/s, 16.05 rev/s, Right spin, Forward"
+Ball Hit,"7.09 m/s, 34.78 rev/s, Left Top spin, Backward"
+Ball Hit,"6.73 m/s, 29.41 rev/s, Left spin, Forward"
+Ball Hit,"7.61 m/s, 65.04 rev/s, Top Right spin, Backward"
+Ball Hit,"12.91 m/s, 95.42 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 6-7. 
+Ball Hit,"5.72 m/s, 23.39 rev/s, Left spin, Backward"
+Ball Hit,"4.87 m/s, 34.85 rev/s, Back spin, Forward"
+Ball Hit,"5.90 m/s, 11.54 rev/s, No significant spin, Backward"
+Ball Hit,"12.46 m/s, 120.29 rev/s, Top Left spin, Forward"
+Ball Hit,"9.91 m/s, 55.80 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 7-7. 
+Ball Hit,"8.67 m/s, 30.17 rev/s, Right spin, Forward"
+Ball Hit,"7.11 m/s, 38.56 rev/s, Right Top spin, Backward"
+Ball Hit,"15.78 m/s, 81.30 rev/s, Left Top spin, Forward"
+Score Update,Current round score: 7-8. 
+Ball Hit,"8.22 m/s, 41.32 rev/s, Right spin, Forward"
+Ball Hit,"6.12 m/s, 25.39 rev/s, Top Right spin, Backward"
+Ball Hit,"10.91 m/s, 96.86 rev/s, Top Right spin, Forward"
+Ball Hit,"7.28 m/s, 39.73 rev/s, No significant spin, Backward"
+Ball Hit,"6.89 m/s, 40.08 rev/s, Top Left spin, Forward"
+Ball Hit,"11.44 m/s, 33.69 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 8-8. 
+Ball Hit,"4.87 m/s, 26.32 rev/s, Left spin, Backward"
+Ball Hit,"7.47 m/s, 34.31 rev/s, Left spin, Forward"
+Score Update,Current round score: 8-9. 
+Ball Hit,"5.36 m/s, 35.04 rev/s, Left spin, Backward"
+Ball Hit,"6.35 m/s, 28.05 rev/s, Back spin, Forward"
+Ball Hit,"8.82 m/s, 75.40 rev/s, Top spin, Backward"
+Ball Hit,"13.05 m/s, 89.81 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 9-9. 
+Ball Hit,"9.44 m/s, 43.05 rev/s, Right Top spin, Forward"
+Ball Hit,"7.91 m/s, 41.51 rev/s, Top Right spin, Backward"
+Ball Hit,"12.49 m/s, 37.59 rev/s, Back Left spin, Forward"
+Score Update,Current round score: 9-10. 
+Ball Hit,"4.93 m/s, 33.60 rev/s, Back Right spin, Forward"
+Ball Hit,"4.49 m/s, 18.36 rev/s, Back spin, Backward"
+Ball Hit,"7.56 m/s, 63.72 rev/s, Top Left spin, Forward"
+Match End,"Current round score: 9-11. , Match Winner: VIOLENTPANDA"
+Match Start,"New match started: {'PlayerNames': ['huole', 'VIOLENTPANDA'], 'PlayerELOs': [2315, 2782], 'MatchId': '58024901', 'BestOf': '3', 'Ranked': 'False'}"
+New Round,"Round 1 started. First round of the match, Current round score: 0-0. "
+Ball Hit,"6.24 m/s, 23.81 rev/s, Back Right spin, Backward"
+Ball Hit,"6.41 m/s, 41.74 rev/s, Back spin, Forward"
+Score Update,Current round score: 0-1. 
+Ball Hit,"6.17 m/s, 20.06 rev/s, Back spin, Backward"
+Ball Hit,"6.36 m/s, 74.33 rev/s, Top Left spin, Forward"
+Ball Hit,"14.10 m/s, 93.87 rev/s, Top spin, Backward"
+Score Update,Current round score: 1-1. 
+Ball Hit,"5.30 m/s, 29.33 rev/s, Right Back spin, Forward"
+Ball Hit,"5.04 m/s, 17.26 rev/s, No significant spin, Backward"
+Ball Hit,"8.42 m/s, 78.38 rev/s, Top spin, Forward"
+Score Update,Current round score: 1-2. 
+Ball Hit,"9.51 m/s, 30.42 rev/s, Right spin, Forward"
+Ball Hit,"7.75 m/s, 57.41 rev/s, Top Right spin, Backward"
+Ball Hit,"10.55 m/s, 78.78 rev/s, Top Left spin, Forward"
+Ball Hit,"14.78 m/s, 113.90 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 2-2. 
+Ball Hit,"5.56 m/s, 28.71 rev/s, Left spin, Backward"
+Ball Hit,"7.46 m/s, 42.42 rev/s, Left Top spin, Forward"
+Ball Hit,"15.00 m/s, 71.24 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 3-2. 
+Ball Hit,"8.52 m/s, 45.06 rev/s, Top spin, Backward"
+Ball Hit,"12.70 m/s, 82.65 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-3. 
+Ball Hit,"6.90 m/s, 36.55 rev/s, Right Back spin, Forward"
+Ball Hit,"5.24 m/s, 27.80 rev/s, Back spin, Backward"
+Score Update,Current round score: 3-4. 
+Ball Hit,"6.70 m/s, 36.86 rev/s, Right spin, Forward"
+Ball Hit,"5.21 m/s, 21.70 rev/s, Back spin, Backward"
+Ball Hit,"9.19 m/s, 103.19 rev/s, Top Right spin, Forward"
+Ball Hit,"11.87 m/s, 21.93 rev/s, Top spin, Backward"
+Score Update,Current round score: 4-4. 
+Ball Hit,"5.82 m/s, 17.17 rev/s, Back spin, Backward"
+Ball Hit,"5.50 m/s, 31.22 rev/s, Back Right spin, Forward"
+Ball Hit,"12.78 m/s, 80.63 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 5-4. 
+Ball Hit,"6.35 m/s, 16.83 rev/s, Back spin, Backward"
+Ball Hit,"6.38 m/s, 12.03 rev/s, No significant spin, Forward"
+Ball Hit,"8.00 m/s, 68.51 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 5-5. 
+Ball Hit,"9.67 m/s, 38.47 rev/s, Right spin, Forward"
+Score Update,Current round score: 5-6. 
+Ball Hit,"7.01 m/s, 27.41 rev/s, Right spin, Forward"
+Ball Hit,"9.85 m/s, 93.48 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 5-7. 
+Ball Hit,"5.53 m/s, 25.61 rev/s, Left spin, Backward"
+Ball Hit,"9.94 m/s, 86.06 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 5-8. 
+Ball Hit,"6.50 m/s, 27.87 rev/s, Left spin, Backward"
+Ball Hit,"8.71 m/s, 76.04 rev/s, Left Top spin, Forward"
+Ball Hit,"8.22 m/s, 41.75 rev/s, Left Back spin, Backward"
+Ball Hit,"11.41 m/s, 103.58 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 5-9. 
+Ball Hit,"8.06 m/s, 41.31 rev/s, Top Right spin, Forward"
+Ball Hit,"7.10 m/s, 24.69 rev/s, Right spin, Backward"
+Score Update,Current round score: 6-9. 
+Ball Hit,"7.47 m/s, 36.88 rev/s, Top Right spin, Forward"
+Ball Hit,"9.46 m/s, 61.83 rev/s, Top spin, Backward"
+Ball Hit,"15.02 m/s, 31.17 rev/s, Right spin, Forward"
+Score Update,Current round score: 6-10. 
+Ball Hit,"6.36 m/s, 35.65 rev/s, Left spin, Backward"
+Ball Hit,"9.54 m/s, 94.59 rev/s, Top Left spin, Forward"
+New Round,"Round 2 started. Previous round score: 6-11, New round of the match, Current round score: 0-0. "
+Ball Hit,"5.18 m/s, 23.29 rev/s, Right Back spin, Forward"
+Ball Hit,"5.02 m/s, 17.07 rev/s, Back spin, Backward"
+Ball Hit,"8.59 m/s, 74.25 rev/s, Top spin, Forward"
+Ball Hit,"7.08 m/s, 34.53 rev/s, Top spin, Backward"
+Ball Hit,"14.49 m/s, 117.89 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 0-1. 
+Ball Hit,"6.27 m/s, 27.57 rev/s, Right spin, Forward"
+Ball Hit,"5.25 m/s, 25.23 rev/s, Back spin, Backward"
+Ball Hit,"11.66 m/s, 119.65 rev/s, Top spin, Forward"
+Ball Hit,"9.68 m/s, 33.70 rev/s, Left spin, Backward"
+Score Update,Current round score: 1-1. 
+Ball Hit,"5.74 m/s, 24.05 rev/s, Right spin, Backward"
+Ball Hit,"7.65 m/s, 45.34 rev/s, Top spin, Forward"
+Score Update,Current round score: 1-2. 
+Ball Hit,"6.43 m/s, 25.83 rev/s, Back spin, Backward"
+Ball Hit,"6.09 m/s, 44.73 rev/s, Back Left spin, Forward"
+Ball Hit,"7.36 m/s, 88.47 rev/s, Top spin, Backward"
+Ball Hit,"17.33 m/s, 100.29 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 1-3. 
+Ball Hit,"7.34 m/s, 26.82 rev/s, Right spin, Forward"
+Ball Hit,"6.35 m/s, 9.16 rev/s, No significant spin, Backward"
+Ball Hit,"5.60 m/s, 23.90 rev/s, Back spin, Forward"
+Ball Hit,"5.37 m/s, 24.52 rev/s, Back spin, Backward"
+Ball Hit,"12.52 m/s, 110.51 rev/s, Top Left spin, Forward"
+Ball Hit,"9.77 m/s, 67.67 rev/s, Top Left spin, Backward"
+Ball Hit,"12.96 m/s, 62.28 rev/s, Back Right spin, Forward"
+Score Update,Current round score: 1-4. 
+Ball Hit,"6.92 m/s, 23.45 rev/s, Right spin, Forward"
+Ball Hit,"6.42 m/s, 12.42 rev/s, No significant spin, Backward"
+Ball Hit,"14.44 m/s, 98.42 rev/s, Top spin, Forward"
+Score Update,Current round score: 1-5. 
+Ball Hit,"5.77 m/s, 25.92 rev/s, Left spin, Backward"
+Ball Hit,"6.26 m/s, 73.55 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 1-6. 
+Ball Hit,"7.01 m/s, 28.35 rev/s, Left spin, Backward"
+Ball Hit,"5.90 m/s, 44.75 rev/s, Back Left spin, Forward"
+Ball Hit,"4.98 m/s, 28.95 rev/s, Back spin, Backward"
+Score Update,Current round score: 2-6. 
+Ball Hit,"8.17 m/s, 27.82 rev/s, Right spin, Forward"
+Ball Hit,"11.28 m/s, 78.26 rev/s, Top spin, Backward"
+Ball Hit,"9.85 m/s, 85.58 rev/s, Top spin, Forward"
+Score Update,Current round score: 2-7. 
+Ball Hit,"8.15 m/s, 27.81 rev/s, Right spin, Forward"
+Ball Hit,"6.10 m/s, 15.80 rev/s, Back spin, Backward"
+Ball Hit,"12.68 m/s, 97.64 rev/s, Top Right spin, Forward"
+Ball Hit,"9.78 m/s, 41.87 rev/s, Top Right spin, Backward"
+Ball Hit,"13.20 m/s, 103.52 rev/s, Top spin, Forward"
+Ball Hit,"9.41 m/s, 30.81 rev/s, Top spin, Backward"
+Score Update,Current round score: 2-8. 
+Ball Hit,"6.46 m/s, 19.63 rev/s, Back Right spin, Backward"
+Ball Hit,"7.61 m/s, 42.36 rev/s, Top Right spin, Forward"
+Ball Hit,"9.51 m/s, 40.75 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 3-8. 
+Ball Hit,"6.39 m/s, 18.22 rev/s, Back spin, Backward"
+Ball Hit,"6.21 m/s, 18.88 rev/s, Back spin, Forward"
+Ball Hit,"9.18 m/s, 81.62 rev/s, Top spin, Backward"
+Score Update,Current round score: 4-8. 
+Ball Hit,"6.60 m/s, 20.68 rev/s, Right spin, Forward"
+Ball Hit,"6.44 m/s, 21.77 rev/s, Back spin, Backward"
+Ball Hit,"13.88 m/s, 80.87 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 4-9. 
+Ball Hit,"8.12 m/s, 31.64 rev/s, Top Right spin, Forward"
+Ball Hit,"9.68 m/s, 65.66 rev/s, Top Left spin, Backward"
+Ball Hit,"12.78 m/s, 108.13 rev/s, Top Right spin, Forward"
+Ball Hit,"13.64 m/s, 87.74 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 5-9. 
+Ball Hit,"6.88 m/s, 24.78 rev/s, Right spin, Backward"
+Ball Hit,"8.81 m/s, 33.87 rev/s, Top Right spin, Forward"
+Ball Hit,"10.97 m/s, 67.97 rev/s, Top Left spin, Backward"
+Ball Hit,"13.07 m/s, 106.85 rev/s, Top Left spin, Forward"
+Ball Hit,"12.58 m/s, 75.23 rev/s, Top spin, Backward"
+Score Update,Current round score: 6-9. 
+Ball Hit,"5.80 m/s, 32.21 rev/s, Left Back spin, Backward"
+Ball Hit,"6.95 m/s, 38.73 rev/s, Left Top spin, Forward"
+Ball Hit,"10.21 m/s, 68.46 rev/s, Top spin, Backward"
+Ball Hit,"16.30 m/s, 51.96 rev/s, Right spin, Forward"
+Score Update,Current round score: 6-10. 
+Ball Hit,"6.84 m/s, 31.75 rev/s, Right Back spin, Forward"
+Ball Hit,"9.75 m/s, 75.48 rev/s, Top spin, Backward"
+Ball Hit,"14.23 m/s, 79.91 rev/s, Top spin, Forward"
+Ball Hit,"13.82 m/s, 91.80 rev/s, Top Right spin, Backward"
+Ball Hit,"14.98 m/s, 27.13 rev/s, Left Back spin, Forward"
+Match End,"Current round score: 6-11. , Match Winner: VIOLENTPANDA"
+Match Start,"New match started: {'PlayerNames': ['huole', 'VIOLENTPANDA'], 'PlayerELOs': [2315, 2782], 'MatchId': '58024997', 'BestOf': '3', 'Ranked': 'False'}"
+New Round,"Round 1 started. First round of the match, Current round score: 0-0. "
+Ball Hit,"7.00 m/s, 40.52 rev/s, Right spin, Forward"
+Ball Hit,"7.87 m/s, 59.61 rev/s, Top spin, Backward"
+Ball Hit,"11.64 m/s, 102.42 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 1-0. 
+Ball Hit,"8.64 m/s, 43.16 rev/s, Right Top spin, Forward"
+Ball Hit,"8.84 m/s, 56.61 rev/s, Top Right spin, Backward"
+Ball Hit,"11.13 m/s, 92.63 rev/s, Top Left spin, Forward"
+Ball Hit,"9.07 m/s, 41.56 rev/s, Top spin, Backward"
+Ball Hit,"12.20 m/s, 97.44 rev/s, Top Left spin, Forward"
+Ball Hit,"7.46 m/s, 41.49 rev/s, Left spin, Backward"
+Ball Hit,"18.57 m/s, 107.79 rev/s, Top Left spin, Forward"
+Ball Hit,"9.65 m/s, 82.35 rev/s, Right Back spin, Backward"
+Score Update,Current round score: 2-0. 
+Ball Hit,"5.77 m/s, 24.28 rev/s, Left spin, Backward"
+Ball Hit,"5.53 m/s, 12.80 rev/s, No significant spin, Forward"
+Ball Hit,"8.00 m/s, 69.31 rev/s, Top Left spin, Backward"
+Ball Hit,"4.04 m/s, 50.73 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 2-1. 
+Ball Hit,"7.70 m/s, 36.02 rev/s, Left spin, Backward"
+Ball Hit,"5.83 m/s, 49.78 rev/s, Back spin, Forward"
+Ball Hit,"12.28 m/s, 89.65 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 2-2. 
+Ball Hit,"10.38 m/s, 34.12 rev/s, Right Top spin, Forward"
+Ball Hit,"7.61 m/s, 47.24 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 2-3. 
+Ball Hit,"5.24 m/s, 27.88 rev/s, Right Back spin, Forward"
+Ball Hit,"4.67 m/s, 24.88 rev/s, Back spin, Backward"
+Ball Hit,"13.24 m/s, 90.94 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 2-4. 
+Ball Hit,"5.77 m/s, 21.42 rev/s, Right Back spin, Backward"
+Ball Hit,"4.54 m/s, 27.71 rev/s, Right Back spin, Forward"
+Ball Hit,"4.40 m/s, 22.15 rev/s, No significant spin, Backward"
+Score Update,Current round score: 3-4. 
+Ball Hit,"5.40 m/s, 31.97 rev/s, Left spin, Backward"
+Ball Hit,"5.59 m/s, 47.95 rev/s, Back Left spin, Forward"
+Score Update,Current round score: 3-5. 
+Ball Hit,"5.69 m/s, 31.33 rev/s, Right spin, Forward"
+Ball Hit,"5.53 m/s, 25.17 rev/s, Back spin, Backward"
+Score Update,Current round score: 3-6. 
+Ball Hit,"5.97 m/s, 30.06 rev/s, Right spin, Forward"
+Ball Hit,"5.20 m/s, 24.98 rev/s, Back spin, Backward"
+Score Update,Current round score: 3-7. 
+Ball Hit,"5.80 m/s, 29.13 rev/s, Left spin, Backward"
+Ball Hit,"7.76 m/s, 18.29 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-8. 
+Ball Hit,"6.33 m/s, 37.38 rev/s, Left spin, Backward"
+Ball Hit,"6.83 m/s, 30.92 rev/s, Back spin, Forward"
+Ball Hit,"9.23 m/s, 76.85 rev/s, Top Right spin, Backward"
+Ball Hit,"13.00 m/s, 75.42 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-9. 
+Ball Hit,"7.20 m/s, 36.05 rev/s, Right Top spin, Forward"
+Ball Hit,"10.90 m/s, 82.76 rev/s, Top Left spin, Backward"
+Ball Hit,"16.80 m/s, 134.97 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 3-10. 
+Ball Hit,"8.05 m/s, 31.11 rev/s, Right spin, Forward"
+Ball Hit,"8.20 m/s, 76.97 rev/s, Top spin, Backward"
+New Round,"Round 2 started. Previous round score: 3-11, New round of the match, Current round score: 0-0. "
+Ball Hit,"6.02 m/s, 17.95 rev/s, Right Back spin, Backward"
+Ball Hit,"5.44 m/s, 23.21 rev/s, Back Left spin, Forward"
+Score Update,Current round score: 0-1. 
+Ball Hit,"6.94 m/s, 20.02 rev/s, Back spin, Backward"
+Ball Hit,"4.95 m/s, 31.89 rev/s, Back spin, Forward"
+Ball Hit,"10.74 m/s, 90.90 rev/s, Top spin, Backward"
+Score Update,Current round score: 0-2. 
+Ball Hit,"9.80 m/s, 53.79 rev/s, Right Top spin, Forward"
+Ball Hit,"9.81 m/s, 65.73 rev/s, Top spin, Backward"
+Score Update,Current round score: 1-2. 
+Ball Hit,"7.35 m/s, 34.18 rev/s, Right Top spin, Forward"
+Ball Hit,"6.55 m/s, 29.94 rev/s, Back spin, Backward"
+Ball Hit,"12.88 m/s, 97.72 rev/s, Top spin, Forward"
+Ball Hit,"10.01 m/s, 54.18 rev/s, Right Top spin, Backward"
+Score Update,Current round score: 1-3. 
+Ball Hit,"5.71 m/s, 22.46 rev/s, Left spin, Backward"
+Ball Hit,"6.39 m/s, 36.34 rev/s, Back Left spin, Forward"
+Ball Hit,"5.51 m/s, 27.02 rev/s, Back Right spin, Backward"
+Ball Hit,"13.72 m/s, 104.90 rev/s, Top Left spin, Forward"
+Ball Hit,"10.03 m/s, 43.28 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 1-4. 
+Ball Hit,"5.56 m/s, 23.66 rev/s, Left spin, Backward"
+Ball Hit,"5.01 m/s, 17.26 rev/s, Back spin, Forward"
+Ball Hit,"5.04 m/s, 20.86 rev/s, Back spin, Backward"
+Ball Hit,"5.54 m/s, 30.68 rev/s, Left spin, Forward"
+Score Update,Current round score: 1-5. 
+Ball Hit,"6.97 m/s, 37.13 rev/s, Right Top spin, Forward"
+Ball Hit,"5.67 m/s, 26.04 rev/s, Right spin, Backward"
+Ball Hit,"11.75 m/s, 102.66 rev/s, Top spin, Forward"
+Score Update,Current round score: 1-6. 
+Ball Hit,"5.19 m/s, 30.35 rev/s, Right Back spin, Forward"
+Ball Hit,"5.79 m/s, 25.78 rev/s, Back spin, Backward"
+Ball Hit,"10.11 m/s, 69.56 rev/s, Top Left spin, Forward"
+Ball Hit,"6.40 m/s, 40.62 rev/s, Back Right spin, Backward"
+Ball Hit,"12.26 m/s, 76.16 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 1-7. 
+Ball Hit,"5.96 m/s, 35.32 rev/s, Left spin, Backward"
+Ball Hit,"5.91 m/s, 22.66 rev/s, Back spin, Forward"
+Ball Hit,"8.79 m/s, 75.32 rev/s, Top spin, Backward"
+Ball Hit,"9.56 m/s, 48.34 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 1-8. 
+Ball Hit,"8.20 m/s, 60.48 rev/s, Top Left spin, Backward"
+Ball Hit,"9.55 m/s, 74.72 rev/s, Top Left spin, Forward"
+Ball Hit,"17.36 m/s, 76.35 rev/s, Top Left spin, Backward"
+Ball Hit,"10.96 m/s, 76.24 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 1-9. 
+Ball Hit,"5.18 m/s, 26.08 rev/s, Right Back spin, Forward"
+Ball Hit,"4.64 m/s, 19.61 rev/s, Back spin, Backward"
+Ball Hit,"4.23 m/s, 20.75 rev/s, Right Back spin, Forward"
+Ball Hit,"4.29 m/s, 20.08 rev/s, Top spin, Backward"
+Ball Hit,"5.01 m/s, 31.65 rev/s, Back Left spin, Forward"
+Score Update,Current round score: 2-9. 
+Ball Hit,"7.46 m/s, 32.91 rev/s, Right spin, Forward"
+Ball Hit,"5.94 m/s, 24.51 rev/s, Right spin, Backward"
+Ball Hit,"14.56 m/s, 120.47 rev/s, Top spin, Forward"
+Ball Hit,"10.95 m/s, 58.93 rev/s, Top spin, Backward"
+Ball Hit,"14.12 m/s, 110.11 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-9. 
+Ball Hit,"5.37 m/s, 14.73 rev/s, Left spin, Backward"
+Ball Hit,"5.21 m/s, 22.37 rev/s, Back spin, Forward"
+Ball Hit,"10.86 m/s, 77.41 rev/s, Top Left spin, Backward"
+Ball Hit,"8.80 m/s, 64.72 rev/s, Left Top spin, Forward"
+Ball Hit,"7.61 m/s, 46.62 rev/s, Left spin, Backward"
+Ball Hit,"14.78 m/s, 108.35 rev/s, Top spin, Forward"
+Ball Hit,"10.66 m/s, 80.49 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 3-10. 
+Ball Hit,"6.50 m/s, 27.31 rev/s, Left spin, Backward"
+Match End,"Current round score: 3-11. , Match Winner: VIOLENTPANDA"
+Match Start,"New match started: {'PlayerNames': ['huole', 'VIOLENTPANDA'], 'PlayerELOs': [2315, 2782], 'MatchId': '58025068', 'BestOf': '3', 'Ranked': 'False'}"
+New Round,"Round 1 started. First round of the match, Current round score: 0-0. "
+Ball Hit,"6.42 m/s, 13.54 rev/s, Back spin, Backward"
+Ball Hit,"11.47 m/s, 101.80 rev/s, Top Left spin, Forward"
+Ball Hit,"10.69 m/s, 49.38 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 1-0. 
+Ball Hit,"4.97 m/s, 16.28 rev/s, Back spin, Backward"
+Ball Hit,"7.75 m/s, 36.93 rev/s, Left Top spin, Forward"
+Ball Hit,"7.52 m/s, 31.26 rev/s, Top spin, Backward"
+Ball Hit,"10.52 m/s, 38.85 rev/s, Top Left spin, Forward"
+Ball Hit,"14.46 m/s, 81.17 rev/s, Top Left spin, Backward"
+Ball Hit,"10.75 m/s, 46.41 rev/s, Top Left spin, Forward"
+Ball Hit,"13.62 m/s, 77.70 rev/s, Top Left spin, Backward"
+Ball Hit,"9.56 m/s, 51.87 rev/s, Top Right spin, Forward"
+Ball Hit,"11.70 m/s, 95.83 rev/s, Top Left spin, Backward"
+Ball Hit,"9.68 m/s, 36.87 rev/s, Left Top spin, Forward"
+Score Update,Current round score: 1-1. 
+Ball Hit,"4.45 m/s, 19.77 rev/s, Back spin, Forward"
+Ball Hit,"4.13 m/s, 9.69 rev/s, No significant spin, Backward"
+Ball Hit,"5.57 m/s, 49.98 rev/s, Top spin, Forward"
+Ball Hit,"8.18 m/s, 73.17 rev/s, Top spin, Backward"
+Score Update,Current round score: 2-1. 
+Ball Hit,"5.50 m/s, 19.52 rev/s, Back spin, Forward"
+Ball Hit,"4.74 m/s, 17.25 rev/s, Back spin, Backward"
+Ball Hit,"4.74 m/s, 14.53 rev/s, Back spin, Forward"
+Ball Hit,"4.98 m/s, 15.85 rev/s, Back spin, Backward"
+Ball Hit,"13.83 m/s, 113.95 rev/s, Top Left spin, Forward"
+Ball Hit,"11.90 m/s, 72.23 rev/s, Top Left spin, Backward"
+Ball Hit,"10.82 m/s, 52.39 rev/s, Top spin, Forward"
+Ball Hit,"13.28 m/s, 84.80 rev/s, Top Left spin, Backward"
+Ball Hit,"9.01 m/s, 71.55 rev/s, Left Top spin, Forward"
+Ball Hit,"8.01 m/s, 72.66 rev/s, Back Right spin, Backward"
+Score Update,Current round score: 3-1. 
+Ball Hit,"5.94 m/s, 18.01 rev/s, Back spin, Backward"
+Ball Hit,"4.76 m/s, 18.94 rev/s, Back spin, Forward"
+Ball Hit,"5.93 m/s, 26.36 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 3-2. 
+Ball Hit,"6.54 m/s, 20.91 rev/s, Right Back spin, Backward"
+Ball Hit,"4.11 m/s, 31.17 rev/s, Back Right spin, Forward"
+Ball Hit,"4.72 m/s, 22.77 rev/s, Left spin, Backward"
+Ball Hit,"4.19 m/s, 12.60 rev/s, No significant spin, Forward"
+Score Update,Current round score: 3-3. 
+Ball Hit,"4.87 m/s, 25.42 rev/s, Right spin, Forward"
+Ball Hit,"5.46 m/s, 17.54 rev/s, No significant spin, Backward"
+Score Update,Current round score: 4-3. 
+Ball Hit,"4.74 m/s, 29.87 rev/s, Right Back spin, Forward"
+Ball Hit,"4.18 m/s, 28.18 rev/s, Back spin, Backward"
+Ball Hit,"4.20 m/s, 27.73 rev/s, Left spin, Forward"
+Score Update,Current round score: 4-4. 
+Ball Hit,"5.36 m/s, 25.84 rev/s, Left spin, Backward"
+Ball Hit,"4.93 m/s, 27.59 rev/s, Back Left spin, Forward"
+Ball Hit,"8.38 m/s, 51.10 rev/s, Left Top spin, Backward"
+Score Update,Current round score: 5-4. 
+Ball Hit,"9.66 m/s, 70.03 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 6-4. 
+Ball Hit,"5.19 m/s, 26.84 rev/s, Back Right spin, Forward"
+Ball Hit,"4.47 m/s, 28.93 rev/s, Back spin, Backward"
+Ball Hit,"4.06 m/s, 14.82 rev/s, Back spin, Forward"
+Score Update,Current round score: 6-5. 
+Ball Hit,"6.08 m/s, 36.15 rev/s, Right Back spin, Forward"
+Ball Hit,"5.75 m/s, 33.21 rev/s, Back Left spin, Backward"
+Ball Hit,"11.26 m/s, 38.25 rev/s, Top Left spin, Forward"
+Ball Hit,"8.99 m/s, 39.00 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 6-6. 
+Ball Hit,"5.35 m/s, 21.67 rev/s, Left spin, Backward"
+Ball Hit,"4.98 m/s, 31.62 rev/s, Back spin, Forward"
+Score Update,Current round score: 6-7. 
+Ball Hit,"6.40 m/s, 9.91 rev/s, No significant spin, Forward"
+Ball Hit,"7.24 m/s, 33.09 rev/s, Left spin, Backward"
+Ball Hit,"7.39 m/s, 45.23 rev/s, Back Left spin, Forward"
+Score Update,Current round score: 6-8. 
+Ball Hit,"4.29 m/s, 29.84 rev/s, Back spin, Backward"
+Ball Hit,"7.67 m/s, 36.11 rev/s, Right Back spin, Forward"
+Ball Hit,"4.85 m/s, 24.52 rev/s, Back spin, Backward"
+Ball Hit,"4.39 m/s, 15.61 rev/s, No significant spin, Forward"
+Ball Hit,"6.33 m/s, 45.01 rev/s, Top Right spin, Backward"
+Ball Hit,"10.23 m/s, 81.92 rev/s, Top Right spin, Forward"
+Ball Hit,"13.01 m/s, 65.98 rev/s, Top Right spin, Backward"
+Ball Hit,"8.90 m/s, 40.96 rev/s, Top Right spin, Forward"
+Ball Hit,"11.34 m/s, 65.69 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 7-8. 
+Ball Hit,"4.92 m/s, 25.94 rev/s, Right Back spin, Forward"
+Ball Hit,"4.59 m/s, 17.65 rev/s, No significant spin, Backward"
+Ball Hit,"10.99 m/s, 60.05 rev/s, Top Right spin, Forward"
+Ball Hit,"7.71 m/s, 46.55 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 7-9. 
+Ball Hit,"6.56 m/s, 39.96 rev/s, Left spin, Backward"
+Ball Hit,"6.77 m/s, 36.51 rev/s, Back spin, Forward"
+Score Update,Current round score: 7-10. 
+Ball Hit,"6.63 m/s, 36.51 rev/s, Left spin, Backward"
+Ball Hit,"5.82 m/s, 35.69 rev/s, Back spin, Forward"
+Ball Hit,"10.60 m/s, 104.34 rev/s, Top spin, Backward"
+Score Update,Current round score: 8-10. 
+Ball Hit,"5.73 m/s, 27.64 rev/s, Right spin, Forward"
+Ball Hit,"4.63 m/s, 18.92 rev/s, Back spin, Backward"
+Ball Hit,"4.54 m/s, 13.17 rev/s, No significant spin, Forward"
+Ball Hit,"5.30 m/s, 10.18 rev/s, No significant spin, Backward"
+Ball Hit,"9.03 m/s, 76.09 rev/s, Top spin, Forward"
+Ball Hit,"12.68 m/s, 69.83 rev/s, Top spin, Backward"
+Ball Hit,"9.93 m/s, 71.79 rev/s, Top Right spin, Forward"
+Ball Hit,"15.10 m/s, 95.22 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 9-10. 
+Ball Hit,"5.66 m/s, 30.53 rev/s, Right spin, Forward"
+Ball Hit,"4.40 m/s, 26.40 rev/s, Back spin, Backward"
+Ball Hit,"10.10 m/s, 96.94 rev/s, Top Left spin, Forward"
+Ball Hit,"9.99 m/s, 45.26 rev/s, Top spin, Backward"
+Score Update,Current round score: 10-10. 
+Ball Hit,"5.55 m/s, 13.18 rev/s, Right spin, Backward"
+Ball Hit,"4.62 m/s, 11.98 rev/s, No significant spin, Forward"
+Ball Hit,"7.21 m/s, 63.07 rev/s, Top Right spin, Backward"
+Ball Hit,"10.66 m/s, 79.05 rev/s, Top Right spin, Forward"
+Ball Hit,"8.10 m/s, 54.71 rev/s, Right spin, Backward"
+Ball Hit,"14.37 m/s, 75.22 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 10-11. 
+Ball Hit,"5.92 m/s, 33.33 rev/s, Right spin, Forward"
+Ball Hit,"4.40 m/s, 31.39 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 11-11. 
+Ball Hit,"6.82 m/s, 25.39 rev/s, Left Back spin, Backward"
+Ball Hit,"6.53 m/s, 33.91 rev/s, Back Left spin, Forward"
+Ball Hit,"4.66 m/s, 34.99 rev/s, Back spin, Backward"
+Ball Hit,"5.02 m/s, 25.13 rev/s, Right spin, Forward"
+Ball Hit,"6.11 m/s, 13.44 rev/s, No significant spin, Backward"
+Ball Hit,"5.63 m/s, 26.45 rev/s, Back spin, Forward"
+Ball Hit,"10.70 m/s, 123.32 rev/s, Top spin, Backward"
+Ball Hit,"6.27 m/s, 22.36 rev/s, Left spin, Forward"
+Ball Hit,"3.90 m/s, 27.09 rev/s, Back spin, Backward"
+Score Update,Current round score: 12-11. 
+Ball Hit,"5.33 m/s, 23.32 rev/s, Right spin, Forward"
+Ball Hit,"5.07 m/s, 22.04 rev/s, Back spin, Backward"
+Ball Hit,"4.75 m/s, 28.08 rev/s, Back spin, Forward"
+Ball Hit,"5.10 m/s, 29.53 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 12-12. 
+Ball Hit,"6.27 m/s, 22.12 rev/s, Back spin, Backward"
+Ball Hit,"5.03 m/s, 16.39 rev/s, Back spin, Forward"
+Score Update,Current round score: 12-13. 
+Ball Hit,"5.32 m/s, 31.01 rev/s, Back Right spin, Forward"
+Ball Hit,"4.82 m/s, 22.91 rev/s, Back spin, Backward"
+New Round,"Round 2 started. Previous round score: 12-14, New round of the match, Current round score: 0-0. "
+Ball Hit,"7.52 m/s, 36.14 rev/s, Right spin, Forward"
+Ball Hit,"9.34 m/s, 62.66 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 0-1. 
+Ball Hit,"9.07 m/s, 35.20 rev/s, Right Top spin, Forward"
+Ball Hit,"10.54 m/s, 77.53 rev/s, Top spin, Backward"
+Ball Hit,"14.25 m/s, 76.59 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 0-2. 
+Ball Hit,"6.67 m/s, 14.62 rev/s, Back spin, Backward"
+Ball Hit,"6.63 m/s, 23.08 rev/s, Back spin, Forward"
+Ball Hit,"5.20 m/s, 29.82 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 0-3. 
+Ball Hit,"6.82 m/s, 61.85 rev/s, Top Left spin, Backward"
+Ball Hit,"11.41 m/s, 82.16 rev/s, Top Left spin, Forward"
+Ball Hit,"9.25 m/s, 42.93 rev/s, Top Left spin, Backward"
+Ball Hit,"10.73 m/s, 67.32 rev/s, Top Left spin, Forward"
+Ball Hit,"13.11 m/s, 98.04 rev/s, Top Left spin, Backward"
+Ball Hit,"14.12 m/s, 68.83 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 0-4. 
+Ball Hit,"4.61 m/s, 27.14 rev/s, Back Right spin, Forward"
+Ball Hit,"4.71 m/s, 18.17 rev/s, Back spin, Backward"
+Score Update,Current round score: 0-5. 
+Ball Hit,"6.75 m/s, 35.97 rev/s, Right spin, Forward"
+Ball Hit,"5.27 m/s, 30.15 rev/s, Back spin, Backward"
+Ball Hit,"11.57 m/s, 102.39 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 0-6. 
+Ball Hit,"4.84 m/s, 52.00 rev/s, Right spin, Forward"
+Ball Hit,"5.30 m/s, 21.94 rev/s, Left spin, Backward"
+Ball Hit,"6.75 m/s, 23.69 rev/s, Right spin, Forward"
+Ball Hit,"10.94 m/s, 64.95 rev/s, Top Left spin, Backward"
+Ball Hit,"7.11 m/s, 26.03 rev/s, Top Left spin, Forward"
+Ball Hit,"11.17 m/s, 82.07 rev/s, Top spin, Backward"
+Ball Hit,"11.07 m/s, 93.69 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 0-7. 
+Ball Hit,"5.51 m/s, 17.17 rev/s, Left spin, Backward"
+Score Update,Current round score: 0-8. 
+Ball Hit,"9.36 m/s, 40.19 rev/s, Right Top spin, Forward"
+Ball Hit,"5.98 m/s, 22.53 rev/s, Back Right spin, Backward"
+Ball Hit,"16.39 m/s, 93.05 rev/s, Top spin, Forward"
+Ball Hit,"8.56 m/s, 17.56 rev/s, Left spin, Backward"
+Ball Hit,"16.12 m/s, 113.14 rev/s, Top Left spin, Forward"
+Ball Hit,"11.42 m/s, 62.80 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 1-8. 
+Ball Hit,"5.75 m/s, 28.09 rev/s, Right spin, Forward"
+Ball Hit,"4.81 m/s, 23.75 rev/s, Back spin, Backward"
+Ball Hit,"8.46 m/s, 108.01 rev/s, Top Right spin, Forward"
+Ball Hit,"8.81 m/s, 27.34 rev/s, Top spin, Backward"
+Ball Hit,"13.50 m/s, 97.13 rev/s, Top spin, Forward"
+Ball Hit,"9.22 m/s, 30.05 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 2-8. 
+Ball Hit,"7.58 m/s, 30.47 rev/s, Left Back spin, Backward"
+Ball Hit,"6.74 m/s, 34.65 rev/s, Back Left spin, Forward"
+Score Update,Current round score: 2-9. 
+Ball Hit,"7.20 m/s, 28.02 rev/s, Left Back spin, Backward"
+Ball Hit,"13.20 m/s, 83.82 rev/s, Top Left spin, Forward"
+Ball Hit,"6.65 m/s, 35.81 rev/s, Left spin, Backward"
+Ball Hit,"17.03 m/s, 102.46 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-9. 
+Ball Hit,"5.95 m/s, 27.43 rev/s, Right spin, Forward"
+Ball Hit,"4.82 m/s, 22.55 rev/s, Back spin, Backward"
+Ball Hit,"11.63 m/s, 55.55 rev/s, Top spin, Forward"
+Ball Hit,"7.96 m/s, 39.63 rev/s, Top spin, Backward"
+Ball Hit,"13.04 m/s, 125.00 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-10. 
+Ball Hit,"6.01 m/s, 23.95 rev/s, Right spin, Forward"
+Ball Hit,"4.42 m/s, 28.94 rev/s, Back spin, Backward"
+Ball Hit,"16.87 m/s, 96.85 rev/s, Top Left spin, Forward"
+Ball Hit,"9.92 m/s, 80.38 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 4-10. 
+Ball Hit,"6.66 m/s, 2.14 rev/s, No significant spin, Backward"
+Ball Hit,"9.61 m/s, 89.85 rev/s, Top Left spin, Forward"
+Ball Hit,"8.43 m/s, 52.26 rev/s, Top spin, Backward"
+Score Update,Current round score: 5-10. 
+Ball Hit,"7.24 m/s, 16.82 rev/s, Right spin, Backward"
+Ball Hit,"10.39 m/s, 75.44 rev/s, Top Left spin, Forward"
+Ball Hit,"7.92 m/s, 6.17 rev/s, No significant spin, Backward"
+Score Update,Current round score: 6-10. 
+Ball Hit,"6.34 m/s, 27.41 rev/s, Right spin, Forward"
+Ball Hit,"6.23 m/s, 29.92 rev/s, Back Right spin, Backward"
+Ball Hit,"5.82 m/s, 26.77 rev/s, Back Left spin, Forward"
+Ball Hit,"6.18 m/s, 29.51 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 7-10. 
+Ball Hit,"6.98 m/s, 36.28 rev/s, Top Right spin, Forward"
+Match End,"Current round score: 7-11. , Match Winner: VIOLENTPANDA"
+Player Exit Room,From room to home
+Player Enter Room,From home to room
+Camera Exit Room,From room to home
+Camera Enter Room,From home to room
+Match Start,"New match started: {'PlayerNames': ['YOTO', 'VIOLENTPANDA'], 'PlayerELOs': [2406.3, 2782], 'MatchId': '58025187', 'BestOf': '3', 'Ranked': 'True'}"
+Ball Hit,"3.87 m/s, 16.13 rev/s, Top spin, Forward"
+New Round,"Round 1 started. First round of the match, Current round score: 0-1. "
+Ball Hit,"6.77 m/s, 42.63 rev/s, Left spin, Forward"
+Ball Hit,"10.30 m/s, 22.00 rev/s, No significant spin, Forward"
+Score Update,Current round score: 0-2. 
+Ball Hit,"3.85 m/s, 18.57 rev/s, Right spin, Forward"
+Score Update,Current round score: 0-3. 
+Ball Hit,"3.12 m/s, 15.45 rev/s, No significant spin, Forward"
+Ball Hit,"5.24 m/s, 15.67 rev/s, No significant spin, Backward"
+Score Update,Current round score: 1-3. 
+Ball Hit,"7.58 m/s, 21.95 rev/s, Back Right spin, Backward"
+Ball Hit,"5.60 m/s, 14.95 rev/s, No significant spin, Forward"
+Ball Hit,"6.93 m/s, 17.11 rev/s, Right spin, Backward"
+Score Update,Current round score: 1-4. 
+Ball Hit,"7.10 m/s, 16.52 rev/s, Back spin, Backward"
+Ball Hit,"5.23 m/s, 8.05 rev/s, No significant spin, Forward"
+Ball Hit,"10.56 m/s, 90.82 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 1-5. 
+Ball Hit,"3.28 m/s, 25.21 rev/s, Back spin, Forward"
+Ball Hit,"1.22 m/s, 13.77 rev/s, Back spin, Forward"
+Ball Hit,"2.08 m/s, 11.87 rev/s, No significant spin, Backward"
+Score Update,Current round score: 2-5. 
+Ball Hit,"1.38 m/s, 10.26 rev/s, No significant spin, Backward"
+Ball Hit,"9.41 m/s, 11.04 rev/s, No significant spin, Forward"
+Ball Hit,"7.55 m/s, 11.52 rev/s, No significant spin, Backward"
+Score Update,Current round score: 2-6. 
+Ball Hit,"6.69 m/s, 34.40 rev/s, Left Back spin, Backward"
+Ball Hit,"4.57 m/s, 33.90 rev/s, Left spin, Forward"
+Score Update,Current round score: 2-7. 
+Ball Hit,"9.03 m/s, 49.34 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 2-8. 
+Ball Hit,"3.98 m/s, 13.11 rev/s, No significant spin, Forward"
+Ball Hit,"6.48 m/s, 31.40 rev/s, Top Right spin, Backward"
+Ball Hit,"6.62 m/s, 15.12 rev/s, Top spin, Forward"
+Ball Hit,"13.41 m/s, 92.24 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 2-9. 
+Ball Hit,"3.05 m/s, 22.57 rev/s, Right spin, Forward"
+Ball Hit,"2.32 m/s, 15.03 rev/s, No significant spin, Backward"
+Score Update,Current round score: 3-9. 
+Ball Hit,"7.10 m/s, 20.76 rev/s, Back spin, Backward"
+Ball Hit,"9.43 m/s, 74.87 rev/s, Top Right spin, Forward"
+Ball Hit,"8.64 m/s, 26.80 rev/s, Top Right spin, Backward"
+Ball Hit,"5.75 m/s, 26.26 rev/s, Top spin, Forward"
+Ball Hit,"13.90 m/s, 85.86 rev/s, Top spin, Backward"
+Score Update,Current round score: 3-10. 
+Ball Hit,"10.78 m/s, 52.58 rev/s, Top Left spin, Backward"
+Ball Hit,"8.11 m/s, 38.06 rev/s, Top spin, Forward"
+Ball Hit,"8.46 m/s, 64.40 rev/s, Top Left spin, Backward"
+Ball Hit,"13.10 m/s, 69.24 rev/s, Top Left spin, Forward"
+New Round,"Round 2 started. Previous round score: 3-11, New round of the match, Current round score: 0-0. "
+Ball Hit,"2.71 m/s, 29.35 rev/s, Back spin, Forward"
+Score Update,Current round score: 0-1. 
+Ball Hit,"6.57 m/s, 16.32 rev/s, Top spin, Forward"
+Ball Hit,"6.45 m/s, 7.99 rev/s, No significant spin, Backward"
+Ball Hit,"7.22 m/s, 54.94 rev/s, Top Left spin, Forward"
+Ball Hit,"15.62 m/s, 87.31 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 0-2. 
+Ball Hit,"6.96 m/s, 41.51 rev/s, Left spin, Backward"
+Ball Hit,"6.42 m/s, 21.99 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 0-3. 
+Ball Hit,"7.53 m/s, 39.17 rev/s, Left spin, Backward"
+Ball Hit,"7.50 m/s, 46.99 rev/s, Top Left spin, Forward"
+Ball Hit,"9.64 m/s, 43.26 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 1-3. 
+Ball Hit,"3.96 m/s, 19.43 rev/s, Right Back spin, Forward"
+Score Update,Current round score: 1-4. 
+Ball Hit,"4.18 m/s, 18.97 rev/s, Right spin, Forward"
+Ball Hit,"6.19 m/s, 22.38 rev/s, Top spin, Backward"
+Ball Hit,"5.62 m/s, 27.10 rev/s, Top Right spin, Forward"
+Ball Hit,"8.37 m/s, 49.59 rev/s, Left Top spin, Backward"
+Ball Hit,"5.76 m/s, 31.51 rev/s, Left Top spin, Forward"
+Score Update,Current round score: 1-5. 
+Ball Hit,"6.46 m/s, 26.87 rev/s, Right Back spin, Backward"
+Ball Hit,"6.14 m/s, 16.43 rev/s, Left spin, Forward"
+Ball Hit,"12.11 m/s, 97.91 rev/s, Top spin, Backward"
+Score Update,Current round score: 1-6. 
+Ball Hit,"9.27 m/s, 28.11 rev/s, Top Left spin, Backward"
+Ball Hit,"5.65 m/s, 18.78 rev/s, Left Top spin, Forward"
+Ball Hit,"16.42 m/s, 32.08 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 2-6. 
+Ball Hit,"3.25 m/s, 31.40 rev/s, Back spin, Forward"
+Ball Hit,"1.04 m/s, 4.65 rev/s, No significant spin, Forward"
+Score Update,Current round score: 3-6. 
+Ball Hit,"3.56 m/s, 41.70 rev/s, Back spin, Forward"
+Ball Hit,"3.36 m/s, 8.72 rev/s, No significant spin, Backward"
+Ball Hit,"8.97 m/s, 45.76 rev/s, Top spin, Forward"
+Ball Hit,"6.97 m/s, 63.60 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 4-6. 
+Ball Hit,"6.28 m/s, 30.61 rev/s, Left spin, Backward"
+Score Update,Current round score: 4-7. 
+Ball Hit,"5.56 m/s, 27.61 rev/s, Left spin, Backward"
+Score Update,Current round score: 4-8. 
+Ball Hit,"3.44 m/s, 26.56 rev/s, Right spin, Forward"
+Ball Hit,"4.52 m/s, 22.03 rev/s, No significant spin, Backward"
+Score Update,Current round score: 4-9. 
+Ball Hit,"2.95 m/s, 36.00 rev/s, Back spin, Forward"
+Score Update,Current round score: 4-10. 
+Ball Hit,"9.10 m/s, 60.86 rev/s, Top Left spin, Backward"
+Match End,"Current round score: 4-11. , Match Winner: VIOLENTPANDA"
+Player Exit Room,From room to home
+Camera Exit Room,From room to home
+Player Enter Room,From home to room
+Camera Enter Room,From home to room
+Match Start,"New match started: {'PlayerNames': ['ChanimalCrackers', 'VIOLENTPANDA'], 'PlayerELOs': [2842, 2785], 'MatchId': '58025258', 'BestOf': '3', 'Ranked': 'False'}"
+Ball Hit,"3.65 m/s, 10.84 rev/s, No significant spin, Forward"
+New Round,"Round 1 started. First round of the match, Current round score: 1-0. "
+Ball Hit,"7.03 m/s, 22.92 rev/s, Right Back spin, Backward"
+Ball Hit,"6.64 m/s, 46.10 rev/s, Back Right spin, Forward"
+Ball Hit,"8.30 m/s, 70.56 rev/s, Top Left spin, Backward"
+Ball Hit,"9.54 m/s, 34.70 rev/s, Top Right spin, Forward"
+Ball Hit,"7.73 m/s, 26.48 rev/s, Top spin, Backward"
+Score Update,Current round score: 2-0. 
+Ball Hit,"5.57 m/s, 47.85 rev/s, Right Back spin, Forward"
+Ball Hit,"6.02 m/s, 32.88 rev/s, Back spin, Backward"
+Ball Hit,"4.83 m/s, 31.99 rev/s, Back Left spin, Forward"
+Ball Hit,"5.66 m/s, 38.38 rev/s, Right spin, Backward"
+Score Update,Current round score: 3-0. 
+Ball Hit,"8.49 m/s, 51.40 rev/s, Right Back spin, Forward"
+Ball Hit,"6.37 m/s, 25.18 rev/s, No significant spin, Backward"
+Score Update,Current round score: 4-0. 
+Ball Hit,"5.31 m/s, 32.00 rev/s, Left Back spin, Backward"
+Ball Hit,"6.81 m/s, 35.78 rev/s, Back spin, Forward"
+Ball Hit,"6.01 m/s, 22.45 rev/s, Right spin, Backward"
+Ball Hit,"15.93 m/s, 79.95 rev/s, Top spin, Forward"
+Score Update,Current round score: 4-1. 
+Ball Hit,"6.84 m/s, 32.41 rev/s, Left spin, Backward"
+Ball Hit,"5.34 m/s, 51.37 rev/s, Back Right spin, Forward"
+Ball Hit,"7.07 m/s, 18.31 rev/s, Left spin, Backward"
+Ball Hit,"7.65 m/s, 39.94 rev/s, Top spin, Forward"
+Ball Hit,"9.92 m/s, 79.72 rev/s, Top spin, Backward"
+Ball Hit,"6.69 m/s, 38.36 rev/s, Back Right spin, Forward"
+Score Update,Current round score: 4-2. 
+Ball Hit,"5.77 m/s, 47.47 rev/s, Back Right spin, Forward"
+Ball Hit,"5.24 m/s, 29.06 rev/s, Back spin, Backward"
+Ball Hit,"4.06 m/s, 31.68 rev/s, Left Back spin, Forward"
+Ball Hit,"5.10 m/s, 23.71 rev/s, Back spin, Backward"
+Ball Hit,"6.35 m/s, 36.23 rev/s, Back spin, Forward"
+Ball Hit,"8.93 m/s, 63.85 rev/s, Top spin, Backward"
+Score Update,Current round score: 5-2. 
+Ball Hit,"5.59 m/s, 39.43 rev/s, Right Back spin, Forward"
+Ball Hit,"5.10 m/s, 31.50 rev/s, Back spin, Backward"
+Ball Hit,"6.15 m/s, 54.25 rev/s, Back Right spin, Forward"
+Score Update,Current round score: 5-3. 
+Ball Hit,"9.79 m/s, 58.85 rev/s, Top Left spin, Backward"
+Ball Hit,"11.00 m/s, 61.80 rev/s, Top Right spin, Forward"
+Ball Hit,"12.08 m/s, 65.59 rev/s, Top Left spin, Backward"
+Ball Hit,"12.59 m/s, 72.16 rev/s, Top Left spin, Forward"
+Ball Hit,"8.72 m/s, 47.73 rev/s, Top spin, Backward"
+Ball Hit,"5.60 m/s, 30.01 rev/s, Back spin, Forward"
+Ball Hit,"5.99 m/s, 21.24 rev/s, Back spin, Backward"
+Ball Hit,"16.27 m/s, 59.18 rev/s, Top spin, Forward"
+Ball Hit,"9.23 m/s, 43.19 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 6-3. 
+Ball Hit,"7.01 m/s, 19.93 rev/s, Right Back spin, Backward"
+Ball Hit,"6.49 m/s, 35.11 rev/s, Left spin, Forward"
+Ball Hit,"6.50 m/s, 20.46 rev/s, Left spin, Backward"
+Score Update,Current round score: 7-3. 
+Ball Hit,"9.82 m/s, 36.68 rev/s, Right Top spin, Forward"
+Score Update,Current round score: 7-4. 
+Ball Hit,"5.36 m/s, 52.36 rev/s, Right Back spin, Forward"
+Ball Hit,"5.55 m/s, 32.13 rev/s, Back spin, Backward"
+Ball Hit,"4.91 m/s, 28.50 rev/s, Left Back spin, Forward"
+Score Update,Current round score: 7-5. 
+Ball Hit,"8.57 m/s, 67.03 rev/s, Top Left spin, Backward"
+Ball Hit,"5.65 m/s, 28.81 rev/s, Back spin, Forward"
+Ball Hit,"19.55 m/s, 46.38 rev/s, Top spin, Backward"
+Score Update,Current round score: 8-5. 
+Ball Hit,"5.94 m/s, 26.80 rev/s, Left spin, Backward"
+Ball Hit,"5.91 m/s, 34.27 rev/s, Back Right spin, Forward"
+Ball Hit,"6.48 m/s, 50.73 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 9-5. 
+Ball Hit,"7.30 m/s, 34.43 rev/s, Back Right spin, Forward"
+Score Update,Current round score: 9-6. 
+Ball Hit,"5.28 m/s, 45.44 rev/s, Back Right spin, Forward"
+Ball Hit,"5.42 m/s, 26.13 rev/s, Back spin, Backward"
+Ball Hit,"4.80 m/s, 26.27 rev/s, Back Left spin, Forward"
+Ball Hit,"6.40 m/s, 20.03 rev/s, Back spin, Backward"
+Ball Hit,"6.97 m/s, 38.82 rev/s, Back spin, Forward"
+Ball Hit,"9.58 m/s, 51.87 rev/s, Top spin, Backward"
+Ball Hit,"7.73 m/s, 37.84 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 9-7. 
+Ball Hit,"9.92 m/s, 73.85 rev/s, Top Left spin, Backward"
+Ball Hit,"7.23 m/s, 36.70 rev/s, Left Back spin, Forward"
+Score Update,Current round score: 9-8. 
+Ball Hit,"9.01 m/s, 65.07 rev/s, Top spin, Backward"
+Ball Hit,"5.18 m/s, 34.51 rev/s, Left spin, Forward"
+Score Update,Current round score: 9-9. 
+Ball Hit,"5.53 m/s, 40.69 rev/s, Back Right spin, Forward"
+Ball Hit,"5.36 m/s, 24.94 rev/s, Back spin, Backward"
+Ball Hit,"4.91 m/s, 25.07 rev/s, Back spin, Forward"
+Score Update,Current round score: 10-9. 
+Ball Hit,"5.86 m/s, 58.95 rev/s, Right Back spin, Forward"
+Ball Hit,"5.88 m/s, 36.39 rev/s, Back Left spin, Backward"
+Ball Hit,"9.05 m/s, 45.59 rev/s, Right Top spin, Forward"
+Score Update,Current round score: 10-10. 
+Ball Hit,"7.13 m/s, 16.71 rev/s, Back spin, Backward"
+Ball Hit,"6.30 m/s, 43.74 rev/s, Right spin, Forward"
+Ball Hit,"7.62 m/s, 61.64 rev/s, Top spin, Backward"
+Ball Hit,"15.18 m/s, 38.20 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 10-11. 
+Ball Hit,"7.95 m/s, 59.97 rev/s, Top spin, Backward"
+Ball Hit,"5.75 m/s, 60.94 rev/s, Right Back spin, Forward"
+Ball Hit,"6.11 m/s, 38.84 rev/s, Back spin, Backward"
+Ball Hit,"5.58 m/s, 31.41 rev/s, Back spin, Forward"
+Ball Hit,"7.37 m/s, 23.34 rev/s, Back spin, Backward"
+Ball Hit,"5.70 m/s, 51.92 rev/s, Back spin, Forward"
+Ball Hit,"5.44 m/s, 21.22 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 11-11. 
+Ball Hit,"6.25 m/s, 31.84 rev/s, Left spin, Backward"
+Ball Hit,"6.90 m/s, 53.04 rev/s, Right spin, Forward"
+Score Update,Current round score: 11-12. 
+Ball Hit,"7.37 m/s, 30.21 rev/s, Right spin, Forward"
+Ball Hit,"5.38 m/s, 22.81 rev/s, Right spin, Backward"
+Ball Hit,"9.31 m/s, 49.59 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 12-12. 
+Ball Hit,"8.30 m/s, 17.86 rev/s, Right spin, Backward"
+Ball Hit,"5.73 m/s, 35.96 rev/s, Back Right spin, Forward"
+Ball Hit,"9.17 m/s, 100.00 rev/s, Top spin, Backward"
+Ball Hit,"10.16 m/s, 50.58 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 12-13. 
+Ball Hit,"6.76 m/s, 52.57 rev/s, Back Right spin, Forward"
+Ball Hit,"6.32 m/s, 28.24 rev/s, Back spin, Backward"
+Ball Hit,"4.77 m/s, 26.99 rev/s, Back spin, Forward"
+Ball Hit,"11.23 m/s, 95.79 rev/s, Top spin, Backward"
+Score Update,Current round score: 13-13. 
+Ball Hit,"7.48 m/s, 30.73 rev/s, Left spin, Backward"
+Ball Hit,"5.31 m/s, 33.59 rev/s, Back Right spin, Forward"
+Ball Hit,"5.33 m/s, 14.52 rev/s, Right spin, Backward"
+Ball Hit,"8.66 m/s, 79.53 rev/s, Top Right spin, Forward"
+Ball Hit,"10.24 m/s, 60.76 rev/s, Top spin, Backward"
+Ball Hit,"10.30 m/s, 59.45 rev/s, Top Right spin, Forward"
+Ball Hit,"7.46 m/s, 18.57 rev/s, Top spin, Backward"
+Ball Hit,"17.97 m/s, 75.31 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 14-13. 
+Ball Hit,"6.74 m/s, 58.45 rev/s, Back Right spin, Forward"
+Ball Hit,"6.51 m/s, 26.04 rev/s, Back spin, Backward"
+Ball Hit,"4.65 m/s, 25.76 rev/s, Back spin, Forward"
+Ball Hit,"9.95 m/s, 61.68 rev/s, Top spin, Backward"
+Ball Hit,"8.86 m/s, 69.07 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 14-14. 
+Ball Hit,"8.86 m/s, 64.35 rev/s, Top spin, Backward"
+Ball Hit,"6.15 m/s, 32.56 rev/s, Back Right spin, Forward"
+Ball Hit,"5.85 m/s, 18.03 rev/s, No significant spin, Backward"
+Ball Hit,"9.42 m/s, 58.46 rev/s, Top Left spin, Forward"
+Ball Hit,"8.66 m/s, 46.35 rev/s, Top Right spin, Backward"
+Ball Hit,"9.25 m/s, 35.85 rev/s, Top spin, Forward"
+Score Update,Current round score: 14-15. 
+Ball Hit,"5.59 m/s, 36.13 rev/s, Right Back spin, Forward"
+Ball Hit,"5.23 m/s, 25.67 rev/s, Back spin, Backward"
+Ball Hit,"13.63 m/s, 92.96 rev/s, Top Right spin, Forward"
+New Round,"Round 2 started. Previous round score: 14-16, New round of the match, Current round score: 0-0. "
+Ball Hit,"6.27 m/s, 25.56 rev/s, Right spin, Forward"
+Ball Hit,"5.14 m/s, 24.42 rev/s, Back spin, Backward"
+Ball Hit,"11.71 m/s, 44.69 rev/s, Top Left spin, Forward"
+Ball Hit,"5.98 m/s, 17.15 rev/s, Top spin, Backward"
+Ball Hit,"12.94 m/s, 61.36 rev/s, Top spin, Forward"
+Score Update,Current round score: 1-0. 
+Ball Hit,"8.29 m/s, 37.00 rev/s, Right Back spin, Forward"
+Ball Hit,"5.67 m/s, 22.32 rev/s, Right Back spin, Backward"
+Ball Hit,"5.94 m/s, 49.33 rev/s, Back Right spin, Forward"
+Ball Hit,"5.69 m/s, 40.09 rev/s, Left Back spin, Backward"
+Ball Hit,"5.68 m/s, 35.47 rev/s, Back spin, Forward"
+Ball Hit,"6.07 m/s, 17.72 rev/s, Back Right spin, Backward"
+Ball Hit,"5.84 m/s, 47.96 rev/s, Back spin, Forward"
+Ball Hit,"7.02 m/s, 22.38 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 2-0. 
+Ball Hit,"8.39 m/s, 29.24 rev/s, Left spin, Backward"
+Ball Hit,"6.58 m/s, 35.51 rev/s, Back Left spin, Forward"
+Ball Hit,"4.76 m/s, 33.90 rev/s, Back Right spin, Backward"
+Ball Hit,"5.15 m/s, 44.99 rev/s, Back Right spin, Forward"
+Ball Hit,"8.52 m/s, 70.25 rev/s, Top Right spin, Backward"
+Ball Hit,"10.46 m/s, 53.35 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 2-1. 
+Ball Hit,"5.75 m/s, 21.82 rev/s, Left spin, Backward"
+Ball Hit,"6.57 m/s, 30.20 rev/s, Back spin, Forward"
+Ball Hit,"7.82 m/s, 35.47 rev/s, Left Top spin, Backward"
+Ball Hit,"18.32 m/s, 96.70 rev/s, Top spin, Forward"
+Score Update,Current round score: 3-1. 
+Ball Hit,"7.87 m/s, 39.67 rev/s, Right Back spin, Forward"
+Ball Hit,"7.20 m/s, 49.10 rev/s, Top Right spin, Backward"
+Ball Hit,"4.86 m/s, 51.97 rev/s, Back spin, Forward"
+Ball Hit,"5.74 m/s, 11.37 rev/s, No significant spin, Backward"
+Ball Hit,"5.85 m/s, 28.02 rev/s, Back spin, Forward"
+Ball Hit,"9.05 m/s, 90.89 rev/s, Top spin, Backward"
+Ball Hit,"11.37 m/s, 15.32 rev/s, Back spin, Forward"
+Score Update,Current round score: 3-2. 
+Ball Hit,"6.14 m/s, 46.00 rev/s, Right Back spin, Forward"
+Ball Hit,"5.31 m/s, 30.86 rev/s, Back spin, Backward"
+Ball Hit,"9.23 m/s, 93.06 rev/s, Top Right spin, Forward"
+Ball Hit,"9.53 m/s, 46.09 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 4-2. 
+Ball Hit,"5.00 m/s, 24.45 rev/s, Left spin, Backward"
+Ball Hit,"5.82 m/s, 24.90 rev/s, Back spin, Forward"
+Ball Hit,"7.12 m/s, 65.88 rev/s, Top spin, Backward"
+Ball Hit,"16.02 m/s, 71.78 rev/s, Top Left spin, Forward"
+Ball Hit,"10.47 m/s, 51.88 rev/s, Top spin, Backward"
+Ball Hit,"12.62 m/s, 85.46 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 4-3. 
+Ball Hit,"7.29 m/s, 33.81 rev/s, Left spin, Backward"
+Ball Hit,"5.73 m/s, 37.93 rev/s, Back spin, Forward"
+Ball Hit,"5.96 m/s, 30.46 rev/s, Back spin, Backward"
+Ball Hit,"10.59 m/s, 82.31 rev/s, Top Right spin, Forward"
+Ball Hit,"7.75 m/s, 27.69 rev/s, Top spin, Backward"
+Score Update,Current round score: 5-3. 
+Ball Hit,"4.64 m/s, 47.04 rev/s, Right Back spin, Forward"
+Score Update,Current round score: 5-4. 
+Ball Hit,"6.13 m/s, 52.86 rev/s, Right Back spin, Forward"
+Ball Hit,"5.76 m/s, 31.58 rev/s, Back spin, Backward"
+Ball Hit,"6.33 m/s, 58.16 rev/s, Back spin, Forward"
+Ball Hit,"7.22 m/s, 31.27 rev/s, Left Back spin, Backward"
+Ball Hit,"5.98 m/s, 35.66 rev/s, Back spin, Forward"
+Ball Hit,"9.25 m/s, 103.17 rev/s, Top spin, Backward"
+Ball Hit,"7.63 m/s, 13.87 rev/s, No significant spin, Forward"
+Ball Hit,"14.85 m/s, 59.86 rev/s, Left Top spin, Backward"
+Score Update,Current round score: 6-4. 
+Ball Hit,"5.17 m/s, 13.07 rev/s, No significant spin, Backward"
+Ball Hit,"5.96 m/s, 37.55 rev/s, Back Right spin, Forward"
+Ball Hit,"8.96 m/s, 65.76 rev/s, Top spin, Backward"
+Ball Hit,"5.92 m/s, 31.13 rev/s, Back spin, Forward"
+Ball Hit,"10.42 m/s, 104.94 rev/s, Top spin, Backward"
+Ball Hit,"14.30 m/s, 79.42 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 6-5. 
+Ball Hit,"8.75 m/s, 35.41 rev/s, Top Right spin, Backward"
+Ball Hit,"7.96 m/s, 23.99 rev/s, Right spin, Backward"
+Ball Hit,"6.91 m/s, 25.91 rev/s, Back Left spin, Forward"
+Ball Hit,"8.23 m/s, 60.63 rev/s, Top spin, Backward"
+Ball Hit,"14.50 m/s, 51.40 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 6-6. 
+Ball Hit,"7.27 m/s, 38.61 rev/s, Right Back spin, Forward"
+Ball Hit,"6.50 m/s, 34.60 rev/s, Back spin, Backward"
+Ball Hit,"4.33 m/s, 40.14 rev/s, Back spin, Forward"
+Ball Hit,"4.10 m/s, 28.65 rev/s, Back spin, Backward"
+Score Update,Current round score: 7-6. 
+Ball Hit,"5.00 m/s, 47.94 rev/s, Right Back spin, Forward"
+Ball Hit,"4.64 m/s, 33.31 rev/s, Back spin, Backward"
+Ball Hit,"6.51 m/s, 40.31 rev/s, Back spin, Forward"
+Ball Hit,"5.70 m/s, 25.52 rev/s, Back Left spin, Backward"
+Ball Hit,"11.61 m/s, 62.97 rev/s, Top Left spin, Forward"
+Ball Hit,"8.83 m/s, 47.64 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 8-6. 
+Ball Hit,"6.10 m/s, 27.61 rev/s, Left spin, Backward"
+Ball Hit,"6.70 m/s, 46.97 rev/s, Right Top spin, Forward"
+Ball Hit,"9.77 m/s, 79.84 rev/s, Top spin, Backward"
+Score Update,Current round score: 9-6. 
+Ball Hit,"7.50 m/s, 33.76 rev/s, Left spin, Backward"
+Ball Hit,"5.35 m/s, 36.89 rev/s, Back spin, Forward"
+Ball Hit,"5.33 m/s, 26.47 rev/s, Back spin, Backward"
+Ball Hit,"15.76 m/s, 80.27 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 10-6. 
+Ball Hit,"6.40 m/s, 43.58 rev/s, Back Right spin, Forward"
+Ball Hit,"5.68 m/s, 22.42 rev/s, Back spin, Backward"
+Ball Hit,"4.91 m/s, 51.66 rev/s, Back spin, Forward"
+Ball Hit,"5.96 m/s, 19.31 rev/s, Back spin, Backward"
+Ball Hit,"6.00 m/s, 49.12 rev/s, Back Right spin, Forward"
+Ball Hit,"8.92 m/s, 52.55 rev/s, Top Left spin, Backward"
+Ball Hit,"6.54 m/s, 28.59 rev/s, Back Left spin, Forward"
+Ball Hit,"11.80 m/s, 98.44 rev/s, Top spin, Backward"
+New Round,"Round 3 started. Previous round score: 11-6, New round of the match, Current round score: 0-0. "
+Ball Hit,"6.14 m/s, 27.31 rev/s, Left spin, Backward"
+Ball Hit,"4.74 m/s, 24.27 rev/s, Back spin, Forward"
+Ball Hit,"5.01 m/s, 22.49 rev/s, Back spin, Backward"
+Ball Hit,"8.12 m/s, 41.48 rev/s, Top Right spin, Forward"
+Ball Hit,"2.61 m/s, 32.64 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 1-0. 
+Ball Hit,"8.63 m/s, 66.64 rev/s, Top spin, Backward"
+Ball Hit,"6.69 m/s, 44.19 rev/s, Back Left spin, Forward"
+Ball Hit,"5.96 m/s, 16.91 rev/s, No significant spin, Backward"
+Score Update,Current round score: 2-0. 
+Ball Hit,"5.68 m/s, 64.29 rev/s, Right Back spin, Forward"
+Ball Hit,"6.26 m/s, 45.05 rev/s, Back Left spin, Backward"
+Ball Hit,"5.42 m/s, 32.91 rev/s, Back spin, Forward"
+Ball Hit,"5.26 m/s, 29.87 rev/s, Back Left spin, Backward"
+Ball Hit,"6.55 m/s, 31.20 rev/s, Back spin, Forward"
+Ball Hit,"11.82 m/s, 83.59 rev/s, Top Left spin, Backward"
+Ball Hit,"7.51 m/s, 24.27 rev/s, Top spin, Forward"
+Ball Hit,"11.05 m/s, 59.65 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 3-0. 
+Ball Hit,"6.16 m/s, 40.11 rev/s, Right Back spin, Forward"
+Ball Hit,"5.40 m/s, 29.53 rev/s, Back spin, Backward"
+Ball Hit,"6.76 m/s, 55.80 rev/s, Back Left spin, Forward"
+Ball Hit,"5.64 m/s, 26.93 rev/s, Back spin, Backward"
+Ball Hit,"6.51 m/s, 35.99 rev/s, Back Right spin, Forward"
+Ball Hit,"5.66 m/s, 19.55 rev/s, Back spin, Backward"
+Ball Hit,"8.02 m/s, 37.19 rev/s, Top spin, Forward"
+Ball Hit,"14.51 m/s, 81.08 rev/s, Top Left spin, Backward"
+Ball Hit,"7.99 m/s, 54.62 rev/s, Left Top spin, Forward"
+Ball Hit,"10.43 m/s, 92.48 rev/s, Top Right spin, Backward"
+Ball Hit,"12.34 m/s, 54.02 rev/s, Right Back spin, Forward"
+Score Update,Current round score: 3-1. 
+Ball Hit,"7.41 m/s, 60.85 rev/s, Top spin, Backward"
+Ball Hit,"6.66 m/s, 35.13 rev/s, Back spin, Forward"
+Ball Hit,"5.05 m/s, 28.11 rev/s, Back Left spin, Backward"
+Ball Hit,"18.50 m/s, 63.90 rev/s, Top spin, Forward"
+Score Update,Current round score: 4-1. 
+Ball Hit,"6.82 m/s, 33.70 rev/s, Left spin, Backward"
+Ball Hit,"6.75 m/s, 26.91 rev/s, Back spin, Forward"
+Ball Hit,"4.67 m/s, 33.15 rev/s, Back Right spin, Backward"
+Ball Hit,"12.61 m/s, 46.32 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 4-2. 
+Ball Hit,"3.76 m/s, 49.08 rev/s, Top spin, Forward"
+Ball Hit,"7.45 m/s, 66.60 rev/s, Back Right spin, Forward"
+Ball Hit,"6.85 m/s, 33.78 rev/s, Back spin, Backward"
+Ball Hit,"4.86 m/s, 36.58 rev/s, Back spin, Forward"
+Ball Hit,"5.68 m/s, 17.83 rev/s, Back spin, Backward"
+Score Update,Current round score: 5-2. 
+Ball Hit,"6.65 m/s, 44.93 rev/s, Back Right spin, Forward"
+Ball Hit,"5.72 m/s, 27.31 rev/s, Back spin, Backward"
+Ball Hit,"5.92 m/s, 58.48 rev/s, Back spin, Forward"
+Ball Hit,"8.25 m/s, 19.80 rev/s, No significant spin, Backward"
+Score Update,Current round score: 6-2. 
+Ball Hit,"9.34 m/s, 74.83 rev/s, Top spin, Backward"
+Ball Hit,"6.09 m/s, 30.10 rev/s, Back Left spin, Forward"
+Ball Hit,"11.47 m/s, 49.85 rev/s, Top spin, Backward"
+Score Update,Current round score: 6-3. 
+Ball Hit,"8.89 m/s, 68.07 rev/s, Top spin, Backward"
+Ball Hit,"6.00 m/s, 45.06 rev/s, Back spin, Forward"
+Ball Hit,"8.60 m/s, 41.24 rev/s, Left Top spin, Backward"
+Ball Hit,"9.38 m/s, 53.89 rev/s, Left Top spin, Forward"
+Score Update,Current round score: 6-4. 
+Ball Hit,"9.25 m/s, 22.58 rev/s, Right spin, Forward"
+Ball Hit,"5.65 m/s, 47.31 rev/s, Right Top spin, Backward"
+Ball Hit,"17.63 m/s, 48.36 rev/s, Top spin, Forward"
+Score Update,Current round score: 7-4. 
+Ball Hit,"5.45 m/s, 55.53 rev/s, Back Right spin, Forward"
+Ball Hit,"5.79 m/s, 29.97 rev/s, Back spin, Backward"
+Score Update,Current round score: 8-4. 
+Ball Hit,"12.16 m/s, 66.06 rev/s, Top Left spin, Backward"
+Ball Hit,"7.94 m/s, 50.27 rev/s, Top Right spin, Forward"
+Ball Hit,"9.98 m/s, 68.11 rev/s, Top Left spin, Backward"
+Ball Hit,"12.66 m/s, 68.31 rev/s, Top Left spin, Forward"
+Ball Hit,"9.35 m/s, 42.72 rev/s, Top Right spin, Backward"
+Ball Hit,"5.26 m/s, 39.24 rev/s, Back spin, Forward"
+Ball Hit,"5.72 m/s, 21.46 rev/s, Back spin, Backward"
+Ball Hit,"17.68 m/s, 78.49 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 8-5. 
+Ball Hit,"5.95 m/s, 14.77 rev/s, Right spin, Backward"
+Ball Hit,"6.33 m/s, 24.50 rev/s, Back Left spin, Forward"
+Score Update,Current round score: 9-5. 
+Ball Hit,"7.01 m/s, 41.05 rev/s, Back Right spin, Forward"
+Ball Hit,"5.57 m/s, 20.24 rev/s, No significant spin, Backward"
+Ball Hit,"6.53 m/s, 56.52 rev/s, Back Right spin, Forward"
+Score Update,Current round score: 9-6. 
+Ball Hit,"2.70 m/s, 8.35 rev/s, No significant spin, Backward"
+Ball Hit,"6.18 m/s, 64.68 rev/s, Back Right spin, Forward"
+Ball Hit,"5.93 m/s, 33.14 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 10-6. 
+Ball Hit,"6.85 m/s, 36.01 rev/s, Left spin, Backward"
+Ball Hit,"6.59 m/s, 49.98 rev/s, Back spin, Forward"
+Ball Hit,"6.53 m/s, 14.34 rev/s, Right spin, Backward"
+Ball Hit,"13.58 m/s, 72.91 rev/s, Top spin, Forward"
+Score Update,Current round score: 10-7. 
+Ball Hit,"5.54 m/s, 34.02 rev/s, Left Back spin, Backward"
+Ball Hit,"4.05 m/s, 33.91 rev/s, Back spin, Forward"
+Ball Hit,"5.07 m/s, 26.11 rev/s, Back spin, Backward"
+Ball Hit,"5.20 m/s, 16.97 rev/s, Back spin, Forward"
+Score Update,Current round score: 10-8. 
+Ball Hit,"7.31 m/s, 62.70 rev/s, Right Back spin, Forward"
+Ball Hit,"7.82 m/s, 67.20 rev/s, Top spin, Backward"
+Ball Hit,"6.30 m/s, 26.87 rev/s, Right Back spin, Forward"
+Ball Hit,"8.36 m/s, 96.25 rev/s, Top spin, Backward"
+Score Update,Current round score: 10-9. 
+Ball Hit,"5.66 m/s, 24.40 rev/s, Right spin, Forward"
+Score Update,Current round score: 10-10. 
+Ball Hit,"8.74 m/s, 17.55 rev/s, Right spin, Backward"
+Ball Hit,"5.65 m/s, 35.66 rev/s, Right Back spin, Forward"
+Ball Hit,"5.20 m/s, 29.69 rev/s, Back spin, Backward"
+Ball Hit,"14.85 m/s, 75.34 rev/s, Top spin, Forward"
+Ball Hit,"10.74 m/s, 53.54 rev/s, Top spin, Backward"
+Ball Hit,"9.55 m/s, 59.62 rev/s, Top Right spin, Forward"
+Ball Hit,"9.07 m/s, 86.30 rev/s, Top spin, Backward"
+Ball Hit,"18.21 m/s, 91.66 rev/s, Top Right spin, Forward"
+Ball Hit,"10.18 m/s, 83.94 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 11-10. 
+Ball Hit,"6.00 m/s, 50.30 rev/s, Right Back spin, Forward"
+Ball Hit,"7.06 m/s, 40.64 rev/s, Left spin, Backward"
+Match End,"Current round score: 12-10. , Match Winner: ChanimalCrackers"
+Player Exit Room,From room to home
+Player Enter Room,From home to room
+Camera Exit Room,From room to home
+Camera Enter Room,From home to room
+Match Start,"New match started: {'PlayerNames': ['garby garb', 'VIOLENTPANDA'], 'PlayerELOs': [2548, 2785], 'MatchId': '58025472', 'BestOf': '3', 'Ranked': 'True'}"
+Ball Hit,"2.32 m/s, 27.89 rev/s, Left Top spin, Backward"
+Ball Hit,"5.15 m/s, 31.42 rev/s, Back spin, Forward"
+New Round,"Round 1 started. First round of the match, Current round score: 2-0. "
+Match Start,"New match started: {'PlayerNames': ['garby garb', 'VIOLENTPANDA'], 'PlayerELOs': [2548, 2785], 'MatchId': '58025485', 'BestOf': '3', 'Ranked': 'True'}"
+New Round,"Round 1 started. First round of the match, Current round score: 0-0. "
+Ball Hit,"5.83 m/s, 22.06 rev/s, Left spin, Backward"
+Ball Hit,"6.10 m/s, 32.23 rev/s, Left spin, Backward"
+Ball Hit,"4.38 m/s, 58.56 rev/s, Back Right spin, Forward"
+Ball Hit,"5.71 m/s, 36.71 rev/s, Left Back spin, Backward"
+Ball Hit,"8.64 m/s, 90.99 rev/s, Top spin, Forward"
+Score Update,Current round score: 1-0. 
+Ball Hit,"6.42 m/s, 34.34 rev/s, Left spin, Backward"
+Ball Hit,"5.47 m/s, 43.29 rev/s, Back Right spin, Forward"
+Ball Hit,"5.78 m/s, 27.44 rev/s, Back spin, Backward"
+Ball Hit,"11.63 m/s, 63.89 rev/s, Top Left spin, Forward"
+Ball Hit,"10.74 m/s, 95.00 rev/s, Top spin, Backward"
+Ball Hit,"10.72 m/s, 42.54 rev/s, Back spin, Forward"
+Score Update,Current round score: 1-1. 
+Ball Hit,"7.29 m/s, 32.58 rev/s, Left spin, Backward"
+Ball Hit,"9.79 m/s, 49.60 rev/s, Top Left spin, Forward"
+Ball Hit,"8.14 m/s, 39.38 rev/s, Top Right spin, Backward"
+Ball Hit,"12.21 m/s, 114.03 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 1-2. 
+Ball Hit,"6.35 m/s, 24.64 rev/s, Back spin, Forward"
+Ball Hit,"7.46 m/s, 45.00 rev/s, Left spin, Backward"
+Ball Hit,"12.22 m/s, 88.13 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 2-2. 
+Ball Hit,"7.46 m/s, 30.92 rev/s, Left spin, Backward"
+Ball Hit,"5.83 m/s, 45.06 rev/s, Back Right spin, Forward"
+Ball Hit,"5.75 m/s, 31.20 rev/s, Back spin, Backward"
+Ball Hit,"8.47 m/s, 103.37 rev/s, Top spin, Forward"
+Score Update,Current round score: 2-3. 
+Ball Hit,"6.19 m/s, 31.28 rev/s, Left Back spin, Backward"
+Ball Hit,"11.08 m/s, 95.45 rev/s, Top spin, Forward"
+Ball Hit,"8.18 m/s, 44.86 rev/s, Top Left spin, Backward"
+Ball Hit,"12.06 m/s, 93.82 rev/s, Top Left spin, Forward"
+Ball Hit,"8.53 m/s, 36.50 rev/s, Top spin, Backward"
+Ball Hit,"8.32 m/s, 119.23 rev/s, Top Right spin, Forward"
+Ball Hit,"8.24 m/s, 31.98 rev/s, Right Back spin, Backward"
+Score Update,Current round score: 3-3. 
+Ball Hit,"5.13 m/s, 30.02 rev/s, Left spin, Forward"
+Ball Hit,"6.00 m/s, 31.22 rev/s, Back spin, Forward"
+Ball Hit,"5.46 m/s, 28.26 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 4-3. 
+Ball Hit,"9.63 m/s, 74.69 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 5-3. 
+Ball Hit,"6.09 m/s, 24.85 rev/s, Left spin, Backward"
+Ball Hit,"5.23 m/s, 31.05 rev/s, Back spin, Forward"
+Score Update,Current round score: 5-4. 
+Ball Hit,"5.11 m/s, 5.52 rev/s, No significant spin, Forward"
+Ball Hit,"8.51 m/s, 66.20 rev/s, Top spin, Backward"
+Ball Hit,"9.00 m/s, 17.73 rev/s, Left spin, Forward"
+Score Update,Current round score: 5-5. 
+Ball Hit,"4.23 m/s, 37.80 rev/s, Left Back spin, Forward"
+Ball Hit,"10.71 m/s, 78.76 rev/s, Top Right spin, Forward"
+Ball Hit,"4.54 m/s, 50.72 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 6-5. 
+Ball Hit,"5.99 m/s, 19.61 rev/s, Back spin, Forward"
+Ball Hit,"5.89 m/s, 25.02 rev/s, Back spin, Backward"
+Ball Hit,"7.34 m/s, 35.74 rev/s, Right spin, Forward"
+Ball Hit,"14.77 m/s, 92.56 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 6-6. 
+Ball Hit,"5.60 m/s, 26.24 rev/s, Left spin, Backward"
+Ball Hit,"4.56 m/s, 35.22 rev/s, Back spin, Forward"
+Ball Hit,"5.70 m/s, 27.51 rev/s, Right spin, Backward"
+Ball Hit,"9.50 m/s, 98.18 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 6-7. 
+Ball Hit,"5.96 m/s, 35.54 rev/s, Left spin, Backward"
+Ball Hit,"5.13 m/s, 32.35 rev/s, Back spin, Forward"
+Ball Hit,"11.91 m/s, 104.59 rev/s, Top Left spin, Backward"
+Ball Hit,"7.73 m/s, 56.04 rev/s, Back Right spin, Forward"
+Ball Hit,"14.87 m/s, 99.72 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 7-7. 
+Ball Hit,"5.64 m/s, 40.62 rev/s, Right Back spin, Forward"
+Ball Hit,"4.84 m/s, 38.43 rev/s, Back Right spin, Backward"
+Score Update,Current round score: 8-7. 
+Ball Hit,"5.44 m/s, 19.25 rev/s, Back spin, Forward"
+Ball Hit,"5.44 m/s, 16.58 rev/s, Back spin, Backward"
+Ball Hit,"7.64 m/s, 79.79 rev/s, Top Left spin, Forward"
+Ball Hit,"16.07 m/s, 86.82 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 9-7. 
+Ball Hit,"6.92 m/s, 15.71 rev/s, Right spin, Backward"
+Ball Hit,"7.42 m/s, 65.07 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 10-7. 
+Ball Hit,"5.15 m/s, 22.06 rev/s, Back Right spin, Backward"
+Ball Hit,"5.08 m/s, 58.92 rev/s, Back spin, Forward"
+Ball Hit,"9.55 m/s, 48.20 rev/s, Top Left spin, Backward"
+Ball Hit,"5.40 m/s, 19.88 rev/s, Left spin, Forward"
+Ball Hit,"3.99 m/s, 28.54 rev/s, Back spin, Backward"
+New Round,"Round 2 started. Previous round score: 11-7, New round of the match, Current round score: 0-0. "
+Ball Hit,"5.72 m/s, 20.94 rev/s, Back spin, Forward"
+Ball Hit,"6.45 m/s, 14.39 rev/s, Back spin, Backward"
+Score Update,Current round score: 1-0. 
+Ball Hit,"10.13 m/s, 47.98 rev/s, Top Left spin, Forward"
+Ball Hit,"7.86 m/s, 34.32 rev/s, Top Right spin, Backward"
+Ball Hit,"12.12 m/s, 99.84 rev/s, Top spin, Forward"
+Ball Hit,"9.66 m/s, 67.58 rev/s, Top spin, Backward"
+Score Update,Current round score: 1-1. 
+Ball Hit,"6.74 m/s, 33.78 rev/s, Left spin, Backward"
+Ball Hit,"9.93 m/s, 72.37 rev/s, Top Left spin, Forward"
+Ball Hit,"9.21 m/s, 48.70 rev/s, Top Right spin, Backward"
+Ball Hit,"12.14 m/s, 78.42 rev/s, Top Left spin, Forward"
+Ball Hit,"11.18 m/s, 72.42 rev/s, Top Right spin, Backward"
+Ball Hit,"12.63 m/s, 172.15 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 1-2. 
+Ball Hit,"5.79 m/s, 23.88 rev/s, Left spin, Backward"
+Ball Hit,"3.93 m/s, 57.21 rev/s, Back Right spin, Forward"
+Ball Hit,"7.53 m/s, 32.53 rev/s, Back Left spin, Backward"
+Score Update,Current round score: 2-2. 
+Ball Hit,"9.87 m/s, 57.73 rev/s, Top Right spin, Forward"
+Ball Hit,"6.96 m/s, 24.93 rev/s, Left spin, Backward"
+Score Update,Current round score: 3-2. 
+Ball Hit,"6.29 m/s, 50.99 rev/s, Right spin, Forward"
+Ball Hit,"8.04 m/s, 44.97 rev/s, Left Top spin, Backward"
+Ball Hit,"10.12 m/s, 65.16 rev/s, Top spin, Forward"
+Ball Hit,"8.62 m/s, 52.91 rev/s, Top Left spin, Backward"
+Ball Hit,"13.51 m/s, 94.90 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-3. 
+Ball Hit,"11.65 m/s, 71.34 rev/s, Top spin, Backward"
+Score Update,Current round score: 4-3. 
+Ball Hit,"7.05 m/s, 38.86 rev/s, Left spin, Backward"
+Ball Hit,"5.19 m/s, 47.11 rev/s, Back Right spin, Forward"
+Ball Hit,"5.51 m/s, 36.77 rev/s, Back Left spin, Backward"
+Ball Hit,"6.97 m/s, 37.41 rev/s, Top spin, Forward"
+Ball Hit,"8.57 m/s, 68.66 rev/s, Top spin, Backward"
+Ball Hit,"10.35 m/s, 59.21 rev/s, Top Right spin, Forward"
+Ball Hit,"10.40 m/s, 60.83 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 5-3. 
+Ball Hit,"10.13 m/s, 76.56 rev/s, Top Right spin, Forward"
+Ball Hit,"7.56 m/s, 23.39 rev/s, Left spin, Backward"
+Score Update,Current round score: 6-3. 
+Ball Hit,"5.51 m/s, 42.70 rev/s, Right spin, Forward"
+Ball Hit,"5.28 m/s, 36.46 rev/s, Back spin, Backward"
+Ball Hit,"8.06 m/s, 103.89 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 6-4. 
+Ball Hit,"6.59 m/s, 17.66 rev/s, Right spin, Backward"
+Ball Hit,"7.24 m/s, 48.81 rev/s, Top spin, Forward"
+Ball Hit,"7.23 m/s, 19.78 rev/s, No significant spin, Backward"
+Score Update,Current round score: 7-4. 
+Ball Hit,"8.00 m/s, 45.61 rev/s, Left Top spin, Backward"
+Ball Hit,"7.56 m/s, 63.59 rev/s, Top Right spin, Forward"
+Ball Hit,"14.18 m/s, 94.42 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 8-4. 
+Ball Hit,"6.07 m/s, 30.04 rev/s, Back spin, Forward"
+Ball Hit,"5.48 m/s, 25.57 rev/s, Back spin, Backward"
+Score Update,Current round score: 8-5. 
+Ball Hit,"6.13 m/s, 29.23 rev/s, Right Back spin, Forward"
+Ball Hit,"6.04 m/s, 26.26 rev/s, Back spin, Backward"
+Ball Hit,"6.34 m/s, 32.78 rev/s, Right spin, Forward"
+Ball Hit,"9.72 m/s, 58.14 rev/s, Top Left spin, Backward"
+Ball Hit,"15.15 m/s, 80.71 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 8-6. 
+Ball Hit,"9.56 m/s, 65.93 rev/s, Top Left spin, Backward"
+Ball Hit,"8.71 m/s, 28.64 rev/s, Top spin, Forward"
+Score Update,Current round score: 8-7. 
+Ball Hit,"8.79 m/s, 63.87 rev/s, Top spin, Backward"
+Ball Hit,"11.04 m/s, 130.80 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 9-7. 
+Ball Hit,"9.84 m/s, 85.65 rev/s, Top Right spin, Forward"
+Ball Hit,"8.96 m/s, 33.54 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 10-7. 
+Ball Hit,"9.03 m/s, 20.03 rev/s, Right spin, Forward"
+Ball Hit,"5.60 m/s, 35.76 rev/s, Top Right spin, Backward"
+Ball Hit,"11.03 m/s, 51.05 rev/s, Top Left spin, Forward"
+Ball Hit,"8.64 m/s, 31.14 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 10-8. 
+Ball Hit,"5.02 m/s, 24.86 rev/s, Left spin, Backward"
+Ball Hit,"4.77 m/s, 35.84 rev/s, Back spin, Forward"
+Ball Hit,"6.99 m/s, 66.36 rev/s, Top spin, Backward"
+Match End,"Current round score: 11-8. , Match Winner: garby garb"
+Player Exit Room,From room to home
+Camera Exit Room,From room to home
+Player Enter Room,From home to room
+Camera Enter Room,From home to room
+Match Start,"New match started: {'PlayerNames': ['HIMANGO', 'VIOLENTPANDA'], 'PlayerELOs': [2427, 2760], 'MatchId': '58025591', 'BestOf': '3', 'Ranked': 'True'}"
+Ball Hit,"6.27 m/s, 55.57 rev/s, Top spin, Backward"
+Match Start,"New match started: {'PlayerNames': ['HIMANGO', 'VIOLENTPANDA'], 'PlayerELOs': [2427, 2760], 'MatchId': '58025604', 'BestOf': '3', 'Ranked': 'True'}"
+New Round,"Round 1 started. First round of the match, Current round score: 0-0. "
+Ball Hit,"6.41 m/s, 14.69 rev/s, Right spin, Backward"
+Ball Hit,"5.63 m/s, 16.93 rev/s, Back spin, Forward"
+Ball Hit,"9.34 m/s, 67.23 rev/s, Top Left spin, Backward"
+Ball Hit,"9.32 m/s, 25.95 rev/s, Top spin, Forward"
+Ball Hit,"14.81 m/s, 95.14 rev/s, Top Left spin, Backward"
+Ball Hit,"10.34 m/s, 41.96 rev/s, Left Top spin, Forward"
+Ball Hit,"10.31 m/s, 55.83 rev/s, Top spin, Backward"
+Ball Hit,"8.61 m/s, 44.30 rev/s, Right Top spin, Forward"
+Ball Hit,"8.03 m/s, 32.66 rev/s, Top Left spin, Backward"
+Ball Hit,"6.91 m/s, 12.32 rev/s, No significant spin, Forward"
+Score Update,Current round score: 0-1. 
+Ball Hit,"5.80 m/s, 28.78 rev/s, Left spin, Backward"
+Ball Hit,"4.90 m/s, 29.56 rev/s, Back Left spin, Forward"
+Ball Hit,"6.13 m/s, 34.58 rev/s, Back Right spin, Backward"
+Ball Hit,"6.17 m/s, 33.04 rev/s, Right Back spin, Forward"
+Ball Hit,"6.36 m/s, 68.70 rev/s, Top spin, Backward"
+Ball Hit,"10.54 m/s, 34.41 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 0-2. 
+Ball Hit,"4.62 m/s, 41.71 rev/s, Right spin, Forward"
+Score Update,Current round score: 0-3. 
+Ball Hit,"12.71 m/s, 53.74 rev/s, Top Right spin, Forward"
+Ball Hit,"7.76 m/s, 25.90 rev/s, Right Top spin, Backward"
+Ball Hit,"16.73 m/s, 66.17 rev/s, Top Right spin, Forward"
+Ball Hit,"9.85 m/s, 53.24 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 1-3. 
+Ball Hit,"7.10 m/s, 35.42 rev/s, Left spin, Backward"
+Ball Hit,"4.90 m/s, 37.43 rev/s, Back Left spin, Forward"
+Ball Hit,"7.41 m/s, 83.34 rev/s, Top spin, Backward"
+Score Update,Current round score: 2-3. 
+Ball Hit,"8.78 m/s, 72.62 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 2-4. 
+Ball Hit,"14.13 m/s, 60.48 rev/s, Top spin, Forward"
+Score Update,Current round score: 2-5. 
+Ball Hit,"10.62 m/s, 61.32 rev/s, Right spin, Forward"
+Ball Hit,"7.55 m/s, 34.90 rev/s, Left Back spin, Backward"
+Ball Hit,"4.77 m/s, 20.10 rev/s, Back spin, Forward"
+Ball Hit,"6.36 m/s, 89.39 rev/s, Top spin, Backward"
+Ball Hit,"16.59 m/s, 25.26 rev/s, Top spin, Forward"
+Score Update,Current round score: 2-6. 
+Ball Hit,"6.59 m/s, 31.59 rev/s, Left spin, Backward"
+Ball Hit,"5.95 m/s, 24.88 rev/s, Back Left spin, Forward"
+Ball Hit,"8.16 m/s, 20.71 rev/s, Top spin, Backward"
+Score Update,Current round score: 3-6. 
+Ball Hit,"6.30 m/s, 28.38 rev/s, Left spin, Backward"
+Ball Hit,"5.76 m/s, 29.36 rev/s, Back Left spin, Forward"
+Ball Hit,"8.19 m/s, 79.40 rev/s, Top Left spin, Backward"
+Ball Hit,"11.13 m/s, 47.01 rev/s, Top Left spin, Forward"
+Ball Hit,"8.75 m/s, 52.64 rev/s, Top spin, Backward"
+Ball Hit,"10.34 m/s, 58.46 rev/s, Top Right spin, Forward"
+Ball Hit,"8.82 m/s, 79.69 rev/s, Top Left spin, Backward"
+Ball Hit,"9.32 m/s, 23.34 rev/s, Top spin, Forward"
+Score Update,Current round score: 3-7. 
+Ball Hit,"7.83 m/s, 58.43 rev/s, Right Back spin, Forward"
+Ball Hit,"8.75 m/s, 59.65 rev/s, Top Right spin, Backward"
+Ball Hit,"9.84 m/s, 39.55 rev/s, Right Top spin, Forward"
+Score Update,Current round score: 3-8. 
+Ball Hit,"12.94 m/s, 51.89 rev/s, Top Right spin, Forward"
+Ball Hit,"8.99 m/s, 35.33 rev/s, Right Top spin, Backward"
+Ball Hit,"13.76 m/s, 62.78 rev/s, Top Right spin, Forward"
+Score Update,Current round score: 4-8. 
+Ball Hit,"5.74 m/s, 39.18 rev/s, Left spin, Backward"
+Ball Hit,"7.88 m/s, 15.49 rev/s, No significant spin, Forward"
+Score Update,Current round score: 5-8. 
+Ball Hit,"6.02 m/s, 21.77 rev/s, Right Back spin, Backward"
+Ball Hit,"5.50 m/s, 21.61 rev/s, Back spin, Forward"
+Score Update,Current round score: 5-9. 
+Ball Hit,"10.84 m/s, 51.16 rev/s, Top spin, Forward"
+Score Update,Current round score: 5-10. 
+Ball Hit,"11.03 m/s, 36.61 rev/s, Top Right spin, Forward"
+Ball Hit,"8.12 m/s, 39.25 rev/s, Top spin, Backward"
+Ball Hit,"7.59 m/s, 20.09 rev/s, Right spin, Forward"
+Ball Hit,"6.99 m/s, 18.98 rev/s, Left spin, Backward"
+Ball Hit,"4.38 m/s, 4.28 rev/s, No significant spin, Forward"
+New Round,"Round 2 started. Previous round score: 5-11, New round of the match, Current round score: 0-0. "
+Ball Hit,"12.17 m/s, 42.06 rev/s, Top Right spin, Forward"
+Ball Hit,"8.73 m/s, 30.75 rev/s, Top Left spin, Backward"
+Ball Hit,"11.70 m/s, 39.28 rev/s, Top spin, Forward"
+Score Update,Current round score: 0-1. 
+Ball Hit,"11.94 m/s, 43.16 rev/s, Top Right spin, Forward"
+Ball Hit,"7.29 m/s, 21.66 rev/s, Back spin, Backward"
+Ball Hit,"13.14 m/s, 53.35 rev/s, Top Right spin, Forward"
+Ball Hit,"8.80 m/s, 36.84 rev/s, Top Right spin, Backward"
+Ball Hit,"8.84 m/s, 36.83 rev/s, Right Top spin, Forward"
+Ball Hit,"7.65 m/s, 14.91 rev/s, No significant spin, Backward"
+Score Update,Current round score: 1-1. 
+Ball Hit,"6.95 m/s, 27.17 rev/s, Back spin, Backward"
+Ball Hit,"5.03 m/s, 38.51 rev/s, Back spin, Forward"
+Ball Hit,"4.72 m/s, 28.97 rev/s, Back Left spin, Backward"
+Ball Hit,"5.98 m/s, 15.15 rev/s, Back spin, Forward"
+Ball Hit,"5.67 m/s, 14.35 rev/s, Back spin, Backward"
+Ball Hit,"6.88 m/s, 14.84 rev/s, Right spin, Forward"
+Ball Hit,"9.03 m/s, 37.03 rev/s, Left Top spin, Backward"
+Score Update,Current round score: 2-1. 
+Ball Hit,"8.85 m/s, 82.66 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 2-2. 
+Ball Hit,"5.54 m/s, 41.56 rev/s, Right spin, Forward"
+Ball Hit,"5.93 m/s, 30.59 rev/s, Back spin, Backward"
+Ball Hit,"5.60 m/s, 30.14 rev/s, Back spin, Forward"
+Ball Hit,"8.68 m/s, 89.78 rev/s, Top Right spin, Backward"
+Ball Hit,"8.99 m/s, 46.52 rev/s, Top Right spin, Forward"
+Ball Hit,"10.25 m/s, 70.37 rev/s, Top Right spin, Backward"
+Ball Hit,"12.85 m/s, 47.93 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-2. 
+Ball Hit,"10.30 m/s, 45.91 rev/s, Right Top spin, Forward"
+Ball Hit,"6.61 m/s, 33.17 rev/s, Back spin, Backward"
+Ball Hit,"12.68 m/s, 59.07 rev/s, Top spin, Forward"
+Score Update,Current round score: 3-3. 
+Ball Hit,"7.80 m/s, 64.57 rev/s, Top spin, Backward"
+Ball Hit,"13.81 m/s, 66.03 rev/s, Top spin, Forward"
+Ball Hit,"8.30 m/s, 52.82 rev/s, Top Left spin, Backward"
+Ball Hit,"7.96 m/s, 20.85 rev/s, Right Top spin, Forward"
+Ball Hit,"6.40 m/s, 20.22 rev/s, Back spin, Backward"
+Ball Hit,"13.16 m/s, 32.63 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-4. 
+Ball Hit,"7.62 m/s, 36.19 rev/s, Left spin, Backward"
+Ball Hit,"6.49 m/s, 20.51 rev/s, Left spin, Forward"
+Score Update,Current round score: 3-5. 
+Ball Hit,"8.96 m/s, 46.53 rev/s, Right Top spin, Forward"
+Ball Hit,"6.17 m/s, 37.36 rev/s, Back Left spin, Backward"
+Ball Hit,"4.20 m/s, 17.77 rev/s, Left spin, Forward"
+Ball Hit,"11.65 m/s, 32.15 rev/s, Top spin, Backward"
+Ball Hit,"7.66 m/s, 23.52 rev/s, Top spin, Forward"
+Score Update,Current round score: 3-6. 
+Ball Hit,"11.09 m/s, 44.49 rev/s, Right spin, Forward"
+Score Update,Current round score: 3-7. 
+Ball Hit,"6.95 m/s, 32.43 rev/s, Left spin, Backward"
+Ball Hit,"6.78 m/s, 29.40 rev/s, Left Back spin, Forward"
+Ball Hit,"8.39 m/s, 86.76 rev/s, Top Left spin, Backward"
+Ball Hit,"14.44 m/s, 52.39 rev/s, Top Left spin, Forward"
+Score Update,Current round score: 3-8. 
+Ball Hit,"9.04 m/s, 73.41 rev/s, Top Left spin, Backward"
+Ball Hit,"11.18 m/s, 45.26 rev/s, Top Left spin, Forward"
+Ball Hit,"7.83 m/s, 58.24 rev/s, Top Left spin, Backward"
+Ball Hit,"9.20 m/s, 34.21 rev/s, Top Right spin, Forward"
+Ball Hit,"11.54 m/s, 76.42 rev/s, Top Left spin, Backward"
+Ball Hit,"10.30 m/s, 37.76 rev/s, Left spin, Forward"
+Ball Hit,"10.81 m/s, 95.89 rev/s, Top Left spin, Backward"
+Score Update,Current round score: 4-8. 
+Ball Hit,"11.54 m/s, 56.43 rev/s, Top spin, Forward"
+Score Update,Current round score: 4-9. 
+Ball Hit,"6.51 m/s, 32.78 rev/s, Right spin, Forward"
+Score Update,Current round score: 4-10. 
+Ball Hit,"6.57 m/s, 17.30 rev/s, Back spin, Backward"
+Ball Hit,"5.38 m/s, 33.30 rev/s, Back spin, Forward"
+Ball Hit,"7.04 m/s, 75.23 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 5-10. 
+Ball Hit,"9.43 m/s, 61.49 rev/s, Top Left spin, Backward"
+Ball Hit,"8.20 m/s, 31.70 rev/s, Top Left spin, Forward"
+Ball Hit,"4.27 m/s, 49.45 rev/s, Top Right spin, Backward"
+Score Update,Current round score: 6-10. 
+Ball Hit,"4.90 m/s, 35.39 rev/s, Left spin, Forward"
+Ball Hit,"8.91 m/s, 46.09 rev/s, Right Top spin, Forward"
+Match End,"Current round score: 6-11. , Match Winner: VIOLENTPANDA"
+Player Exit Room,From room to home
+Camera Exit Room,From room to home

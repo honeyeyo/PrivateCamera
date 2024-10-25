@@ -1,0 +1,44 @@
+{
+    "playerNames": [
+        "HIMANGO",
+        "VIOLENTPANDA"
+    ],
+    "playerELOs": [
+        2427,
+        2760
+    ],
+    "playerCountryCodes": [
+        "CN",
+        "CN"
+    ],
+    "playerRanks": [
+        "2787",
+        "706"
+    ],
+    "playerWins": [
+        "6161",
+        "4225"
+    ],
+    "playerLosses": [
+        "4781",
+        "2618"
+    ],
+    "currentScores": [
+        [
+            5,
+            11
+        ],
+        [
+            6,
+            11
+        ]
+    ],
+    "matchId": "58025604",
+    "bestOf": "3",
+    "ranked": "True",
+    "matchWinner": "1418464",
+    "matchScore": [
+        0,
+        1
+    ]
+}

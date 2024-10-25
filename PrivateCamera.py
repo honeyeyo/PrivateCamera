@@ -7,11 +7,14 @@ import pyautogui
 import shutil
 import re
 import math
+from generate_scoreboard import generate_scoreboard
 
 # 配置
 LOG_DIR = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\logs\\"
 CSV_OUTPUT = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\log_analysis.csv"
 OBS_OUTPUT = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\obs.log"
+MATCH_JSON = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\match_data.json"
+SCOREBOARD_OUTPUT = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\scoreboard.html"
 LAST_POSITION_FILE = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\.last_position" # 保存本次处理的日志中处理到的行
 # PERFORMANCE_LOG = "D:\\Oculus\\Software\\Software\\for-fun-labs-eleven-table-tennis-vr\\RPA\\performance.log" # 性能日志
 PLAYER_ID = "1418464"  # VIOLENTPANDA 的 ID
@@ -54,13 +57,13 @@ def simulate_keypress(key):
 def simulate_click(x, y):
     # 移动鼠标
     pyautogui.moveTo(x, y, duration=0.05)
-    time.sleep(0.05)
+    time.sleep(0.02)
     # 模拟鼠标按下
     pyautogui.mouseDown(x, y)
     time.sleep(0.02)
     # 模拟鼠标松开
     pyautogui.mouseUp(x, y)
-    time.sleep(1)
+    time.sleep(0.02)
 
 def enter_room():
     # 切换到侧面视角
@@ -99,7 +102,7 @@ def exit_room():
     simulate_mouse_move(*SCREEN_CORNER_POSE)
 
     # 等待退出完成
-    time.sleep(2)
+    time.sleep(0.1)
 
 def get_latest_log_file():
     log_files = [f for f in os.listdir(LOG_DIR) if f.endswith('.log')]
@@ -203,6 +206,18 @@ def parse_snapshot(content):
         data = json.loads(content.replace("Snapshot reads: ", ""))
         current_scores = data["RoundScores"]
         
+        match_data = {
+            "playerNames": data["PlayerNames"],
+            "playerELOs": data["PlayerELOs"],
+            "currentScores": current_scores,
+            "matchId": data["MatchId"],
+            "bestOf": data["BestOf"],
+            "ranked": data["Ranked"],
+            "matchWinner": data["MatchWinner"]
+        }
+        
+        update_match_data(match_data)
+        
         global last_score, match_info
         
         # 如果是新的比赛或者新的对手，重置 match_info 和 last_score
@@ -221,44 +236,73 @@ def parse_snapshot(content):
         
         if last_score != current_scores:
             current_round = len(current_scores)
-            current_round_score = current_scores[-1]
             
-            scoring_side = data["LastPointReasonSide"]
-            scoring_player = data["PlayerNames"][0] if scoring_side == "SideA" else data["PlayerNames"][1]
-            losing_player = data["PlayerNames"][1] if scoring_side == "SideA" else data["PlayerNames"][0]
-            
-            server_id = int(data["CurrentServer"])
-            server_name = data["PlayerNames"][0] if server_id == data["PlayerIds"][0] else data["PlayerNames"][1]
-            
-            reason = data["LastPointReason"]
-            
-            # 检查是否是新的Round开始
-            if len(current_scores) > len(last_score or []):
-                event = "New Round"
-                details = f"Round {current_round} started. "
-                if len(current_scores) == 1:
-                    details += f", First round of the match, "
+            if current_scores:
+                current_round_score = current_scores[-1]
+                scoring_side = data["LastPointReasonSide"]
+                scoring_player = data["PlayerNames"][0] if scoring_side == "SideA" else data["PlayerNames"][1]
+                losing_player = data["PlayerNames"][1] if scoring_side == "SideA" else data["PlayerNames"][0]
+                
+                server_id = int(data["CurrentServer"])
+                server_name = data["PlayerNames"][0] if server_id == data["PlayerIds"][0] else data["PlayerNames"][1]
+                
+                reason = data["LastPointReason"]
+                
+                # 检查是否是新的Round开始
+                if len(current_scores) > len(last_score or []):
+                    event = "New Round"
+                    details = f"Round {current_round} started. "
+                    if len(current_scores) == 1:
+                        details += f"First round of the match, "
+                    else:
+                        details += f"Previous round score: {current_scores[-2][0]}-{current_scores[-2][1]}, New round of the match, "
                 else:
-                    details += f"Previous round score: {current_scores[-2][0]}-{current_scores[-2][1]}, New round of the match, "
+                    event = "Score Update"
+                    details = ""
+                
+                details += f"Current round score: {current_round_score[0]}-{current_round_score[1]}. "
             else:
-                event = "Score Update"
-                details = ""
-            
-            details += f"Current round score: {current_round_score[0]}-{current_round_score[1]}. "
+                event = "Match Reset"
+                details = "Scores have been reset."
             
             if data["MatchWinner"] != "0":
                 event = "Match End"
-                winner_name = data["PlayerNames"][0] if int(data["MatchWinner"]) == data["PlayerIds"][0] else data["PlayerNames"][1]
+                winner_index = 0 if int(data["MatchWinner"]) == data["PlayerIds"][0] else 1
+                winner_name = data["PlayerNames"][winner_index]
                 details += f", Match Winner: {winner_name}"
+                
+                # 更新大比分
+                try:
+                    with open(MATCH_JSON, 'r', encoding='utf-8') as f:
+                        match_data = json.load(f)
+                    match_score = match_data.get('matchScore', [0, 0])
+                    match_score[winner_index] += 1
+                    update_match_data({'matchScore': match_score})
+                except Exception as e:
+                    print(f"Error updating match score: {e}")
             
             last_score = current_scores
         else:
             if data["MatchWinner"] != "0":
                 event = "Match End"
-                winner_name = data["PlayerNames"][0] if int(data["MatchWinner"]) == data["PlayerIds"][0] else data["PlayerNames"][1]
+                winner_index = 0 if int(data["MatchWinner"]) == data["PlayerIds"][0] else 1
+                winner_name = data["PlayerNames"][winner_index]
                 details = f"Match ended. Winner: {winner_name}, Final score: {' '.join([f'{s[0]}-{s[1]}' for s in current_scores])}"
+                
+                # 更新大比分
+                try:
+                    with open(MATCH_JSON, 'r', encoding='utf-8') as f:
+                        match_data = json.load(f)
+                    match_score = match_data.get('matchScore', [0, 0])
+                    match_score[winner_index] += 1
+                    update_match_data({'matchScore': match_score})
+                except Exception as e:
+                    print(f"Error updating match score: {e}")
             else:
                 return "Unknown", None  # 如果比分没有变化且比赛未结束，不记录
+
+        # 生成新的记分牌
+        generate_scoreboard()
 
         return event, details
     except json.JSONDecodeError:
@@ -379,18 +423,74 @@ def analyze_log():
                                     continue
                                 details = f"From {old_state} to {new_state}"
 
-                            # # 处理 RoomJoined
-                            # elif data["key"] == "RoomJoined":
-                            #     for player in data["data"][0]["Players"]:
-                            #         if player["Id"] == PLAYER_ID:
-                            #             event = "Player Join Room"
-                            #         elif player["Id"] == CAMERA_ID:
-                            #             event = "Camera Join Room"
-                            #         else:
-                            #             event = "Other Player Join Room"
-                            #         details = f"Room ID: {data['data'][0]['Id']}, Player ID: {player['Id']}, Player Name: {player['UserName']}"
+                            elif data["key"] == "RoomJoined":
+                                roomId = data["data"][0]["Id"]
+                                hostId = data["data"][0]["HostId"]
+                                matchId = data["data"][0]["MatchId"]
+                                viewCount = data["data"][0]["ViewCount"]
+                                players = data["data"][0]["Players"]
+                                playerIds = data["data"][0]["PlayerIds"]
+                                print(f"Room Joined: {roomId}, Host: {hostId}, Match: {matchId}, Viewers: {viewCount}, Players: {playerIds}")
+                                
+                                # 提取玩家信息，排除摄像机
+                                player_data = {
+                                    'playerNames': [],
+                                    'playerELOs': [],
+                                    'playerCountryCodes': [],
+                                    'playerRanks': [],
+                                    'playerWins': [],
+                                    'playerLosses': []
+                                }
 
-                            # # 处理 RoomExitUser
+                                valid_players = [p for p in players if p['Id'] != CAMERA_ID and p['UserName'] != CAMERA_NAME]
+                                
+                                if len(valid_players) == 2:
+                                    # 根据玩家在数组中的位置确定主客顺序
+                                    home_player = valid_players[0]
+                                    away_player = valid_players[1]
+                                    
+                                    # 读取现有的 match_data（如果存在）
+                                    try:
+                                        with open(MATCH_JSON, 'r', encoding='utf-8') as f:
+                                            old_match_data = json.load(f)
+                                    except FileNotFoundError:
+                                        old_match_data = {}
+                                    
+                                    # 检查玩家是否相同，并调整顺序和分数
+                                    old_players = old_match_data.get('playerNames', [])
+                                    new_players = [home_player['UserName'], away_player['UserName']]
+                                    
+                                    if set(old_players) == set(new_players):
+                                        # 玩家相同，但可能顺序改变
+                                        if old_players != new_players:
+                                            # 顺序改变，调整大局分
+                                            old_match_score = old_match_data.get('matchScore', [0, 0])
+                                            match_score = old_match_score[::-1]  # 反转大局分
+                                        else:
+                                            # 顺序相同，保持原有大局分
+                                            match_score = old_match_data.get('matchScore', [0, 0])
+                                    else:
+                                        # 新的玩家组合，重置大局分
+                                        match_score = [0, 0]
+                                    
+                                    # 更新玩家数据
+                                    for player in [home_player, away_player]:
+                                        player_data['playerNames'].append(player['UserName'])
+                                        player_data['playerELOs'].append(player['ELO'])
+                                        player_data['playerCountryCodes'].append(player['CountryCode'])
+                                        player_data['playerRanks'].append(player['Rank'])
+                                        player_data['playerWins'].append(player['Wins'])
+                                        player_data['playerLosses'].append(player['Losses'])
+                                    
+                                    player_data['matchScore'] = match_score
+                                    
+                                    # 更新 match_data
+                                    update_match_data(player_data)
+                                    generate_scoreboard()
+                                else:
+                                    print("Warning: Unexpected number of players detected. Scoreboard not updated.")
+
+                            # 处理 RoomExitUser
                             # elif data["key"] == "RoomExitUser":
                             #     if data["data"][0]["Id"] == PLAYER_ID:
                             #         event = "Player Left Room"
@@ -430,7 +530,7 @@ def analyze_log():
                             if event == "New Round":
                                 print("=" * 50)  # 添加一个分隔线以突出显示新的Round开始
                             elif event == "Match End":
-                                print("#" * 50)  # 为比赛结束添加特殊的分隔线
+                                print("#" * 50)  # ���比赛结束添加特殊的分隔线
                             else:
                                 print("-" * 30)
                         else:
@@ -478,15 +578,35 @@ def set_text_source(text):
     with open(OBS_OUTPUT, 'w', encoding='utf-8') as f:
         f.write(text)
 
+def update_match_data(new_data):
+    try:
+        with open(MATCH_JSON, 'r', encoding='utf-8') as f:
+            match_data = json.load(f)
+    except FileNotFoundError:
+        match_data = {}
+    
+    # 更新所有新数据，包括玩家信息
+    for key, value in new_data.items():
+        match_data[key] = value
+    
+    # 保留其他可能存在的字段
+    for key in match_data.keys():
+        if key not in new_data:
+            match_data[key] = match_data[key]
+    
+    with open(MATCH_JSON, 'w', encoding='utf-8') as f:
+        json.dump(match_data, f, ensure_ascii=False, indent=4)
+
+
 if __name__ == "__main__":
     # 在脚本启动时执行上次运行输出文件的备份和重置
     backup_and_reset_files()
 
     simulate_mouse_move(*SCREEN_CORNER_POSE)
-    time.sleep(1)
+    time.sleep(0.1)
     simulate_click(*SCREEN_CORNER_POSE)
 
-    time.sleep(1)
+    time.sleep(0.1)
 
     # 一开始先呼出 -> 关闭菜单一下 确保好友列表中我名字加载出来了。
     # 呼出菜单
@@ -502,4 +622,6 @@ if __name__ == "__main__":
         text_to_display = read_last_lines(CSV_OUTPUT,20)
         # 设置到obs的文本源
         set_text_source(text_to_display)
+        generate_scoreboard()  # 生成新的 scoreboard.html
         time.sleep(1)  # 每1秒运行一次
+

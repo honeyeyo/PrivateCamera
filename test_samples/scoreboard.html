@@ -1,0 +1,105 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ElevenVR Scoreboard</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgba(0, 0, 0, 0.7);
+                color: white;
+                margin: 0;
+                padding: 5px;
+            }
+            .scoreboard {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #222;
+                border-radius: 5px;
+                padding: 5px 10px;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .player {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 45%;
+            }
+            .player-right {
+                align-items: flex-end;
+            }
+            .player-name {
+                font-size: 18px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+            }
+            .flag {
+                width: 24px;
+                height: 16px;
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+            .player-right .flag {
+                margin-right: 0;
+                margin-left: 5px;
+            }
+            .score {
+                font-size: 28px;
+                font-weight: bold;
+                margin-top: 2px;
+            }
+            .elo {
+                font-size: 14px;
+                color: #aaa;
+            }
+            .match-score {
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                width: 10%;
+                color: #2ecc71;  /* 绿色 */
+            }
+            .blue {
+                color: #3498db;
+            }
+            .red {
+                color: #e74c3c;
+            }
+            .player-stats {
+                font-size: 12px;
+                color: #aaa;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="scoreboard">
+            <div class="player">
+                <div class="player-name blue">
+                    <img class="flag" src="https://flagcdn.com/w40/cn.png" alt="CN flag">
+                    HIMANGO
+                </div>
+                <div class="score blue">6</div>
+                <div class="elo">ELO 2427</div>
+                <div class="player-stats">WR#2787 | W/L: 6161/4781</div>
+            </div>
+            <div class="match-score">
+                0 - 1
+            </div>
+            <div class="player player-right">
+                <div class="player-name red">
+                    VIOLENTPANDA
+                    <img class="flag" src="https://flagcdn.com/w40/cn.png" alt="CN flag">
+                </div>
+                <div class="score red">11</div>
+                <div class="elo">ELO 2760</div>
+                <div class="player-stats">WR#706 | W/L: 4225/2618</div>
+            </div>
+        </div>
+    </body>
+    </html>
+    
