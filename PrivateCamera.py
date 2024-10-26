@@ -21,6 +21,8 @@ PLAYER_ID = "1418464"  # VIOLENTPANDA 的 ID
 CAMERA_ID = "1461990"  # CHN_CAMERA 的 ID
 PLAYER_NAME = "VIOLENTPANDA"
 CAMERA_NAME = "CHN_CAMERA"
+# PLAYER_NAME = "justwe"
+# PLAYER_ID = "1686306"
 # CSV_COLUMNS = ["Timestamp", "Analysis Time", "Event", "Details", "Delay (seconds)"]
 CSV_COLUMNS = ["Event", "Details"]
 
@@ -220,7 +222,7 @@ def parse_snapshot(content):
         
         global last_score, match_info
         
-        # 如果是新的比赛或者新的对手，重置 match_info、last_score 和 currentSetStatus
+        # 如果是新的比赛或者新的对手，重置 match info、last score 和 current Set Status
         if not match_info or match_info["MatchId"] != data["MatchId"]:
             match_info = {
                 "PlayerNames": data["PlayerNames"],
@@ -233,12 +235,12 @@ def parse_snapshot(content):
             event = "Match Start"
             details = f"New match started: {match_info}"
             
-            # 重置 currentSetStatus 和 matchScore
+            # 重置 current Set Status 和 match Score
             try:
                 with open(MATCH_JSON, 'r', encoding='utf-8') as f:
                     match_data = json.load(f)
                 match_data['currentSetStatus'] = [0, 0]
-                match_data['matchScore'] = [0, 0]
+                # match_data['matchScore'] = [0, 0] 这里不需要更新，重新进房间才重置
                 
                 # 更新玩家信息
                 match_data['playerNames'] = data["PlayerNames"]
@@ -280,7 +282,7 @@ def parse_snapshot(content):
                         previous_score = current_scores[-2]
                         details += f"Previous round score: {previous_score[0]}-{previous_score[1]}, New round of the match, "
                         
-                        # 更新 currentSetStatus
+                        # 更新 current Set Status
                         try:
                             with open(MATCH_JSON, 'r', encoding='utf-8') as f:
                                 match_data = json.load(f)
@@ -314,14 +316,14 @@ def parse_snapshot(content):
                 winner_name = data["PlayerNames"][winner_index]
                 details += f", Match Winner: {winner_name}"
                 
-                # 更新大比分
+                # 更新 match Score
                 try:
                     with open(MATCH_JSON, 'r', encoding='utf-8') as f:
                         match_data = json.load(f)
                     match_score = match_data.get('matchScore', [0, 0])
                     match_score[winner_index] += 1
                     update_match_data({'matchScore': match_score})
-                    # 这里也要更新 currentSetStatus
+                    # 这里也要更新 current Set Status
                     current_set_status = match_data.get('currentSetStatus', [0, 0])
                     current_set_status[winner_index] += 1
                     update_match_data({'currentSetStatus': current_set_status})
@@ -335,14 +337,14 @@ def parse_snapshot(content):
                 winner_name = data["PlayerNames"][winner_index]
                 details = f"Match ended. Winner: {winner_name}, Final score: {' '.join([f'{s[0]}-{s[1]}' for s in current_scores])}"
                 
-                # 更新大比分
+                # 更新 match Score
                 try:
                     with open(MATCH_JSON, 'r', encoding='utf-8') as f:
                         match_data = json.load(f)
                     match_score = match_data.get('matchScore', [0, 0])
                     match_score[winner_index] += 1
                     update_match_data({'matchScore': match_score})
-                    # 这里也要更新 currentSetStatus
+                    # 这里也要更新 current Set Status
                     current_set_status = match_data.get('currentSetStatus', [0, 0])
                     current_set_status[winner_index] += 1
                     update_match_data({'currentSetStatus': current_set_status})

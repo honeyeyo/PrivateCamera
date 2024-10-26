@@ -120,10 +120,10 @@ def generate_scoreboard():
                 document.querySelector('.player-name.blue').innerHTML = `
                     <img class="flag" src="https://flagcdn.com/w40/${data.playerCountryCodes[0].toLowerCase()}.png" alt="${data.playerCountryCodes[0]} flag">
                     ${data.playerNames[0]}
-                    ${Array(data.currentSetStatus[0]).fill('<span class="set-indicator">●</span>').join('')}
+                    ${Array(data.currentSetStatus[0]).fill('<span class="set-indicator">● </span>').join(' ')}
                 `;
                 document.querySelector('.player-name.red').innerHTML = `
-                    ${Array(data.currentSetStatus[1]).fill('<span class="set-indicator">●</span>').join('')}
+                    ${Array(data.currentSetStatus[1]).fill('<span class="set-indicator">● </span>').join(' ')}
                     ${data.playerNames[1]}
                     <img class="flag" src="https://flagcdn.com/w40/${data.playerCountryCodes[1].toLowerCase()}.png" alt="${data.playerCountryCodes[1]} flag">
                 `;
