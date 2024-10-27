@@ -4,8 +4,7 @@ PrivateCamera for ETT match recording and streaming
 2024-10-26
 New feature: 增加了根据日志自动刷新的local scoreboard
 
-![image](https://github.com/user-attachments/assets/e60f7309-5a8c-4d28-af33-fca1cd01d35f)
-
+![image](https://github.com/user-attachments/assets/6fd5367e-fc5d-4810-b4e1-e4a5e23c8576)
 
 
 使用说明在下面链接
