@@ -1,6 +1,9 @@
 # PrivateCamera
 PrivateCamera for ETT match recording and streaming
 
+2024-11-07 
+昨晚打ETT的时候发现官方PC客户端的最新版本350.4已经修复了10s延迟的bug, 此脚本终于可以正常实时输出击球数据和比分更新了
+
 2024-10-26
 New feature: 增加了根据日志自动刷新的local scoreboard
 
