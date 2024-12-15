@@ -29,6 +29,8 @@ CSV_COLUMNS = ["Event", "Details"]
 # 全局变量
 in_room = False
 camera_in_room = False
+last_ball_hit_time = None
+ALIVE_TIMEOUT = 60  # 60秒无击球则判定为可能掉线
 
 # 屏幕坐标（根据您的屏幕分辨率调整）
 PLAYER_NAME_POS = (-520, 320)
@@ -99,7 +101,8 @@ def exit_room():
     simulate_keypress('m')
 
     # 点击弹窗NO按钮
-    simulate_click(*REJOIN_NO_POS)
+    simulate_click(*REJOIN_NO_POS) 
+    simulate_click(*REJOIN_NO_POS) # 实际运行中发现有时需要点击两次，可能因为点击太快。 这里点两次
 
     simulate_mouse_move(*SCREEN_CORNER_POSE)
 
@@ -407,8 +410,35 @@ def backup_and_reset_files():
         os.remove(LAST_POSITION_FILE)
         print(f"已删除上次位置文件: {LAST_POSITION_FILE}")
 
+def check_alive_status():
+    """检查是否需要退出房间"""
+    global last_ball_hit_time, in_room
+    
+    if not in_room or not last_ball_hit_time:
+        return
+        
+    current_time = time.time()
+    time_since_last_hit = current_time - last_ball_hit_time
+    
+    if time_since_last_hit > ALIVE_TIMEOUT:
+        print(f"Warning: No ball hit detected for {time_since_last_hit:.1f} seconds. Exiting room...")
+        try:
+            exit_room()
+            in_room = False
+            last_ball_hit_time = None
+            
+            # 记录到CSV
+            with open(CSV_OUTPUT, 'a', newline='', encoding='utf-8') as csv_file:
+                csv_writer = csv.writer(csv_file)
+                csv_writer.writerow([
+                    "Connection Lost",
+                    f"No activity for {time_since_last_hit:.1f} seconds"
+                ])
+        except Exception as e:
+            print(f"Error during force exit: {e}")
+
 def analyze_log():
-    global in_room, camera_in_room
+    global in_room, camera_in_room, last_ball_hit_time
 
     start_time = datetime.now()
     # print(f"开始分析日志: {start_time}")
@@ -466,7 +496,7 @@ def analyze_log():
                                 if new_state == "room" and old_state != "room":
                                     in_room = True
                                     event = "Player Enter Room"
-                                    enter_room()  # 执行进���房间操作
+                                    enter_room()  # 执行进房间操作
                                 elif old_state == "room" and new_state != "room":
                                     in_room = False
                                     event = "Player Exit Room"
@@ -557,7 +587,8 @@ def analyze_log():
                         
                         elif isinstance(data, str) and "Received ball hit from opponent:" in data:
                             ball_data = parse_ball_hit_data(data)
-                            if ball_data and ball_data['speed'] >= 1:  # 只处理速度大于等于1的数据
+                            if ball_data and ball_data['speed'] >= 1:
+                                last_ball_hit_time = time.time()  # 更新最后击球时间
                                 event = "Ball Hit"
                                 details = (f"{ball_data['speed']:.2f} m/s, "
                                         f"{ball_data['rotation']:.2f} rev/s, "
@@ -585,7 +616,7 @@ def analyze_log():
                             print(f"Analysis Time: {analysis_time}")
                             print(f"Delay: {delay:.3f} seconds")
                             if event == "New Round":
-                                print("=" * 50)  # 添加一个分隔线���突出显示新的Round开始
+                                print("=" * 50)  # 添���一个分隔线突出显示新的Round开始
                             elif event == "Match End":
                                 print("#" * 50)  # 比赛结束添加特殊的分隔线
                             else:
@@ -626,7 +657,7 @@ def analyze_log():
     print(f"结束分析日志: {end_time} 本次分析处理了 {lines_processed} 行日志，耗时 {duration:.2f} 秒")
 
 def read_last_lines(file_path, num_lines=5):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()[-num_lines:]
     return ''.join(lines)
 
@@ -676,6 +707,7 @@ if __name__ == "__main__":
 
     while True:
         analyze_log()
+        check_alive_status()  # 添加存活状态检查
         text_to_display = read_last_lines(CSV_OUTPUT,20)
         # 设置到obs的文本源
         set_text_source(text_to_display)

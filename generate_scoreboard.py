@@ -132,15 +132,37 @@ def generate_scoreboard():
                 document.querySelector('.match-score').textContent = `${data.matchScore[0]} - ${data.matchScore[1]}`;
                 document.querySelectorAll('.elo')[0].textContent = `ELO ${data.playerELOs[0]}`;
                 document.querySelectorAll('.elo')[1].textContent = `ELO ${data.playerELOs[1]}`;
-                document.querySelectorAll('.player-stats')[0].textContent = `WR#${data.playerRanks[0]} | W/L: ${data.playerWins[0]}/${data.playerLosses[0]}`;
-                document.querySelectorAll('.player-stats')[1].textContent = `WR#${data.playerRanks[1]} | W/L: ${data.playerWins[1]}/${data.playerLosses[1]}`;
+                
+                // 计算两位玩家的胜率
+                const calculateWinRate = (wins, losses) => {
+                    // 确保字符串转换为数字
+                    let winsNum = parseInt(wins);
+                    let lossesNum = parseInt(losses);
+                    let total = winsNum + lossesNum;
+                    
+                    if (total === 0) {
+                        return "0.00";
+                    }
+                    
+                    let winrate = (winsNum / total) * 100;
+                    return winrate.toFixed(2);
+                };
+                
+                let winRate1 = calculateWinRate(data.playerWins[0], data.playerLosses[0]);
+                let winRate2 = calculateWinRate(data.playerWins[1], data.playerLosses[1]);
+                
+                // 更新显示，添加胜率信息
+                document.querySelectorAll('.player-stats')[0].textContent = 
+                    `WR#${data.playerRanks[0]} | W/L: ${data.playerWins[0]}/${data.playerLosses[0]} (${winRate1}%)`;
+                document.querySelectorAll('.player-stats')[1].textContent = 
+                    `WR#${data.playerRanks[1]} | W/L: ${data.playerWins[1]}/${data.playerLosses[1]} (${winRate2}%)`;
             }
 
             // 页面加载完成后立即更新一次
             document.addEventListener('DOMContentLoaded', updateScoreboard);
 
-            // 每3秒更新一次计分板
-            setInterval(updateScoreboard, 3000);  
+            // 每1秒更新一次计分板
+            setInterval(updateScoreboard, 1000);  
         </script>
     </head>
     <body>
